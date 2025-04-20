@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+body {
+font-family: 'Inter', sans-serif;
+}
+
+.apply-hero {
+background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+background-size: cover;
+background-position: center;
+}
+
+.step {
+transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(97, 114, 243, 0.2);
+}
+
+
+.cta-bg {
+    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('/images/emergency-meeting.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.05);
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.nav-link:hover::after {
+width: 100%;
+}
+
+.progress-bar {
+height: 6px;
+background-color: #e0e9fe;
+border-radius: 3px;
+overflow: hidden;
+}
+
+.progress {
+height: 100%;
+background-color: #6172f3;
+transition: width 0.5s ease;
+}
+
+.scroller {
+max-width: 100vw;
+z-index: 10;
+}
+
+.scroller__inner {
+
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+}
+
+.scroller[data-animated=true] {
+overflow: hidden;
+-webkit-mask: linear-gradient(
+    90deg, 
+    transparent, 
+    white 10%, 
+    white 90%,
+    transparent);
+mask: linear-gradient(
+    90deg, 
+    transparent, 
+    white 10%, 
+    white 90%,
+    transparent);
+}
+
+.scroller[data-animated=true] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+
+}
+
+.scroller[data-direction="opposite"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 40s;
+}
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+@keyframes scroll {
+to {
+    transform: translate(calc(-50% - 0.25rem));
+}
+}
+
+.contact-hero {
+    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('/images/emergency-meeting.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contact-icon {
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+    color: var(--primary-600);
+}
+
+.form-input:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(97, 114, 243, 0.2);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-toggle.active .faq-content {
+    max-height: 300px;
+}
+
+.faq-toggle.active i {
+    transform: rotate(180deg);
+}
+.hero-bg {
+    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('/images/compliance_img.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.history-bg {
+    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.values-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #6172f3;
+    left: -10px;
+    top: 0;
+}
+.policy-section h2 {
+    scroll-margin-top: 100px;
+}
+.login-hero {
+    background: linear-gradient(rgba(6, 101, 255, 0.9), rgba(6, 101, 255, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-card {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.login-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.filter-active {
+    background-color: #0665ff;
+    color: white;
+}
