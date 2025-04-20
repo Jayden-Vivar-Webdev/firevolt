@@ -1631,7 +1631,7 @@ const HomePage = () => {
         { name: "Anytime Fitness", logo: "/images/Anytime-Fitness-logo.png" },
         { name: "Downer Group", logo: "/images/Downer_Group_logo.png" },
         { name: "Queensland Bank", logo: "/images/Queensland_bank-logo.jpg" },
-        { name: "Snap Fitness", logo: "/images/SnapFitness_logo.png" },
+        { name: "Snap Fitness", logo: "/images/snapFitness_logo.png" },
         { name: "The Good Feet Store", logo: "/images/The_Good-Feet-Store_LOGO.jpg" },
         { name: "Ultra Tune", logo: "/images/Ultra_Tune_logo.png" }
       ].map((client, index) => (
