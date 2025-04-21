@@ -8,14 +8,23 @@ import "../output.css";
 import "../styles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import FreeQuote from './free_quote';
 
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+  
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
+
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -70,11 +79,11 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-            <Link href="/login" className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
+            <button onClick={togglePopup} className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
               
                 Free Quote Now
              
-            </Link>
+            </button>
           </div>
 
           <button
@@ -127,19 +136,20 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#"
+                  <button onClick={togglePopup}
                     className="block bg-primary-600 text-white px-6 py-2 rounded-lg font-medium text-center hover:bg-primary-700 transition shadow-md">
                       Free Quote Now
                     
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </nav>
           </div>
         )}
       </div>
+      <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
     </header>
-
+    
   );
 };
 
