@@ -94,7 +94,7 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4" id="mobile-menu">
             <nav>
-              <ul className="space-y-3 justify-items-center">
+              <ul className="space-y-3" style={{justifyItems: 'center'}}>
                 <li>
                   <Link href="/"
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
