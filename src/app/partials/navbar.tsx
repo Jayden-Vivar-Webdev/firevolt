@@ -63,13 +63,7 @@ const Navbar = () => {
                    
                   </Link>
                 </li>
-                <li>
-                  <Link href="/join" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
-                    
-                      Join Us
-                   
-                  </Link>
-                </li>
+                
                 <li>
                   <Link href="/contact" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
                     
