@@ -109,19 +109,8 @@ const Navbar = () => {
                     
                   </Link>
                 </li>
-                <li>
-                  <Link href="/apply"
-                  className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
-                      Apply
-                    
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/join"
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
-                      Join Us
-                    </Link>
-                </li>
+                
+               
                 <li>
                   <Link href="/contact"
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
