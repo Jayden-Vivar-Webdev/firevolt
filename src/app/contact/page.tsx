@@ -153,7 +153,7 @@ const ContactPage = () => {
                             id="message" 
                             rows={4} 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
-                            placeholder="Tell us about your financial goals..."
+                            placeholder="Tell us about your goals..."
                             />
                         </div>
                         

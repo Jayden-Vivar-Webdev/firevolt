@@ -41,7 +41,7 @@ const AboutPage = () => {
             <div className="lg:w-1/2">
                 <Image 
                 src="/images/warehouse-safety.jpg" 
-                alt="Brokers Mutual team meeting" 
+                alt="Warehouse Safety" 
                 className="w-full rounded-xl shadow-lg"
                 width={500}
                 height={300}

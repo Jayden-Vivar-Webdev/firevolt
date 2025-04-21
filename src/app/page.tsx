@@ -241,7 +241,7 @@ const HomePage = () => {
             <div className="text-center mb-1">
               <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Why Choose Us</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Here to help business owners</h2>
-              <p className="text-secondary-600 max-w-2xl mx-auto">Discover the features that make us stand out from the competition and help you achieve your financial goals.</p>
+              <p className="text-secondary-600 max-w-2xl mx-auto">Discover the features that make us stand out from the competition and help your business.</p>
             </div>
             <div className="flex justify-center">
               <Image 
@@ -370,7 +370,7 @@ const HomePage = () => {
             <div className="text-center mb-16">
               <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-              <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their financial future with Brokers Mutual.</p>
+              <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their business future with Firevolt.</p>
             </div>
             
             <div className="max-w-4xl mx-auto">
