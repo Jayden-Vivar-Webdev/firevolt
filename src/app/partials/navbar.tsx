@@ -110,7 +110,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Services"
+                  <Link href="/services"
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       Services
                     
