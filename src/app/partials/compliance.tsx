@@ -176,7 +176,7 @@ import {
             <FontAwesomeIcon icon={faHandshake} className="text-primary-500 mt-1 mr-3 text-xl" />
             <div>
               <blockquote className="text-secondary-700 italic mb-3">
-                "Their compliance audit identified several issues we weren't aware of. Their team helped us implement solutions that not only made us compliant but improved our overall safety culture."
+                &quot;Their compliance audit identified several issues we weren&apos;t aware of. Their team helped us implement solutions that not only made us compliant but improved our overall safety culture.&quot;
               </blockquote>
               <p className="font-semibold">- Sarah K., Manufacturing Client</p>
             </div>
