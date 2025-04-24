@@ -89,7 +89,7 @@ const Extinguisher = () => {
     <div className="lg:w-1/2 order-1 lg:order-2">
       <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
         <Image
-          src="/images/extinguisher-service.webp"
+          src="/images/fire_extinguisher_services.JPEG"
           alt="Fire extinguisher maintenance"
           width={800}
           height={600}

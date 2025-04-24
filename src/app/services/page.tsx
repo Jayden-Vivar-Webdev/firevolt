@@ -3,29 +3,8 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faFireExtinguisher, 
-  faArrowRight, 
+  faFireExtinguisher,  
   faFire, 
-  faHome, 
-  faExclamationTriangle, 
-  faCheckCircle, 
-  faTag, 
-  faStar, 
-  faBuilding, 
-  faCalendarCheck, 
-  faThumbsUp, 
-  faShieldAlt, 
-  faUsers, 
-  faRoute, 
-  faTornado, 
-  faFlask, 
-  faUserInjured, 
-  faClock, 
-  faFileAlt, 
-  faArrowDown, 
-  faFileDownload,
-  faPhone,
-  faCalendarAlt,
   faClipboardCheck,
   faMapMarkedAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -40,7 +19,7 @@ import { useState } from 'react';
 
 const ServicesPage = () => {
 
-const [selectedCategory, setSelectedCategory] = useState('training');
+const [selectedCategory, setSelectedCategory] = useState('compliance-check');
 
 
 const toggleCategory = (category: string) => {

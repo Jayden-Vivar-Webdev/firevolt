@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileAlt, faCheckCircle, faArrowRight, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
-
+import Image from "next/image";
 const Plans = () => {
     return (
         <>
@@ -8,6 +8,7 @@ const Plans = () => {
  {/* Emergency Plans Section */}
  <section className="py-20 bg-gray-50" id="emergency-plans">
  <div className="container mx-auto px-4">
+   
    <div className="text-center mb-16">
      <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
        Compliance Documentation
@@ -17,6 +18,23 @@ const Plans = () => {
        AS3745-2010 compliant documentation tailored to your specific workplace requirements
      </p>
    </div>
+   {/* Image Column */}
+   <div className="flex flex-col w-full justify-center items-center pb-10">
+   
+        <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
+          <Image
+            src="/images/evac_template.png"
+            alt="Professional emergency evacuation diagram example"
+            width={600}
+            height={600}
+            className="w-full h-auto"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-4 text-center">
+            <p className="text-sm font-medium text-gray-700">Sample AS3745-2010 Compliant Evacuation Diagram</p>
+          </div>
+        </div>
+      </div>
    
    <div className="grid md:grid-cols-2 gap-8 mb-12">
      <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">

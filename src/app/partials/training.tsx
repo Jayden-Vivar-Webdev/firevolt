@@ -11,7 +11,7 @@ const Training = () => {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
                 <Image
-                  src="/images/live-fire-training.webp"
+                  src="/images/fire_training.jpg"
                   alt="Fire safety training session"
                   width={800}
                   height={600}

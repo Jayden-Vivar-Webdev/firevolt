@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faMapMarkerAlt, faUserTie, faLock, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt, faUserTie, faLock, faHandshake, faClock } from '@fortawesome/free-solid-svg-icons';
 
 const ContactPage = () => {
 
@@ -164,6 +164,112 @@ const ContactPage = () => {
         </div>
     </div>
 </section>
+<section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Visit Our Office</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We&apos;re conveniently located to serve your safety compliance needs across the region.
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Google Maps Embed */}
+          <div className="lg:w-2/3">
+            <div className="rounded-xl overflow-hidden shadow-lg h-full min-h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453479.24779197463!2d152.66287556973612!3d-27.381754036001457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb2a4ec8029ebb3%3A0xf75895effb19e68!2sFirevolt!5e0!3m2!1sen!2sau!4v1745487839282!5m2!1sen!2sau"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="min-h-[400px]"
+                title="Business Location Map"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Contact Information Card */}
+          <div className="lg:w-1/3">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full border border-gray-200">
+              <div className="flex items-center mb-6">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary-500 text-2xl mr-4" />
+                <div>
+                  <h3 className="text-xl font-bold">Our Location</h3>
+                  <p className="text-gray-600">
+                    123 Safety Street<br />
+                    Brisbane, QLD 4000<br />
+                    Australia
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <FontAwesomeIcon icon={faPhone} className="text-primary-500 mt-1 mr-4 text-lg" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Phone</h4>
+                    <p className="text-gray-600">
+                      <a href="tel:+61123456789" className="hover:text-primary-600 transition">
+                        +61 123 456 789
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <FontAwesomeIcon icon={faEnvelope} className="text-primary-500 mt-1 mr-4 text-lg" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Email</h4>
+                    <p className="text-gray-600">
+                      <a href="mailto:info@yoursafetycompany.com" className="hover:text-primary-600 transition">
+                        info@yoursafetycompany.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <FontAwesomeIcon icon={faClock} className="text-primary-500 mt-1 mr-4 text-lg" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Business Hours</h4>
+                    <p className="text-gray-600">
+                      Mon-Fri: 8:00 AM - 5:00 PM<br />
+                      Sat: 9:00 AM - 1:00 PM<br />
+                      Sun: Closed
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="text-sm text-gray-500">
+                    Free parking available onsite<br />
+                    Wheelchair accessible<br />
+                    Appointments recommended
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional CTA */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold mb-4">Need Directions?</h3>
+          <a
+            href="https://maps.google.com/?q=123+Safety+Street+Brisbane+QLD+4000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg"
+          >
+            Get Directions on Google Maps
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="ml-3" />
+          </a>
+        </div>
+      </div>
+    </section>
 
 {/* FAQ Section */}
 <section className="py-16 bg-secondary-50">
