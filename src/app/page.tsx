@@ -2,19 +2,26 @@
 import './globals.css';
 import './styles.css';
 import './output.css';
+import FreeQuote from './partials/free_quote';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload } from '@fortawesome/free-solid-svg-icons';
-
+import { useState } from 'react';
 
 
 const HomePage = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
   
   return (
       <>
         
         {/* Hero Section */}
         <section className="hero-bg text-white py-24 md:py-32" id="home">
+        <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Your Local Experts In Fire Safety & Compliance
@@ -28,7 +35,7 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/apply" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get Started</a>
+              <a href="/contact" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get Started</a>
               <a href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-1">Learn More</a>
             </div>
           </div>
@@ -1654,7 +1661,6 @@ const HomePage = () => {
   </div>
 </section>
 
-    
         {/* CTA Section */}
         <section className="cta-bg text-white py-20">
           <div className="container mx-auto px-4 text-center">
@@ -1662,7 +1668,7 @@ const HomePage = () => {
             <p className="text-lg max-w-3xl mx-auto mb-10 text-secondary-200">We&apos;re here to help you stay compliant and safe.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="/contact" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
-              <a className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-0.1">Free Quote</a>
+              <a onClick={togglePopup} className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-0.1">Free Quote</a>
             </div>
           </div>
         </section>
