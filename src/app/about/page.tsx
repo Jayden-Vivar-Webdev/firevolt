@@ -191,7 +191,7 @@ const AboutPage = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                 <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Our People</span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Leadership Team</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
                 <p className="text-secondary-600 max-w-2xl mx-auto">Seasoned professionals with decades of combined experience</p>
             </div>
             
@@ -202,23 +202,23 @@ const AboutPage = () => {
                         <Image 
                         src="/images/hayden-img.webp" 
                         alt="Robert Langley" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                         width={500}
                         height={300}
                         />
                     </div>
                     <div className="p-6">
-                        <h3 className="text-xl font-bold">John Tyrrell</h3>
+                        <h3 className="text-xl font-bold">Hayden Heath</h3>
                         <p className="text-primary-600 mb-3">Founder & CEO</p>
                         <p className="text-secondary-600 text-sm mb-4">Over a decade of experience in the military and now helping small businesses stay compliant.</p>
                         <div className="flex space-x-3">
                             <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faLinkedin} /></a>
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faEnvelope} /></a>
+                            <a href="mailto:service@firevolt.com.au" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faEnvelope} /></a>
                         </div>
                     </div>
                 </div>
                 
-                {/* Team Member 2 */}
+                {/* Team Member 2
                 <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
                     <div className="h-64 overflow-hidden">
                         <Image 
@@ -238,10 +238,10 @@ const AboutPage = () => {
                             <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
                 {/* Team Member 3 */}
-                <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
+                {/* <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
                     <div className="h-64 overflow-hidden">
                         <Image 
                         src="/images/hayden-img.webp" 
@@ -260,10 +260,10 @@ const AboutPage = () => {
                             <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
                 {/* Team Member 4 */}
-                <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
+                {/* <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
                     <div className="h-64 overflow-hidden">
                         <Image 
                         src="/images/hayden-img.webp" 
@@ -282,8 +282,8 @@ const AboutPage = () => {
                             <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> */}
+            </div> 
             
         </div>
     </section>

@@ -18,6 +18,7 @@ const Navbar = () => {
   
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
+    setMobileMenuOpen(false);
   };
   
 
@@ -97,6 +98,7 @@ const Navbar = () => {
               <ul className="space-y-3" style={{justifyItems: 'center'}}>
                 <li>
                   <Link href="/"
+                    onClick={() => {toggleMobileMenu()}}
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       Home
                     
@@ -104,6 +106,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link href="/about"
+                    onClick={() => {toggleMobileMenu()}}
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       About
                     
@@ -111,6 +114,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link href="/services"
+                    onClick={() => {toggleMobileMenu()}}
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       Services
                     
@@ -120,6 +124,7 @@ const Navbar = () => {
                
                 <li>
                   <Link href="/contact"
+                    onClick={() => {toggleMobileMenu()}}
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       Contact
                     

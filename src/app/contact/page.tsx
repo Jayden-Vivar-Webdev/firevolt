@@ -1,8 +1,36 @@
-
+'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faUserTie, faLock, faHandshake, faClock } from '@fortawesome/free-solid-svg-icons';
 
+
 const ContactPage = () => {
+  
+  async function submitForm(formData: FormData): Promise<void> {
+    
+    const formValues = {
+      name: formData.get("name"),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      service: formData.get('service'),
+      message: formData.get('message')
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(formValues)
+      });
+      if(response.ok){
+        console.log('Success, Form Sent')
+      } else {
+        console.error('Failed to send message')
+      }
+    } catch (error) {
+      console.error("Error", error)
+    }
+
+  }
 
     {/* Use state for FAQ */}
 
@@ -19,7 +47,7 @@ const ContactPage = () => {
 
 <section className="py-16">
     <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Card 1 */}
             <div className="contact-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                 <div className="contact-icon w-16 h-16 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 mx-auto">
@@ -101,10 +129,11 @@ const ContactPage = () => {
                 
                 <div className="md:w-1/2 p-8 md:p-12">
                     <h3 className="text-xl font-bold mb-6 text-secondary-900">Send Us a Message</h3>
-                    <form>
+                    <form action={submitForm}>
                         <div className="mb-4">
                             <label htmlFor="name" className="block text-secondary-700 font-medium mb-2">Full Name</label>
                             <input 
+                            name="name"
                             type="text" 
                             id="name" 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
@@ -116,33 +145,42 @@ const ContactPage = () => {
                         <div className="mb-4">
                             <label htmlFor="email" className="block text-secondary-700 font-medium mb-2">Email Address</label>
                             <input 
+                            name='email'
                             type="email" 
                             id="email" 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
                             placeholder="john@example.com" 
                             required
+                            
+                            
                             />
                         </div>
                         
                         <div className="mb-4">
                             <label htmlFor="phone" className="block text-secondary-700 font-medium mb-2">Phone Number</label>
                             <input 
+                            name='phone'
                             type="tel" 
                             id="phone" 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
                             placeholder="(+61) 423 320 712"
+                            
+                            
                             />
                         </div>
                         
                         <div className="mb-4">
                             <label htmlFor="service" className="block text-secondary-700 font-medium mb-2">Service Interested In</label>
-                            <select id="service" className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                            <select id="service" 
+                            name='service'
+                            className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
                                 <option value="">Select a service</option>
-                                <option value="investment">Fire Safety</option>
-                                <option value="retirement">Fire Risk Assessment</option>
-                                <option value="wealth">Fire Compliance</option>
-                                <option value="tax">Fire Training</option>
-                                <option value="estate">Fire Management</option>
+                                <option value="Free Check">Free Compliance Check</option>
+                                <option value="Extinguisher Services">Extinguisher Services</option>
+                                <option value="Test & Tag">Test & Tag</option>
+                                <option value="Fire Training">Fire Training</option>
+                                <option value="Evacuation Diagrams">Evacuation Diagrams</option>
+                                <option value="Evacuation Plans">Evacuation Plans</option>
                                 <option value="other">Other</option>
                             </select>
                         </div> 
@@ -150,10 +188,12 @@ const ContactPage = () => {
                         <div className="mb-6">
                             <label htmlFor="message" className="block text-secondary-700 font-medium mb-2">Your Message</label>
                             <textarea 
+                            name='message'
                             id="message" 
                             rows={4} 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
                             placeholder="Tell us about your goals..."
+                          
                             />
                         </div>
                         
@@ -167,7 +207,7 @@ const ContactPage = () => {
 <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Visit Our Office</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">View Servicing Locations</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We&apos;re conveniently located to serve your safety compliance needs across the region.
           </p>
@@ -199,7 +239,7 @@ const ContactPage = () => {
                 <div>
                   <h3 className="text-xl font-bold">Our Location</h3>
                   <p className="text-gray-600">
-                    123 Safety Street<br />
+                    
                     Brisbane, QLD 4000<br />
                     Australia
                   </p>
@@ -213,7 +253,7 @@ const ContactPage = () => {
                     <h4 className="font-semibold mb-1">Phone</h4>
                     <p className="text-gray-600">
                       <a href="tel:+61123456789" className="hover:text-primary-600 transition">
-                        +61 123 456 789
+                        1300 533 294
                       </a>
                     </p>
                   </div>
@@ -224,8 +264,8 @@ const ContactPage = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
                     <p className="text-gray-600">
-                      <a href="mailto:info@yoursafetycompany.com" className="hover:text-primary-600 transition">
-                        info@yoursafetycompany.com
+                      <a href="mailto:service@firevolt.com.au" className="hover:text-primary-600 transition">
+                        service@firevolt.com.au
                       </a>
                     </p>
                   </div>
@@ -245,8 +285,8 @@ const ContactPage = () => {
 
                 <div className="pt-4 border-t border-gray-200">
                   <p className="text-sm text-gray-500">
-                    Free parking available onsite<br />
-                    Wheelchair accessible<br />
+                    Operating All Year Round<br />
+                    Organise a visit<br />
                     Appointments recommended
                   </p>
                 </div>
@@ -287,7 +327,7 @@ const ContactPage = () => {
                     <span>In what areas do you provide services?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div className="faq-content mt-2 text-secondary-600">
+                <div id='faq-content-1' className="faq-content mt-2 text-secondary-600">
                     <p>We provide fire safety services to all areas of Queensland. Our basic fire safety services start with no minimum investment requirement, while our premium fire safety services typically require a minimum portfolio of $100,000. We believe in accessible fire safety advice for everyone.</p>
                 </div>
             </div>

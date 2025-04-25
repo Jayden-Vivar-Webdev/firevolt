@@ -7,15 +7,56 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import Training from './gallery/training';
+import Extinguishers from './gallery/extinguishers';
 
 
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+
+
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
+
+  const [selectedCategory, setSelectedCategory] = useState('training-gallery');
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategory(category);
+  };
+
+  const categories = [
+    {
+      name: 'Training',
+      filter: 'training-gallery',
+      component: <Training />,
+      icon: faFire
+    },
+    {
+      name: 'Extinguishers',
+      filter: 'extinguishers-gallery',
+      component: <Extinguishers />,
+      icon: faFireExtinguisher
+    },
+    {
+      name: 'Evacuation',
+      filter: 'evacuation-gallery',
+      component: '',
+      icon: faRoute
+    },
+    {
+      name: 'Compliance',
+      filter: 'compliance-gallery',
+      component: '',
+      icon: faCheckCircle
+    }
+
+  ]
   
+
+
+
   return (
       <>
         
@@ -253,10 +294,10 @@ const HomePage = () => {
             <div className="flex justify-center">
               <Image 
                 src="/images/hayden-img.webp" 
-                alt="fire-extinguisher" 
+                alt="owner of Firevolt" 
                 width={500}
                 height={300}
-                className="w-2/6 sm:w-4/5 md:w-2/4 lg:w-1/3 max-w-3xl h-auto object-contain mx-auto"
+                className="w-3/6 sm:w-4/5 md:w-2/4 lg:w-1/3 max-w-3xl h-auto object-contain mx-auto"
               />
             </div>
             
@@ -717,155 +758,21 @@ const HomePage = () => {
 
     {/* Gallery Filters */}
     <div className="flex flex-wrap justify-center gap-3 mb-12">
-      <button className="gallery-filter px-4 py-2 rounded-full bg-primary-600 text-white font-medium transition hover:bg-primary-700 active" data-filter="all">
-        All Services
-      </button>
-      <button className="gallery-filter px-4 py-2 rounded-full bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600" data-filter="training">
-        <FontAwesomeIcon icon={faFire} className="mr-2" />
-        Training
-      </button>
-      <button className="gallery-filter px-4 py-2 rounded-full bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600" data-filter="extinguishers">
-        <FontAwesomeIcon icon={faFireExtinguisher} className="mr-2" />
-        Extinguishers
-      </button>
-      <button className="gallery-filter px-4 py-2 rounded-full bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600" data-filter="evacuation">
-        <FontAwesomeIcon icon={faRoute} className="mr-2" />
-        Evacuation
-      </button>
-      <button className="gallery-filter px-4 py-2 rounded-full bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600" data-filter="compliance">
-        <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
-        Compliance
-      </button>
+      
+      {categories.map((category) => (
+                <button 
+                key={category.filter}
+                onClick={() => toggleCategory(category.filter)}
+                className={`gallery-filter px-4 py-2 rounded-full ${selectedCategory === category.filter ? 'bg-primary-600 text-white font-medium transition hover:bg-primary-700 active' : 'bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600'}`} 
+                data-filter={category.filter}
+                >
+                    <FontAwesomeIcon icon={category.icon} className="mr-2" />
+                    {category.name}
+                </button>
+            ))}
     </div>
 
-    {/* Gallery Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {/* Gallery Item 1 - Training */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="training">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/fire-extinguisher-training.webp"
-            alt="Fire safety training session"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Live Fire Training</h3>
-              <p className="text-sm text-gray-200">Hands-on extinguisher training for staff</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Training
-        </div>
-      </div>
-
-      {/* Gallery Item 2 - Extinguishers */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="extinguishers">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/extinguisher_installation.jpg"
-            alt="Fire extinguisher installation"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Extinguisher Installation</h3>
-              <p className="text-sm text-gray-200">Commercial kitchen fire protection</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Extinguishers
-        </div>
-      </div>
-
-      {/* Gallery Item 3 - Evacuation */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="evacuation">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/emergency_plans.jpeg"
-            alt="Evacuation diagram installation"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Evacuation Diagrams</h3>
-              <p className="text-sm text-gray-200">Custom emergency exit plans</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Evacuation
-        </div>
-      </div>
-
-      {/* Gallery Item 4 - Compliance */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="compliance">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/fire_training-img.webp"
-            alt="Fire safety compliance check"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Compliance Audit</h3>
-              <p className="text-sm text-gray-200">Detailed workplace safety inspection</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Compliance
-        </div>
-      </div>
-
-      {/* Gallery Item 5 - Training */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="training">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/live-fireblanket-img.webp"
-            alt="Chief warden training"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Equipment Training</h3>
-              <p className="text-sm text-gray-200">Emergency response skills</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Training
-        </div>
-      </div>
-
-      {/* Gallery Item 6 - Extinguishers */}
-      <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="extinguishers">
-        <div className="relative h-90 overflow-hidden">
-          <Image
-            src="/images/testing_equipment-img.webp"
-            alt="Fire extinguisher maintenance"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">Equipment Testing</h3>
-              <p className="text-sm text-gray-200">Annual extinguisher servicing</p>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-          Testing
-        </div>
-      </div>
-    </div>
+    {categories.find(c => c.filter === selectedCategory)?.component}
 
     {/* View More Button */}
     <div className="text-center mt-12">
