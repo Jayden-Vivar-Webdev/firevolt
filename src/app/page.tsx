@@ -5,22 +5,19 @@ import './output.css';
 import FreeQuote from './partials/free_quote';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import Training from './gallery/training';
-import Extinguishers from './gallery/extinguishers';
+
 
 
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-
-
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const [selectedCategory, setSelectedCategory] = useState('training-gallery');
+  const [selectedCategory, setSelectedCategory] = useState('extinguishers-gallery');
 
   const toggleCategory = (category: string) => {
     setSelectedCategory(category);
@@ -28,34 +25,238 @@ const HomePage = () => {
 
   const categories = [
     {
-      name: 'Training',
-      filter: 'training-gallery',
-      component: <Training />,
-      icon: faFire
-    },
-    {
       name: 'Extinguishers',
       filter: 'extinguishers-gallery',
-      component: <Extinguishers />,
-      icon: faFireExtinguisher
+      icon: faFireExtinguisher,
+      components: [
+        {
+          id: 'e1',
+          src: '/images/extinguisher_installation.jpg',
+          alt: 'Fire extinguisher installation',
+          title: 'Extinguisher Testing',
+          p: 'Testing and maintenance',
+          type: 'Testing'
+        },
+        {
+          id: 'e2',
+          src: '/images/extinguisher_gal/IMG_4299.JPEG',
+          alt: 'Fire extinguisher installation',
+          title: 'Extinguisher Installation',
+          p: 'Commercial kitchen fire protection',
+          type: 'Installation'
+        },
+        {
+          id: 'e3',
+          src: '/images/fire_extinguisher_services.JPEG',
+          alt: 'Fire extinguisher servicing',
+          title: 'Fire Extinguisher Servicing',
+          p: 'Annual extinguisher servicing',
+          type: 'Evacuation'
+        },
+        {
+          id: 'e4',
+          src: '/images/extinguisher_gal/IMG_7798.png',
+          alt: 'fire extingusher compliance',
+          title: 'Compliance Adherance',
+          p: 'Detailed workplace safety',
+          type: 'Compliance'
+        },
+        {
+          id: 'e5',
+          src: '/images/extinguisher_gal/IMG_6997.jpg',
+          alt: 'extinguisher types',
+          title: 'Sized Extinguishers',
+          p: 'Fitted Extinguishers',
+          type: 'Positioning'
+        },
+        {
+          id: 'e6',
+          src: '/images/extinguisher_gal/IMG_6622.jpg',
+          alt: 'Fire extinguisher Truck',
+          title: 'Essential Equipment',
+          p: 'Annual extinguisher servicing',
+          type: 'Replacement'
+        },
+        
+      ]
     },
     {
-      name: 'Evacuation',
-      filter: 'evacuation-gallery',
-      component: '',
-      icon: faRoute
+      name: 'Training',
+      filter: 'training-gallery',
+      icon: faFire,
+      components: [
+        {
+          id: 't1',
+          src: '/images/fire-extinguisher-training.webp',
+          alt: 'Fire safety training session',
+          title: 'Live Fire Training',
+          p: 'Hands-on extinguisher training for staff',
+          type: 'Extinguisher'
+        },
+        {
+          id: 't2',
+          src: '/images/training_gal/fire_training_img.jpg',
+          alt: 'Safety Measures Training',
+          title: 'Fire Hose Training',
+          p: 'Training Exposure',
+          type: 'Fire Hose'
+        },
+        {
+          id: 't3',
+          src: '/images/training_gal/fire_e_training.jpg',
+          alt: 'Evacuation use',
+          title: 'Extinguisher Training',
+          p: 'Develop skills',
+          type: 'Extinguisher'
+        },
+        {
+          id: 't4',
+          src: '/images/fire_training-img.webp',
+          alt: 'fire plan coordination',
+          title: 'Coordination Plan',
+          p: 'Detailed workplace training',
+          type: 'Evacuation Training'
+        },
+        {
+          id: 'e5',
+          src: '/images/fire_training.jpg',
+          alt: 'Chief warden training',
+          title: 'Equipment Training',
+          p: 'Emergency response skills',
+          type: 'Training'
+        },
+        {
+          id: 'e6',
+          src: '/images/testing_equipment-img.webp',
+          alt: 'hazard training',
+          title: 'Understanding Hazards',
+          p: 'Training on hazards',
+          type: 'Hazards'
+        },
+        
+      ]
     },
     {
       name: 'Compliance',
       filter: 'compliance-gallery',
-      component: '',
-      icon: faCheckCircle
-    }
+      icon: faClipboardCheck,
+      components: [
+        {
+          id: 't1',
+          src: '/images/compliance_gal/IMG_2518.JPG',
+          alt: 'Fire equipment labeling',
+          title: 'Clear Labels',
+          p: 'Compliance check on lables',
+          type: 'Fire Reel'
+        },
+        {
+          id: 't2',
+          src: '/images/emergency_plan_book.png',
+          alt: 'Business Management Plan',
+          title: 'Business Management Plan',
+          p: 'Comprehensive Fire Plan',
+          type: 'Planning'
+        },
+        {
+          id: 't3',
+          src: '/images/compliance_gal/IMG_2682.JPEG',
+          alt: 'Evacuation diagram installation',
+          title: 'Emergency Signs',
+          p: 'Emergency labeling',
+          type: 'Labeling'
+        },
+        {
+          id: 't4',
+          src: '/images/compliance_gal/IMG_3755.JPEG',
+          alt: 'fire test & tag',
+          title: 'Compliance Audit',
+          p: 'Test and tag equipment',
+          type: 'Test'
+        },
+        {
+          id: 'e5',
+          src: '/images/compliance_gal/IMG_6805.JPG',
+          alt: 'Fire reel compliance',
+          title: 'Equipment Testing',
+          p: 'Testing For Defects',
+          type: 'Testing'
+        },
+        {
+          id: 'e6',
+          src: '/images/compliance_gal/IMG_6816.jpg',
+          alt: 'Fire extinguisher maintenance',
+          title: 'Protective Measures',
+          p: 'Protect Equipment',
+          type: 'Protection'
+        },
+        
+      ]
+    },
+    {
+      name: 'Evacuation',
+      filter: 'evacuation-gallery',
+      icon: faMapMarkedAlt,
+      components: [
+        {
+          id: 't1',
+          src: '/images/evac_gal/IMG_2683.JPEG',
+          alt: 'Evacuation Map',
+          title: 'Evacuation Diagrams',
+          p: 'Compliance Designs',
+          type: 'Evacuation Diagrams'
+        },
+        {
+          id: 't2',
+          src: '/images/evac_gal/IMG_7798 (1).jpg',
+          alt: 'Diagram Locatoin',
+          title: 'Evacuatoin Diagram',
+          p: 'Positioning & location',
+          type: 'Evacuation Diagrams'
+        },
+        {
+          id: 't3',
+          src: '/images/emergency_plans.jpeg',
+          alt: 'Evacuation installation',
+          title: 'Evacuation Diagrams Installation',
+          p: 'Custom emergency exit plans',
+          type: 'Evacuation'
+        },
+        {
+          id: 't4',
+          src: '/images/fire_training-img.webp',
+          alt: 'Fire safety compliance check',
+          title: 'Compliance Audit',
+          p: 'Detailed workplace safety inspection',
+          type: 'Compliance'
+        },
+        {
+          id: 'e5',
+          src: '/images/live-fireblanket-img.webp',
+          alt: 'Chief warden training',
+          title: 'Equipment Training',
+          p: 'Emergency response skills',
+          type: 'Training'
+        },
+        {
+          id: 'e6',
+          src: '/images/testing_equipment-img.webp',
+          alt: 'Fire extinguisher maintenance',
+          title: 'Equipment Testing',
+          p: 'Annual extinguisher servicing',
+          type: 'Testing'
+        },
+        
+      ]
+    },
+   
 
   ]
   
+  const selectedCategoryData = categories.find(
+    (category) => category.filter === selectedCategory
+  );
 
-
+  console.log(selectedCategoryData);
 
   return (
       <>
@@ -744,6 +945,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* Gallery Section */}
+
 <section className="py-20 bg-gray-50" id="gallery">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
@@ -772,7 +974,39 @@ const HomePage = () => {
             ))}
     </div>
 
-    {categories.find(c => c.filter === selectedCategory)?.component}
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          selectedCategoryData && selectedCategoryData.components.map((component)=> {
+
+            return(
+              <div key={component.id} className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100">
+              <div className="relative h-90 overflow-hidden">
+                <Image
+                  src={component.src}
+                  alt={component.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl font-bold mb-1">{component.title}</h3>
+                    <p className="text-sm text-gray-200">{component.p}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+                {component.type}
+              </div>
+            </div>
+
+            )
+            
+          })
+        }
+
+    </div>
+    
 
     {/* View More Button */}
     <div className="text-center mt-12">

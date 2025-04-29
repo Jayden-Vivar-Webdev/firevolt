@@ -33,66 +33,66 @@ import {
         {/* Expanded Services Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-8 pt-4 sm:pt-0">
           <div>
-            <h3 className="font-bold mb-3 flex items-center">
-              <FontAwesomeIcon icon={faClipboardCheck} className="text-primary-500 mr-2" />
+            <h3 className="font-bold mb-3 text-lg flex items-center">
+              <FontAwesomeIcon icon={faClipboardCheck} className="text-primary-500 text-lg mr-2" />
               Our Compliance Services:
             </h3>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Comprehensive WHS audits & gap analysis</span>
+                <span className="font-medium text-secondary-600">Comprehensive WHS audits & gap analysis</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Risk assessments & hazard identification</span>
+                <span className="font-medium text-secondary-600">Risk assessments & hazard identification</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Safety management system development</span>
+                <span className="font-medium text-secondary-600">Safety management system development</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Emergency planning & evacuation procedures</span>
+                <span className="font-medium text-secondary-600">Emergency planning & evacuation procedures</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Safety documentation & registers</span>
+                <span className="font-medium text-secondary-600">Safety documentation & registers</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Incident investigation & reporting</span>
+                <span className="font-medium text-secondary-600">Incident investigation & reporting</span>
               </li>
             </ul>
           </div>
           <div className="pt-4 sm:pt-0">
-            <h3 className="font-bold mb-3 flex items-center">
+            <h3 className="font-bold mb-3 flex text-lg items-center">
               <FontAwesomeIcon icon={faShieldAlt} className="text-primary-500 mr-2" />
               Key Regulations We Cover:
             </h3>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Work Health & Safety Act 2011</span>
+                <span className="font-medium text-secondary-600">Work Health & Safety Act 2011</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">AS3745:2010 Emergency Planning</span>
+                <span className="font-medium text-secondary-600">AS3745:2010 Emergency Planning</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Dangerous Goods Storage & Handling</span>
+                <span className="font-medium text-secondary-600">Dangerous Goods Storage & Handling</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Industry-specific regulations (construction, healthcare, etc.)</span>
+                <span className="font-medium text-secondary-600">Industry-specific regulations (construction, healthcare, etc.)</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Chain of Responsibility (CoR) compliance</span>
+                <span className="font-medium text-secondary-600">Chain of Responsibility (CoR) compliance</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium">Environmental protection regulations</span>
+                <span className="font-medium text-secondary-600">Environmental protection regulations</span>
               </li>
             </ul>
           </div>

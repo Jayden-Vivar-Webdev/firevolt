@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Extinguishers = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Gallery Item 1 - Training */}
 <div className="gallery-item group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100" data-category="training">
   <div className="relative h-90 overflow-hidden">

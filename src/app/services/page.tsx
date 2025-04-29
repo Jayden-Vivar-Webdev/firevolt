@@ -14,13 +14,20 @@ import Extinguisher from '../partials/extinguisher';
 import Plans from '../partials/plans';
 import Compliance from '../partials/compliance';
 import Test from '../partials/test';
-
 import { useState } from 'react';
+
+import FreeQuote from '../partials/free_quote';
 
 const ServicesPage = () => {
 
 const [selectedCategory, setSelectedCategory] = useState('compliance-check');
 
+const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+const togglePopup = () => {
+  setIsPopupOpen(!isPopupOpen);
+
+}
 
 const toggleCategory = (category: string) => {
   setSelectedCategory(category);
@@ -76,13 +83,14 @@ return (
             <strong>BRISBANE - SUNSHINE COAST - GOLD COAST</strong>
           </p>
           <a 
-            href="#free-compliance-check" 
+            onClick={togglePopup}
             className="bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-block"
           >
             Claim Your Free Compliance Check
           </a>
         </div>
       </section>
+      <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
 
       {/* Services Overview */}
       <section className="py-20 bg-white">

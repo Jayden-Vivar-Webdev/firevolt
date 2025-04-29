@@ -1,9 +1,32 @@
 
+
+
 const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopup: () => void;}) => {
 
-
-   
-
+    async function submitForm(formData: FormData): Promise<void> {
+      
+      const formValues = {
+        name: formData.get("name"),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        service: formData.get('service'),
+        message: formData.get('message')
+      }
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(formValues)
+        });
+        if(response.ok){
+          console.log('Success, Form Sent')
+        } else {
+          console.error('Failed to send message')
+        }
+      } catch (error) {
+        console.error("Error", error)
+      }
+    }
     
     return (
       <>
@@ -24,8 +47,8 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                   <p className="text-secondary-500 mt-1">Please fill out the form below and we will get back to you within 24 hours.</p>
                 </div>
                 
-                <form id="contactForm" className="space-y-4" onSubmit={() => {}}>
-                  {/* Name Field */}
+                <form id="contactForm" className="space-y-4" action={submitForm}>
+  
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-2">Name</label>
                     <input
@@ -33,7 +56,7 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                       id="name"
                       name="name"
                       required
-                      onChange={() => {}}
+                      
                       placeholder="Enter your name"
                       className="w-full px-4 py-2 border border-primary-300 text-black rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-white-500 transition duration-200 bg-white-800 placeholder-secondary-400"
                     />
@@ -47,9 +70,9 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                       id="email"
                       name="email"
                       required
-                      value={''}
+                      
                       placeholder="Enter your Email"
-                      onChange={() => {}}
+                      
                       className="w-full px-4 py-2 border border-primary-300 text-black rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-white-500 transition duration-200 bg-white-800 placeholder-secondary-400"
                     />
                   </div>
@@ -61,67 +84,31 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={''}
+                      
                       placeholder="Phone Number"
-                      onChange={() => {}}
+                      
                        className="w-full px-4 py-2 border border-primary-300 text-black rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-white-500 transition duration-200 bg-white-800 placeholder-secondary-400"
                     />
                   </div>
         
                   {/* Services Section */}
-                  <div>
-                    <p className="block text-sm font-medium text-secondary-700 mb-2">Services Required</p>
-                    <div className="space-y-2">
-                      <div className="flex items-start">
-                        <input
-                          id="service1"
-                          name="services"
-                          type="checkbox"
-                          value="fire-extinguisher"
-                          
-                          onChange={() => {}}
-                          className="h-4 w-4 text-primary-600 rounded border-secondary-300 focus:ring-primary-500"
-                        />
-                        <label htmlFor="service1" className="ml-2 block text-sm text-secondary-700">Fire Extinguisher Inspection</label>
-                      </div>
-                      <div className="flex items-start">
-                        <input
-                          id="service2"
-                          name="services"
-                          type="checkbox"
-                          value="alarm-systems"
-                          
-                          onChange={() => {}}
-                          className="h-4 w-4 text-primary-600 rounded border-secondary-300 focus:ring-primary-500"
-                        />
-                        <label htmlFor="service2" className="ml-2 block text-sm text-secondary-700">Fire Alarm Systems</label>
-                      </div>
-                      <div className="flex items-start">
-                        <input
-                          id="service3"
-                          name="services"
-                          type="checkbox"
-                          value="risk-assessment"
-                          
-                          onChange={() => {}}
-                          className="h-4 w-4 text-primary-600 rounded border-secondary-300 focus:ring-primary-500"
-                        />
-                        <label htmlFor="service3" className="ml-2 block text-sm text-secondary-700">Fire Risk Assessment</label>
-                      </div>
-                      <div className="flex items-start">
-                        <input
-                          id="service4"
-                          name="services"
-                          type="checkbox"
-                          value="compliance-training"
-                          
-                          onChange={() => {}}
-                          className="h-4 w-4 text-primary-600 rounded border-secondary-300 focus:ring-primary-500"
-                        />
-                        <label htmlFor="service4" className="ml-2 block text-sm text-secondary-700">Fire Safety Compliance Training</label>
-                      </div>
-                    </div>
-                  </div>
+                  
+                  <div className="mb-4">
+                      <label htmlFor="service" className="block text-secondary-700 font-medium mb-2">Service Interested In</label>
+                      <select id="service" 
+                      name='service'
+                      className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                          <option value="">Select a service</option>
+                          <option value="Free Check">Free Compliance Check</option>
+                          <option value="Extinguisher Services">Extinguisher Services</option>
+                          <option value="Test & Tag">Test & Tag</option>
+                          <option value="Fire Training">Fire Training</option>
+                          <option value="Evacuation Diagrams">Evacuation Diagrams</option>
+                          <option value="Evacuation Plans">Evacuation Plans</option>
+                          <option value="other">Other</option>
+                      </select>
+                  </div> 
+                  
         
                   {/* Submit Button */}
                   <div className="pt-4">
@@ -132,9 +119,11 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                       Submit Request
                     </button>
                   </div>
+                  
                 </form>
               </div>
             </div>
+
             </section>
             
             ) : 
