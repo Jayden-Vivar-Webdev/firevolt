@@ -1,10 +1,16 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faUserTie, faLock, faHandshake, faClock } from '@fortawesome/free-solid-svg-icons';
-
+import { useState } from 'react';
 
 const ContactPage = () => {
-  
+  const [formStatus, setFormStatus] = useState<string | null>(null);
+  const [isFaqOpen1, setIsFaqOpen1] = useState(false);
+  const [isFaqOpen2, setIsFaqOpen2] = useState(false);
+  const [isFaqOpen3, setIsFaqOpen3] = useState(false);
+  const [isFaqOpen4, setIsFaqOpen4] = useState(false);
+  const [isFaqOpen5, setIsFaqOpen5] = useState(false);
+
   async function submitForm(formData: FormData): Promise<void> {
     
     const formValues = {
@@ -22,9 +28,11 @@ const ContactPage = () => {
         body: JSON.stringify(formValues)
       });
       if(response.ok){
+        setFormStatus('Success, you will be contacted within 24hrs.')
         console.log('Success, Form Sent')
       } else {
         console.error('Failed to send message')
+        setFormStatus('Please call us, your form submission failed.')
       }
     } catch (error) {
       console.error("Error", error)
@@ -196,6 +204,17 @@ const ContactPage = () => {
                           
                             />
                         </div>
+
+                        {formStatus && (
+                            <div 
+                            className={formStatus.includes("Success") ? "text-green-500 font-bold text-center mb-4 bg-green-100 border border-green-500 border-2 rounded-lg p-3" : "text-red-500 font-bold text-center mb-4 bg-red-100 border border-red-500 border-2 rounded-lg p-3"}
+                            >
+                              <p className={formStatus.includes("Success") ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
+                                {formStatus}
+                              </p>
+                            </div>
+                          )}
+                  
                         
                         <button type="submit" className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-primary-700 transition shadow-md hover:shadow-lg">Send Message</button>
                     </form>
@@ -297,14 +316,14 @@ const ContactPage = () => {
 
         {/* Additional CTA */}
         <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold mb-4">Need Directions?</h3>
+          <h3 className="text-2xl font-bold mb-4"> View Our Location</h3>
           <a
-            href="https://maps.google.com/?q=123+Safety+Street+Brisbane+QLD+4000"
+            href="https://maps.app.goo.gl/eEBVwbkR3a7HnEfP7"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg"
           >
-            Get Directions on Google Maps
+            Google Maps
             <FontAwesomeIcon icon={faMapMarkerAlt} className="ml-3" />
           </a>
         </div>
@@ -323,57 +342,73 @@ const ContactPage = () => {
         <div className="max-w-3xl mx-auto">
             {/* FAQ Item 1 */}
             <div className="mb-4 border-b border-gray-200 pb-4">
-                <button className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
+                <button 
+                onClick={() => setIsFaqOpen1(!isFaqOpen1)}
+                className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
                     <span>In what areas do you provide services?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div id='faq-content-1' className="faq-content mt-2 text-secondary-600">
+
+                {isFaqOpen1 && <div className="faq-content mt-2 text-secondary-600">
                     <p>We provide fire safety services to all areas of Queensland. Our basic fire safety services start with no minimum investment requirement, while our premium fire safety services typically require a minimum portfolio of $100,000. We believe in accessible fire safety advice for everyone.</p>
-                </div>
+                </div>}
+                
             </div>
             
             {/* FAQ Item 2 */}
             <div className="mb-4 border-b border-gray-200 pb-4">
-                <button className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
+                <button 
+                onClick={() => setIsFaqOpen2(!isFaqOpen2)}
+                className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
                     <span>Do you offer contracts for customers?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div className="faq-content mt-2 text-secondary-600">
+                {isFaqOpen2 && <div className="faq-content mt-2 text-secondary-600">
                     <p>We offer contracts for customers. Please contact us to discuss your needs.</p>
-                </div>
+                </div>}
+                
             </div>
             
             {/* FAQ Item 3 */}
             <div className="mb-4 border-b border-gray-200 pb-4">
-                <button className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
+                <button 
+                onClick={() => setIsFaqOpen3(!isFaqOpen3)}
+                className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
                     <span>What makes Fire Volt different from other fire safety firms?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div className="faq-content mt-2 text-secondary-600">
+                {isFaqOpen3 && <div className="faq-content mt-2 text-secondary-600">
                     <p>Our approach combines cutting-edge technology with personalized service. We use advanced experience to optimize your fire safety and compliance measures.</p>
-                </div>
+                </div>}
+                
             </div>
             
             {/* FAQ Item 4 */}
             <div className="mb-4 border-b border-gray-200 pb-4">
-                <button className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
+                <button 
+                onClick={() => setIsFaqOpen4(!isFaqOpen4)}
+                className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
                     <span>How often will I meet with my fire safety advisor?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div className="faq-content mt-2 text-secondary-600">
+                {isFaqOpen4 &&  <div className="faq-content mt-2 text-secondary-600">
                     <p>We typically schedule quarterly check-ins, but the frequency can be adjusted based on your needs. Between meetings you&apos;ll have access to our fire safety experts. We&apos;re always available when important fire safety decisions arise.</p>
-                </div>
+                </div>}
+               
             </div>
             
             {/* FAQ Item 5 */}
             <div className="mb-4 border-b border-gray-200 pb-4">
-                <button className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
+                <button 
+                onClick={() => setIsFaqOpen5(!isFaqOpen5)}
+                className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
                     <span>Is my business and fire safety procedures secure with Fire Volt?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
-                <div className="faq-content mt-2 text-secondary-600">
+                {isFaqOpen5 && <div className="faq-content mt-2 text-secondary-600">
                     <p>Absolutely. We use encryption for all data transmissions and storage. Our systems undergo regular security audits, and we adhere to strict privacy policies. Your information is never shared with third parties without your explicit consent, except as required by law.</p>
-                </div>
+                </div>}
+                
             </div>
         </div>
     </div>

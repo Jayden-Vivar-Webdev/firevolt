@@ -13,6 +13,12 @@ import { useState } from 'react';
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  const [isFaqOpen1, setIsFaqOpen1] = useState(false);
+  const [isFaqOpen2, setIsFaqOpen2] = useState(false);
+  const [isFaqOpen3, setIsFaqOpen3] = useState(false);
+  const [isFaqOpen4, setIsFaqOpen4] = useState(false);
+ 
+
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
@@ -252,6 +258,8 @@ const HomePage = () => {
 
   ]
   
+  
+
   const selectedCategoryData = categories.find(
     (category) => category.filter === selectedCategory
   );
@@ -262,8 +270,9 @@ const HomePage = () => {
       <>
         
         {/* Hero Section */}
-        <section className="hero-bg text-white py-24 md:py-32" id="home">
         <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
+        <section className="hero-bg text-white py-24 md:py-32" id="home">
+        
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Your Local Experts In Fire Safety & Compliance
@@ -1548,13 +1557,15 @@ const HomePage = () => {
       <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
         {/* FAQ Item 1 */}
         <div className="border-b border-gray-200">
-          <button className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
+          <button 
+          onClick={() => setIsFaqOpen1(!isFaqOpen1)}
+          className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
             <span className="font-medium text-lg">How often should our emergency plan be reviewed?</span>
             <svg className="w-5 h-5 text-primary-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div className="faq-answer px-6 pb-6 hidden">
+        {isFaqOpen1 && <div className="faq-answer px-6 pb-6">
             <p className="text-secondary-600">
               AS3745-2010 requires emergency plans to be reviewed at least every 12 months, or whenever there are significant changes to:
             </p>
@@ -1572,18 +1583,21 @@ const HomePage = () => {
                 <span>After any emergency incident</span>
               </li>
             </ul>
-          </div>
+          </div>}
+          
         </div>
 
         {/* FAQ Item 2 */}
         <div className="border-b border-gray-200">
-          <button className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
+          <button 
+          onClick={() => setIsFaqOpen2(!isFaqOpen2)}
+          className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
             <span className="font-medium text-lg">What&apos;s the difference between an emergency plan and evacuation diagrams?</span>
             <svg className="w-5 h-5 text-primary-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div className="faq-answer px-6 pb-6 hidden">
+          {isFaqOpen2 && <div className="faq-answer px-6 pb-6">
             <p className="text-secondary-600">
               While both are required under AS3745-2010, they serve different purposes:
             </p>
@@ -1601,18 +1615,22 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div>}
+          
         </div>
 
         {/* FAQ Item 3 */}
         <div className="border-b border-gray-200">
-          <button className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
+          <button 
+          onClick={() => setIsFaqOpen3(!isFaqOpen3)}
+          className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
             <span className="font-medium text-lg">Do we need different plans for different types of emergencies?</span>
             <svg className="w-5 h-5 text-primary-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div className="faq-answer px-6 pb-6 hidden">
+
+          {isFaqOpen3 && <div className="faq-answer px-6 pb-6">
             <p className="text-secondary-600">
               Your emergency plan should cover all potential emergencies relevant to your workplace. We typically include:
             </p>
@@ -1634,18 +1652,22 @@ const HomePage = () => {
                 Natural disasters
               </span>
             </div>
-          </div>
+          </div>}
+          
         </div>
 
         {/* FAQ Item 4 */}
         <div className="">
-          <button className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
+          <button 
+          onClick={() => setIsFaqOpen4(!isFaqOpen4)}
+          className="faq-question w-full text-left p-6 hover:bg-gray-50 transition flex justify-between items-center">
             <span className="font-medium text-lg">How long does it take to develop an emergency plan?</span>
             <svg className="w-5 h-5 text-primary-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div className="faq-answer px-6 pb-6 hidden">
+
+          {isFaqOpen4 && <div className="faq-answer px-6 pb-6">
             <p className="text-secondary-600">
               The timeline depends on the size and complexity of your workplace:
             </p>
@@ -1672,7 +1694,8 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>}
+          
         </div>
       </div>
     </div>

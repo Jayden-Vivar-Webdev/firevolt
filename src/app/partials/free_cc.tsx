@@ -1,16 +1,17 @@
 
-import {useState} from 'react'
+import { useState } from "react";
 
-const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopup: () => void;}) => {
+const FreeCompliance = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopup: () => void;}) => {
     const [formStatus, setFormStatus] = useState<string | null>(null);
+    
     async function submitForm(formData: FormData): Promise<void> {
       
       const formValues = {
         name: formData.get("name"),
         email: formData.get('email'),
         phone: formData.get('phone'),
-        service: formData.get('service'),
-        message: `The client has requested a free quote for ${formData.get('service')}.`
+        service: 'Free Compliance Check',
+        message: 'The customer is requesting a free compliance check for their business!'
       }
       try {
         const response = await fetch('/api/contact', {
@@ -19,12 +20,11 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
           body: JSON.stringify(formValues)
         });
         if(response.ok){
-          setFormStatus('Success, you will be contacted within 24hrs')
+          setFormStatus('Success, you will be contacted within 24hrs.')
           console.log('Success, Form Sent')
-
         } else {
-          setFormStatus('Please call us, your form submission failed.')
           console.error('Failed to send message')
+          setFormStatus('Please call us, your form submission failed.')
         }
       } catch (error) {
         console.error("Error", error)
@@ -45,8 +45,8 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                 </button>
                 
                 <div className="mb-6 text-center">
-                  <h2 className="text-2xl font-semibold text-gray-900">Free Quote Now</h2>
-                  <strong className="text-secondary-500 p-2 inline-block">Don&apos;t have time?</strong> 
+                  <h2 className="text-2xl font-semibold text-gray-900">Free Compliance Check</h2>
+                  <strong className="text-secondary-500 p-2 inline-block">Allow Us To Assist You</strong> 
                   <p className="text-secondary-500 mt-1">Please fill out the form below and we will get back to you within 24 hours.</p>
                 </div>
                 
@@ -95,23 +95,6 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                   </div>
         
                   {/* Services Section */}
-                  
-                  <div className="mb-4">
-                      <label htmlFor="service" className="block text-secondary-700 font-medium mb-2">Service Interested In</label>
-                      <select id="service" 
-                      name='service'
-                      className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                          <option value="">Select a service</option>
-                          <option value="Free Check">Free Compliance Check</option>
-                          <option value="Extinguisher Services">Extinguisher Services</option>
-                          <option value="Test & Tag">Test & Tag</option>
-                          <option value="Fire Training">Fire Training</option>
-                          <option value="Evacuation Diagrams">Evacuation Diagrams</option>
-                          <option value="Evacuation Plans">Evacuation Plans</option>
-                          <option value="other">Other</option>
-                      </select>
-                  </div> 
-                  {/* Services Section */}
                   {formStatus && (
                     <div 
                     className={formStatus.includes("Success") ? "text-green-500 font-bold text-center mb-4 bg-green-100 border border-green-500 border-2 rounded-lg p-3" : "text-red-500 font-bold text-center mb-4 bg-red-100 border border-red-500 border-2 rounded-lg p-3"}
@@ -121,6 +104,7 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                       </p>
                     </div>
                   )}
+                  
         
                   {/* Submit Button */}
                   <div className="pt-4">
@@ -144,4 +128,4 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
         )
       }   
        
-export default FreeQuote;
+export default FreeCompliance;

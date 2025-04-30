@@ -14,7 +14,7 @@ const referrerPolicy = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms and Conditions</h1>
-            <p className="text-xl text-gray-600">Firevolt Pty Ltd - Effective Date: [Insert Date]</p>
+            <p className="text-xl text-gray-600">Firevolt Pty Ltd - Effective Date: 2025</p>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">

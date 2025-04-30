@@ -16,7 +16,7 @@ import Compliance from '../partials/compliance';
 import Test from '../partials/test';
 import { useState } from 'react';
 
-import FreeQuote from '../partials/free_quote';
+import FreeCompliance from '../partials/free_cc';
 
 const ServicesPage = () => {
 
@@ -90,7 +90,7 @@ return (
           </a>
         </div>
       </section>
-      <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
+      <FreeCompliance isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
 
       {/* Services Overview */}
       <section className="py-20 bg-white">

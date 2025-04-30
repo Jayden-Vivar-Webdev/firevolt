@@ -1,4 +1,5 @@
 "use client"; 
+import { usePathname } from 'next/navigation';
 
 import React, { useState } from 'react';
 import '../globals.css'; // Make sure this is the correct path to your globals.css file
@@ -11,7 +12,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import FreeQuote from './free_quote';
 
 
+
+
+
+
 const Navbar = () => {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -30,14 +36,18 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-center lg:justify-between items-center">
           <div className="flex items-center text-2xl font-bold">
+          
+          <Link href={'/'}>
           <Image
             src="/images/Firevolt_CenteredLogo(CMYK-LBG).jpg"
             alt="logo"
             height={100}
             width={200}
             ></Image>
+          </Link>
+          
 
             <span className="text-secondary-900"></span>
           </div>
@@ -46,19 +56,34 @@ const Navbar = () => {
             <nav>
               <ul className="flex gap-10">
                 <li>
-                  <Link href="/" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
+                <Link 
+                    href="/"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                    }`}
+                  >
                       Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
+                <Link 
+                    href="/services"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/services' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                    }`}
+                  >
                    
                       Services
                     
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
+                <Link 
+                    href="/about"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/about' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                    }`}
+                  >
                     
                       About Us
                    
@@ -66,7 +91,12 @@ const Navbar = () => {
                 </li>
                 
                 <li>
-                  <Link href="/contact" className="nav-link relative pb-1 text-secondary-600 hover:text-primary-600 transition">
+                <Link 
+                    href="/contact"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/contact' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                    }`}
+                  >
                     
                       Contact
                   
@@ -82,7 +112,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="lg:hidden text-2xl focus:outline-none text-secondary-600"
+            className="lg:hidden text-2xl focus:outline-none text-secondary-600 absolute right-6"
             id="mobile-menu-button"
             onClick={toggleMobileMenu}
           >
