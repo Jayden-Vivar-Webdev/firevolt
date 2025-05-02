@@ -150,7 +150,7 @@ import {
             Request Compliance Audit
             <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
           </a>
-          <a href="/compliance-guide" className="inline-flex items-center justify-center bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold transition shadow-sm hover:shadow-md flex-1 text-center">
+          <a href="https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf" className="inline-flex items-center justify-center bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold transition shadow-sm hover:shadow-md flex-1 text-center">
             Download Compliance Guide
             <FontAwesomeIcon icon={faFileAlt} className="ml-3" />
           </a>

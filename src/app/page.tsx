@@ -9,25 +9,61 @@ import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle
 import { useState } from 'react';
 
 
-
 const HomePage = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  //Free form quote
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+  //Faq Open elements
   const [isFaqOpen1, setIsFaqOpen1] = useState(false);
   const [isFaqOpen2, setIsFaqOpen2] = useState(false);
   const [isFaqOpen3, setIsFaqOpen3] = useState(false);
   const [isFaqOpen4, setIsFaqOpen4] = useState(false);
  
-
+  //Open or close popup form
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
 
+  //Category for galleries
   const [selectedCategory, setSelectedCategory] = useState('extinguishers-gallery');
 
+  //Toggle category function
   const toggleCategory = (category: string) => {
     setSelectedCategory(category);
   };
+
+  //Download free emergency pdf form submission
+  async function submitForm(formData: FormData): Promise<void> {
+    
+    const formValues = {
+      name: formData.get("name"),
+      email: formData.get('email'),
+      phone: 'Not required for this form entry',
+      service: 'Potential Client: Emergency Procedures or Diagrams',
+      message: 'The client has downloaded the Emergency Preparedness Fact Sheet they may need your services.'
+    }
+
+    try {
+      const response = await fetch('/api/potential', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(formValues)
+      });
+      if(response.ok){
+        window.location.href= 'https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf';
+        console.log('Success, Form Sent')
+      } else {
+        window.location.href= 'https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf';
+        console.error('Failed to send message');
+      }
+    } catch (error) {
+      window.location.href= 'https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf';
+      console.error("Error", error)
+    }
+
+  }
+
 
   const categories = [
     {
@@ -264,7 +300,7 @@ const HomePage = () => {
     (category) => category.filter === selectedCategory
   );
 
-  console.log(selectedCategoryData);
+ 
 
   return (
       <>
@@ -757,7 +793,7 @@ const HomePage = () => {
                       <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 text-xl" />
                     </div>
                     <p className="ml-3 text-secondary-700">
-                      <strong>Veteran Discounts:</strong> Special offers for fellow veterans and active military
+                      <strong>Veteran Operated:</strong> We only provide the best service and make it our mission
                     </p>
                   </div>
                   <div className="flex items-start">
@@ -765,15 +801,15 @@ const HomePage = () => {
                       <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 text-xl" />
                     </div>
                     <p className="ml-3 text-secondary-700">
-                      <strong>Community Focused:</strong> Committed to supporting veteran causes and organizations
+                      <strong>Community Focused:</strong> Committed to supporting veteran causes and organisations
                     </p>
                   </div>
                 </div>
                 <a 
-                  href="/veteran-program" 
+                  href="/about" 
                   className="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg"
                 >
-                  Learn About Our Veteran Program
+                  Learn About Us
                 </a>
               </div>
             </div>
@@ -1749,10 +1785,11 @@ const HomePage = () => {
           </ul>
 
           {/* Download Form */}
-          <form className="space-y-4">
+          <form action={submitForm} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
               <input 
+                name='name'
                 type="text" 
                 id="name" 
                 required 
@@ -1762,6 +1799,7 @@ const HomePage = () => {
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email*</label>
               <input 
+                name='email'
                 type="email" 
                 id="email" 
                 required 

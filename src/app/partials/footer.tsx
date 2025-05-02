@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,16 +17,14 @@ const Footer = () => {
                     </div>
                     <p className="text-center md:text-left mb-6 text-secondary-300">Fire compliance services for your business, that takes you to the next level.</p>
                     <div className="flex justify-around pr-5">
-                        <Link href="#" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link href="https://www.facebook.com/people/Firevolt/100086488210335/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faFacebook} />
                         </Link>
-                        <Link href="#" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </Link>
-                        <Link href="#" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        
+                        <Link href="https://www.linkedin.com/in/haydenheath/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Link>
-                        <Link href="#" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link href="https://www.instagram.com/firevolt._/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faInstagram} />
                         </Link>
                     </div>
@@ -37,11 +35,11 @@ const Footer = () => {
                         Services
                     </h3>
                     <ul className="space-y-3">
-                        <li><Link href="/contact" className="text-secondary-300 hover:text-primary-400 transition">Fire Safety</Link></li>
-                        <li><Link href="/contact" className="text-secondary-300 hover:text-primary-400 transition">Fire Training</Link></li>
-                        <li><Link href="/contact" className="text-secondary-300 hover:text-primary-400 transition">Emergency Evacuation</Link></li>
-                        <li><Link href="/contact" className="text-secondary-300 hover:text-primary-400 transition">Emergency Response</Link></li>
-                        <li><Link href="/contact" className="text-secondary-300 hover:text-primary-400 transition">Fire Extinguishers</Link></li>
+                        <li><Link href="/services" className="text-secondary-300 hover:text-primary-400 transition">Fire Safety</Link></li>
+                        <li><Link href="/services" className="text-secondary-300 hover:text-primary-400 transition">Fire Training</Link></li>
+                        <li><Link href="/services" className="text-secondary-300 hover:text-primary-400 transition">Emergency Evacuation</Link></li>
+                        <li><Link href="/services" className="text-secondary-300 hover:text-primary-400 transition">Emergency Response</Link></li>
+                        <li><Link href="/services" className="text-secondary-300 hover:text-primary-400 transition">Fire Extinguishers</Link></li>
                     </ul>
                 </div>
                 
@@ -52,7 +50,7 @@ const Footer = () => {
                     <ul className="space-y-3">
                         <li><Link href="/about" className="text-secondary-300 hover:text-primary-400 transition">About Us</Link></li>
                         <li><Link href="/about#our-team" className="text-secondary-300 hover:text-primary-400 transition">Our Team</Link></li>
-                        <li><Link href="/join" className="text-secondary-300 hover:text-primary-400 transition">Careers</Link></li>
+                        
                     </ul>
                 </div>
         
@@ -79,12 +77,12 @@ const Footer = () => {
             
             <div className="pt-6 border-t border-secondary-800 text-secondary-400 text-sm">
             <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 text-center z-50">
-                <Link href="https://nexawebdev.com" className="hover:text-primary-400 transition">
-                Powered By Nexa Web
-                </Link>
-                <span className="hidden md:inline">|</span>
                 <Link href="/policy" className="hover:text-primary-400 transition">
                 Privacy Policy
+                </Link>
+                <span className="hidden md:inline">|</span>
+                <Link href="https://nexawebdev.com" className="hover:text-primary-400 transition">
+                Powered By Nexa Web
                 </Link>
                 <span className="hidden md:inline">|</span>
                 <p className="mt-2 md:mt-0">&copy; 2025 FireVolt. All rights reserved.</p>

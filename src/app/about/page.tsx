@@ -141,8 +141,8 @@ const AboutPage = () => {
             {/* Timeline Item 1 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2018 - Founding</h3>
-                    <p className="text-secondary-200 mb-2">Firevolt is founded by Hayden in Brisbane with a vision to help small businesses stay compliant.</p>
+                    <h3 className="text-xl font-bold mb-2">2023 Janurary - Founding</h3>
+                    <p className="text-secondary-200 mb-2">Firevolt is founded by Hayden after his service in the Australian Army.</p>
                     <span className="text-sm text-primary-300">June 15, 2018</span>
                 </div>
             </div>
@@ -150,7 +150,7 @@ const AboutPage = () => {
             {/* Timeline Item 2 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2020 - First Expansion</h3>
+                    <h3 className="text-xl font-bold mb-2">2023 March - First Expansion</h3>
                     <p className="text-secondary-200 mb-2">We gain our first client and start to supporting local businesses.</p>
                     <span className="text-sm text-primary-300">March 3, 2020</span>
                 </div>
@@ -159,7 +159,7 @@ const AboutPage = () => {
             {/* Timeline Item 3 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2021 - Provide a Service</h3>
+                    <h3 className="text-xl font-bold mb-2">2023 December - Provide a Service</h3>
                     <p className="text-secondary-200 mb-2">We provide our first full packaged service to local businesses.</p>
                     <span className="text-sm text-primary-300">October 22, 2021</span>
                 </div>
@@ -168,7 +168,7 @@ const AboutPage = () => {
             {/* Timeline Item 4 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2022 - Building a Team</h3>
+                    <h3 className="text-xl font-bold mb-2">2024 January - Building a Team</h3>
                     <p className="text-secondary-200 mb-2">We start to build a team to support our clients.</p>
                     <span className="text-sm text-primary-300">January 8, 2022</span>
                 </div>
@@ -177,7 +177,7 @@ const AboutPage = () => {
             {/* Timeline Item 5 */}
             <div className="relative timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2023 - Today</h3>
+                    <h3 className="text-xl font-bold mb-2">2024 - Today</h3>
                     <p className="text-secondary-200 mb-2">Serving over 100+ businesses in Brisbane and surrounding areas.</p>
                     <span className="text-sm text-primary-300">Present</span>
                 </div>
@@ -195,9 +195,9 @@ const AboutPage = () => {
                 <p className="text-secondary-600 max-w-2xl mx-auto">Seasoned professionals with decades of combined experience</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 {/* Team Member 1 */}
-                <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
+                <div className="team-card col-2 bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
                     <div className="h-64 overflow-hidden">
                         <Image 
                         src="/images/hayden-img.webp" 
@@ -212,8 +212,11 @@ const AboutPage = () => {
                         <p className="text-primary-600 mb-3">Founder & CEO</p>
                         <p className="text-secondary-600 text-sm mb-4">Over a decade of experience in the military and now helping small businesses stay compliant.</p>
                         <div className="flex space-x-3">
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faLinkedin} /></a>
-                            <a href="mailto:service@firevolt.com.au" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faEnvelope} /></a>
+                            <a href="https://www.linkedin.com/in/haydenheath/" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faLinkedin} /></a>
+                            <a href="mailto:service@firevolt.com.au" className="text-secondary-400 hover:text-primary-600 transition">
+                                <FontAwesomeIcon icon={faEnvelope} />
+                            </a>
+                            
                         </div>
                     </div>
                 </div>

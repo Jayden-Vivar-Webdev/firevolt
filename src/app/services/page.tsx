@@ -70,6 +70,9 @@ const categories = [
   
 return (
     <>
+    <main>
+
+    
       {/* Hero Section */}
       <section className="hero-bg text-white py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">
@@ -120,7 +123,18 @@ return (
          
         </div>
       </section>
-      
+      {/* CTA Section */}
+      <section className="cta-bg text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Business Compliant?</h2>
+            <p className="text-lg max-w-3xl mx-auto mb-10 text-secondary-200">We&apos;re here to help you stay compliant and safe.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="/contact" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
+              <a onClick={togglePopup} className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-0.1">Free Quote</a>
+            </div>
+          </div>
+        </section>
+        </main>
       </>
 
   )

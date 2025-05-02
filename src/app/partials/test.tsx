@@ -78,11 +78,17 @@ const TestAndTag = () => {
           Under AS/NZS 3760, workplaces must regularly test all portable electrical equipment. Failure to comply may void insurance and can result in fines up to $30,000 for non-compliance with WHS regulations.
         </p>
       </div>
-      
+      <div className="flex gap-2">
       <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg">
         Book Test & Tag Service
         <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
       </a>
+      <a href="https://irp.cdn-website.com/94ddd8b4/files/uploaded/Electrical%20Test%20%26%20Tag%20Interval%20Guide%20.pdf" className="border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
+        Download Free Test & Tag Guide
+        <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
+      </a>
+      </div>
+      
     </div>
     <div className="lg:w-1/2 order-1 lg:order-2">
       <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
