@@ -350,7 +350,7 @@ const ContactPage = () => {
                 </button>
 
                 {isFaqOpen1 && <div className="faq-content mt-2 text-secondary-600">
-                    <p>We provide fire safety services to all areas of Queensland. Our basic fire safety services start with no minimum investment requirement, while our premium fire safety services typically require a minimum portfolio of $100,000. We believe in accessible fire safety advice for everyone.</p>
+                    <p>We provide fire safety services in Queensland, to see our service area please locate our map on this page and see the servicing area. We believe in accessible fire safety advice for everyone.</p>
                 </div>}
                 
             </div>
@@ -378,7 +378,7 @@ const ContactPage = () => {
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
                 {isFaqOpen3 && <div className="faq-content mt-2 text-secondary-600">
-                    <p>Our approach combines cutting-edge technology with personalized service. We use advanced experience to optimize your fire safety and compliance measures.</p>
+                    <p>Our approach combines cutting-edge technology with personalised service. We use advanced experience to optimise your fire safety and compliance measures.</p>
                 </div>}
                 
             </div>
@@ -392,7 +392,7 @@ const ContactPage = () => {
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
                 {isFaqOpen4 &&  <div className="faq-content mt-2 text-secondary-600">
-                    <p>We typically schedule quarterly check-ins, but the frequency can be adjusted based on your needs. Between meetings you&apos;ll have access to our fire safety experts. We&apos;re always available when important fire safety decisions arise.</p>
+                    <p>We typically schedule quarterly check-ins, but the frequency can be adjusted based on your needs. Between meetings you&apos;ll have access to our fire safety experts. We&apos;re always available for our clients.</p>
                 </div>}
                
             </div>
