@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-// tailwind.config.js
+
+
 module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',       // All pages in app directory
@@ -55,7 +56,6 @@ module.exports = {
     }
 },
   plugins: [
-    
   ],
 };
 

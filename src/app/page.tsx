@@ -28,6 +28,15 @@ const HomePage = () => {
   //Category for galleries
   const [selectedCategory, setSelectedCategory] = useState('extinguishers-gallery');
 
+  //Information Evac and diagram
+  const [selectedInfo, setSelectedInfo] = useState('Whats Included');
+
+
+  //Function to set infoSection 
+  const toggleInfo = (info: string) => {
+    setSelectedInfo(info);
+  }
+
   //Toggle category function
   const toggleCategory = (category: string) => {
     setSelectedCategory(category);
@@ -64,6 +73,47 @@ const HomePage = () => {
 
   }
 
+  const infoSection = [
+    {
+      name: 'Whats Included',
+      components: {
+        title: 'Whats Inluded In Our Evacuation Diagrams',
+        points: ['Floor plan with clear exit routes', 
+        'Assembly area locations', 
+        'Emergency equipment locations', 'You Are Here indicators', 
+        'Standardized emergency symbols', 'Legend explaining all symbols']
+      }
+    },
+    {
+      name: 'Legal Requirements',
+      components: {
+        title: 'Consider the following requirements', 
+        points: ['Diagrams must include the "You Are Here" location', 'The evacuation diagram must be correctly oriented', 
+        'Diagrams must be displayed in conspicuous positions', 'Must use standardised symbols', 
+        , 'Review and maintenance must be conducted']
+      }
+    },
+    {
+      name: 'Placement Guide',
+      components: {
+      title: 'Best placements includes the follow',
+      points: ['Visable and easily accessible', 'Height guidelines 1200 mm and 1600 mm from the floor', 
+        'Place diagrams at key decision points', 'Large or complex buildings require multiple diagrams', 
+        'Key Location', 'Diagrams must be permanently affixed']
+      }
+    },
+    {
+      name: 'Update Frequency',
+      components: {
+        title: 'What the law says',
+        points: ['Review every 5 years', 'Update after building changes', 
+        'Post renovation checks', 'Ongoing Maintenance', 
+        'Annual emergency review', 'Emergency Planning Committee (EPC) Responsibility']
+      }
+      
+    }
+
+  ]
 
   const categories = [
     {
@@ -294,7 +344,8 @@ const HomePage = () => {
 
   ]
   
-  
+
+  const selectedData = infoSection.find(info => info.name === selectedInfo);
 
   const selectedCategoryData = categories.find(
     (category) => category.filter === selectedCategory
@@ -660,16 +711,17 @@ const HomePage = () => {
     
         {/* Testimonials Section */}
         <section className="py-20 bg-secondary-50" id="testimonials">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 ">
             <div className="text-center mb-16">
               <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
               <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their business future with Firevolt.</p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
+            <div className="flex overflow-x-auto snap-x snap-mandatory h-fit gap-10 mx-auto hide-scrollbar p-4 scroll-smooth">
               {/* Testimonial 1 */}
-              <div className="testimonial-slide active bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+
+                <div className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Great training today with Fire volt. Very informative and professional whilst creating a fantastic fun and learning environment. Would highly recommend.
@@ -692,8 +744,10 @@ const HomePage = () => {
                 </div>
               </div>
               
+              
+              
               {/* Testimonial 2 */}
-              <div className="testimonial-slide bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <div className="testimonials min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Thanks so much for our training today at Apollo Hayden and Ally. Very well done and clearly explained and good to get everyone involved to learn how to handle a fire blanket and extinguisher.
@@ -717,7 +771,7 @@ const HomePage = () => {
               </div>
               
               {/* Testimonial 3 */}
-              <div className="testimonial-slide bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <div className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Hayden from Firevolt supplied fire extinguishers and helped make my business compliant. He was very helpful, reliable, and provided great advice. Highly recommended for any business owners!
@@ -740,12 +794,6 @@ const HomePage = () => {
                 </div>
               </div>
               
-              {/* Slider Navigation */}
-              <div className="flex justify-center mt-8 space-x-2">
-                <button className="slider-dot w-3 h-3 rounded-full bg-gray-300 active bg-primary-600" data-slide="0"></button>
-                <button className="slider-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
-                <button className="slider-dot w-3 h-3 rounded-full bg-gray-300" data-slide="2"></button>
-              </div>
             </div>
           </div>
         </section>
@@ -1215,69 +1263,39 @@ const HomePage = () => {
     {/* Detailed Information Tabs */}
     <div className="mt-20 p-8 bg-gray-50 rounded-xl p-1 max-w-4xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-1 pb-8">
-        <button className="emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition bg-primary-600 text-white">
-          What&apos;s Included
+
+        {/* {infoSection.map((info) => ()) */}
+        
+        {infoSection.map(info => (
+          <button 
+          key={info.name} 
+          onClick={() => toggleInfo(info.name)}
+          className={`emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition ${selectedInfo === info.name ? 'bg-primary-600 text-white' : 'hover:bg-gray-100'}`}>
+          {info.name}
         </button>
-        <button className="emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition hover:bg-gray-100">
-          Legal Requirements
-        </button>
-        <button className="emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition hover:bg-gray-100">
-          Placement Guide
-        </button>
-        <button className="emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition hover:bg-gray-100">
-          Update Frequency
-        </button>
+        ))
+        }
       </div>
 
       <div className="flex flex-col justify-around">
         {/* Tab Content - What's Included */}
         <div className="emergency-tab-content active">
-          <h3 className="text-xl font-bold mb-4">What&apos;s Included in Our Evacuation Diagrams</h3>
+
+        {selectedData && (
+          <>
+          <h3 className="text-xl font-bold mb-4">{selectedData.components.title}</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>Floor plan with clear exit routes</span>
-              </li>
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>Assembly area locations</span>
-              </li>
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>Emergency equipment locations</span>
-              </li>
-            </ul>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>You Are Here indicators</span>
-              </li>
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>Standardized emergency symbols</span>
-              </li>
-              <li className="flex items-start">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
-                <span>Legend explaining all symbols</span>
-              </li>
-            </ul>
+              <ul className="space-y-3">
+                {selectedData.components.points.map((point, index) => (
+                  <li key={index} className="flex items-start">
+                    <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-3 flex-shrink-0" />
+                    <span key={index}>{point}</span>
+                  </li>
+                ))}
+              </ul>
           </div>
-        </div>
-
-        {/* Tab Content - Legal Requirements (hidden by default) */}
-        <div className="emergency-tab-content hidden">
-          {/* Content would go here */}
-        </div>
-
-        {/* Tab Content - Placement Guide (hidden by default) */}
-        <div className="emergency-tab-content hidden">
-          {/* Content would go here */}
-        </div>
-
-        {/* Tab Content - Update Frequency (hidden by default) */}
-        <div className="emergency-tab-content hidden">
-          {/* Content would go here */}
+          </>
+        )}
         </div>
       </div>
     </div>

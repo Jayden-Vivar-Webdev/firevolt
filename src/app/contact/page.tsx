@@ -422,7 +422,7 @@ const ContactPage = () => {
         <a href="#contact-us" className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Book a Consultation</a>
     </div>
 </section>
-
+ 
 
     
     
