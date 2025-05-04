@@ -11,7 +11,7 @@ const QuickLink = () => {
     const phoneNumber = "1300533294"; // Replace with your phone number
 
     return (
-      <div className="fixed bottom-4 right-5 z-10">
+      <div className="fixed bottom-4 right-5 z-50">
         <a href={`tel:${phoneNumber}`} className="block">
           <div className='bg-primary-600 h-10 w-10 rounded-full flex items-center justify-center'>
             <FontAwesomeIcon icon={faPhone} className='text-white'/>
