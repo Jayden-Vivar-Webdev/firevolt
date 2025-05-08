@@ -23,6 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <body>
       <Navbar />
         {children}
+        
         <QuickLink />
         <Footer />
         
