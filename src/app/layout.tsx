@@ -15,7 +15,11 @@ const inter = Inter({
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={inter.className}>
-      
+      <link
+          rel="preload"
+          href="/images/compliance_img.webp"
+          as="image"
+        />
       <body>
       <Navbar />
         {children}
