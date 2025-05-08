@@ -8,9 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useRef } from 'react';
+import type { Metadata } from 'next'
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
   description: "Firevolt provides comprehensive fire safety services including test & tag, emergency planning, fire training, and extinguisher services across Brisbane. Stay compliant with our expert solutions.",
   openGraph: {

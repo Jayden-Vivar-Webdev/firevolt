@@ -16,8 +16,9 @@ import Compliance from '../partials/compliance';
 import Test from '../partials/test';
 import { useState } from 'react';
 import FreeCompliance from '../partials/free_cc';
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Professional Fire Safety Services Brisbane | Firevolt Solutions",
   description: "Firevolt offers expert fire safety services in Brisbane including test & tag, fire warden training, extinguisher servicing & compliance solutions. Protect your business today.",
   openGraph: {

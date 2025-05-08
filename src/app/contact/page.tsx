@@ -2,8 +2,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faUserTie, faLock, faHandshake, faClock } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact Firevolt | Brisbane Fire Safety Experts | Quick Response",
   description: "Need fire safety services in Brisbane? Contact Firevolt today for test & tag, fire training, extinguisher servicing & compliance solutions. Call ☎️ [Your Number] or message us!",
   openGraph: {
