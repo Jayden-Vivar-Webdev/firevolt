@@ -410,6 +410,7 @@ const HomePage = () => {
                     width={500} 
                     height={300} 
                     className="w-full h-full object-cover transition duration-500" 
+                    priority
                   />
                   <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Highly Rated</span>
                 </div>
