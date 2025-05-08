@@ -156,7 +156,7 @@ to {
 }
 
 .hero-bg {
-    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('/images/compliance_img.jpeg');
+    background: linear-gradient(rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.9)), url('/images/compliance_img.webp');
     background-size: cover;
     background-position: center;
 }

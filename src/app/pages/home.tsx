@@ -405,7 +405,7 @@ const HomePage = () => {
                 <div className="service-img h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 z-10"></div>
                   <Image 
-                    src="/images/compliance_img.jpeg" 
+                    src="/images/compliance_img.webp" 
                     alt="Fire Compliance Services by Firevolt" 
                     width={500} 
                     height={300} 
