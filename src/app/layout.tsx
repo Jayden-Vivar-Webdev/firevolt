@@ -3,11 +3,18 @@ import "./output.css";
 import "./styles.css";
 import Footer from "./partials/footer";
 import QuickLink from "./partials/quicklink";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       
       <body>
       <Navbar />
