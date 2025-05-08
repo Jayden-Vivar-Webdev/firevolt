@@ -1474,6 +1474,13 @@ video {
   display: none;
 }
 
+*{
+  scrollbar-color:
+      initial;
+  scrollbar-width:
+      initial;
+}
+
 /*
   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
   2. Remove default margins and padding
@@ -2061,6 +2068,16 @@ button,
       1rem;
 }
 
+.left-4{
+  left:
+      1rem;
+}
+
+.top-1\/2{
+  top:
+      50%;
+}
+
 .z-10{
   z-index:
       10;
@@ -2091,42 +2108,11 @@ button,
       1.5rem;
 }
 
-.m-20{
-  margin:
-      5rem;
-}
-
-.m-\[10rem\]{
-  margin:
-      10rem;
-}
-
 .mx-auto{
   margin-left:
       auto;
   margin-right:
       auto;
-}
-
-.mx-20{
-  margin-left:
-      5rem;
-  margin-right:
-      5rem;
-}
-
-.mx-10{
-  margin-left:
-      2.5rem;
-  margin-right:
-      2.5rem;
-}
-
-.mx-\[10rem\]{
-  margin-left:
-      10rem;
-  margin-right:
-      10rem;
 }
 
 .mb-1{
@@ -2269,6 +2255,11 @@ button,
       inline-block;
 }
 
+.inline{
+  display:
+      inline;
+}
+
 .flex{
   display:
       flex;
@@ -2314,11 +2305,6 @@ button,
       4rem;
 }
 
-.h-3{
-  height:
-      0.75rem;
-}
-
 .h-32{
   height:
       8rem;
@@ -2354,16 +2340,21 @@ button,
       auto;
 }
 
-.h-full{
-  height:
-      100%;
-}
-
 .h-fit{
   height:
       -moz-fit-content;
   height:
       fit-content;
+}
+
+.h-full{
+  height:
+      100%;
+}
+
+.h-4{
+  height:
+      1rem;
 }
 
 .max-h-16{
@@ -2411,11 +2402,6 @@ button,
       5rem;
 }
 
-.w-3{
-  width:
-      0.75rem;
-}
-
 .w-3\/6{
   width:
       50%;
@@ -2436,11 +2422,6 @@ button,
       2rem;
 }
 
-.w-\[100vw\]{
-  width:
-      100vw;
-}
-
 .w-auto{
   width:
       auto;
@@ -2451,64 +2432,19 @@ button,
       100%;
 }
 
-.min-w-\[300px\]{
-  min-width:
-      300px;
+.w-4{
+  width:
+      1rem;
 }
 
-.min-w-\[100vh\]{
-  min-width:
-      100vh;
-}
-
-.min-w-\[100vw\]{
-  min-width:
+.w-\[100vw\]{
+  width:
       100vw;
-}
-
-.min-w-\[100\%\]{
-  min-width:
-      100%;
 }
 
 .min-w-full{
   min-width:
       100%;
-}
-
-.min-w-\[20rem\]{
-  min-width:
-      20rem;
-}
-
-.min-w-\[10rem\]{
-  min-width:
-      10rem;
-}
-
-.min-w-\[1rem\]{
-  min-width:
-      1rem;
-}
-
-.min-w-\[30rem\]{
-  min-width:
-      30rem;
-}
-
-.min-w-\[400px\]{
-  min-width:
-      400px;
-}
-
-.min-w-\[380px\]{
-  min-width:
-      380px;
-}
-
-.min-w-\[500px\]{
-  min-width:
-      500px;
 }
 
 .max-w-2xl{
@@ -2536,51 +2472,6 @@ button,
       28rem;
 }
 
-.max-w-\[20rem\]{
-  max-width:
-      20rem;
-}
-
-.max-w-\[10rem\]{
-  max-width:
-      10rem;
-}
-
-.max-w-\[100rem\]{
-  max-width:
-      100rem;
-}
-
-.max-w-1{
-  max-width:
-      0.25rem;
-}
-
-.max-w-full{
-  max-width:
-      100%;
-}
-
-.max-w-\[80\%\]{
-  max-width:
-      80%;
-}
-
-.max-w-\[100vw\%\]{
-  max-width:
-      100vw%;
-}
-
-.max-w-\[100vw\]{
-  max-width:
-      100vw;
-}
-
-.max-w-\[500px\]{
-  max-width:
-      500px;
-}
-
 .flex-1{
   flex:
       1 1 0%;
@@ -2591,11 +2482,6 @@ button,
       0;
 }
 
-.flex-shrink{
-  flex-shrink:
-      1;
-}
-
 .translate-y-4{
   --tw-translate-y:
       1rem;
@@ -2603,19 +2489,16 @@ button,
       translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.transform{
+.-translate-y-1\/2{
+  --tw-translate-y:
+      -50%;
   transform:
       translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer{
-  cursor:
-      pointer;
-}
-
-.cursor-all-scroll{
-  cursor:
-      all-scroll;
+.transform{
+  transform:
+      translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .snap-x{
@@ -2678,11 +2561,6 @@ button,
       center;
 }
 
-.items-stretch{
-  align-items:
-      stretch;
-}
-
 .justify-center{
   justify-content:
       center;
@@ -2738,13 +2616,9 @@ button,
       2rem;
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse:
-      0;
-  margin-right:
-      calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left:
-      calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+.gap-5{
+  gap:
+      1.25rem;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
@@ -2819,33 +2693,6 @@ button,
       calc(2rem * var(--tw-space-y-reverse));
 }
 
-.space-x-10 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse:
-      0;
-  margin-right:
-      calc(2.5rem * var(--tw-space-x-reverse));
-  margin-left:
-      calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse:
-      0;
-  margin-right:
-      calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left:
-      calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-6 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse:
-      0;
-  margin-right:
-      calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left:
-      calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .overflow-hidden{
   overflow:
       hidden;
@@ -2859,6 +2706,16 @@ button,
 .overflow-y-auto{
   overflow-y:
       auto;
+}
+
+.overflow-x-scroll{
+  overflow-x:
+      scroll;
+}
+
+.overflow-y-scroll{
+  overflow-y:
+      scroll;
 }
 
 .scroll-smooth{
@@ -3020,6 +2877,25 @@ button,
       rgb(255 255 255 / 0.3);
 }
 
+.border-gray-500{
+  --tw-border-opacity:
+      1;
+  border-color:
+      rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#e53e3e\]{
+  --tw-border-opacity:
+      1;
+  border-color:
+      rgb(229 62 62 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#e53e3eba\]{
+  border-color:
+      #e53e3eba;
+}
+
 .bg-black\/20{
   background-color:
       rgb(0 0 0 / 0.2);
@@ -3042,13 +2918,6 @@ button,
       1;
   background-color:
       rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-300{
-  --tw-bg-opacity:
-      1;
-  background-color:
-      rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-50{
@@ -3160,6 +3029,72 @@ button,
       1;
   background-color:
       rgb(254 249 195 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cyan-500{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(6 182 212 / var(--tw-bg-opacity, 1));
+}
+
+.bg-pink-500{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(236 72 153 / var(--tw-bg-opacity, 1));
+}
+
+.bg-purple-500{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(168 85 247 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-500{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(107 114 128 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-400{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-300{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-500{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#e53e3e\]{
+  --tw-bg-opacity:
+      1;
+  background-color:
+      rgb(229 62 62 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#e53e3eba\]{
+  background-color:
+      #e53e3eba;
+}
+
+.bg-\[\#e53e3ed1\]{
+  background-color:
+      #e53e3ed1;
 }
 
 .bg-gradient-to-b{
@@ -3296,11 +3231,6 @@ button,
       2rem;
 }
 
-.p-20{
-  padding:
-      5rem;
-}
-
 .px-10{
   padding-left:
       2.5rem;
@@ -3392,20 +3322,6 @@ button,
       1rem;
 }
 
-.py-10{
-  padding-top:
-      2.5rem;
-  padding-bottom:
-      2.5rem;
-}
-
-.px-20{
-  padding-left:
-      5rem;
-  padding-right:
-      5rem;
-}
-
 .pb-1{
   padding-bottom:
       0.25rem;
@@ -3464,6 +3380,16 @@ button,
 .pt-6{
   padding-top:
       1.5rem;
+}
+
+.pb-\[30px\]{
+  padding-bottom:
+      30px;
+}
+
+.pb-\[\]{
+  padding-bottom:
+      ;
 }
 
 .text-left{
@@ -3923,6 +3849,53 @@ button,
       500ms;
 }
 
+.scrollbar-thin::-webkit-scrollbar-track{
+  background-color:
+      var(--scrollbar-track);
+  border-radius:
+      var(--scrollbar-track-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb{
+  background-color:
+      var(--scrollbar-thumb);
+  border-radius:
+      var(--scrollbar-thumb-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner{
+  background-color:
+      var(--scrollbar-corner);
+  border-radius:
+      var(--scrollbar-corner-radius);
+}
+
+.scrollbar-thin{
+  scrollbar-width:
+      thin;
+  scrollbar-color:
+      var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+}
+
+.scrollbar-thin::-webkit-scrollbar{
+  display:
+      block;
+  width:
+      8px;
+  height:
+      8px;
+}
+
+.scrollbar-track-gray-300{
+  --scrollbar-track:
+      #d1d5db;
+}
+
+.scrollbar-thumb-blue-500{
+  --scrollbar-thumb:
+      #3b82f6;
+}
+
 @tailwind utilities;
 
 .hover\:-translate-y-1:hover{
@@ -3935,6 +3908,24 @@ button,
 .hover\:translate-y-\[-8px\]:hover{
   --tw-translate-y:
       -8px;
+  transform:
+      translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-110:hover{
+  --tw-scale-x:
+      1.1;
+  --tw-scale-y:
+      1.1;
+  transform:
+      translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-125:hover{
+  --tw-scale-x:
+      1.25;
+  --tw-scale-y:
+      1.25;
   transform:
       translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -4060,6 +4051,20 @@ button,
       var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-red-300:hover{
+  --tw-shadow-color:
+      #fca5a5;
+  --tw-shadow:
+      var(--tw-shadow-colored);
+}
+
+.hover\:shadow-\[\#e53e3e\]:hover{
+  --tw-shadow-color:
+      #e53e3e;
+  --tw-shadow:
+      var(--tw-shadow-colored);
+}
+
 .focus\:border-transparent:focus{
   border-color:
       transparent;
@@ -4124,13 +4129,6 @@ button,
 }
 
 @media (min-width: 640px){
-  .sm\:mx-\[20rem\]{
-    margin-left:
-      20rem;
-    margin-right:
-      20rem;
-  }
-
   .sm\:w-4\/5{
     width:
       80%;
@@ -4158,20 +4156,6 @@ button,
 }
 
 @media (min-width: 768px){
-  .md\:mx-\[20rem\]{
-    margin-left:
-      20rem;
-    margin-right:
-      20rem;
-  }
-
-  .md\:mx-\[2rem\]{
-    margin-left:
-      2rem;
-    margin-right:
-      2rem;
-  }
-
   .md\:mt-0{
     margin-top:
       0px;
@@ -4308,13 +4292,6 @@ button,
       2;
   }
 
-  .lg\:mx-\[20rem\]{
-    margin-left:
-      20rem;
-    margin-right:
-      20rem;
-  }
-
   .lg\:mb-2{
     margin-bottom:
       0.5rem;
@@ -4350,26 +4327,6 @@ button,
       66.666667%;
   }
 
-  .lg\:min-w-\[5rem\]{
-    min-width:
-      5rem;
-  }
-
-  .lg\:min-w-\[10rem\]{
-    min-width:
-      10rem;
-  }
-
-  .lg\:min-w-\[20rem\]{
-    min-width:
-      20rem;
-  }
-
-  .lg\:min-w-\[30rem\]{
-    min-width:
-      30rem;
-  }
-
   .lg\:grid-cols-2{
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
@@ -4400,20 +4357,6 @@ button,
       space-between;
   }
 
-  .lg\:px-20{
-    padding-left:
-      5rem;
-    padding-right:
-      5rem;
-  }
-
-  .lg\:px-\[20rem\]{
-    padding-left:
-      20rem;
-    padding-right:
-      20rem;
-  }
-
   .lg\:text-6xl{
     font-size:
       3.75rem;
@@ -4431,6 +4374,11 @@ button,
   .xl\:w-2\/3{
     width:
       66.666667%;
+  }
+
+  .xl\:min-w-\[28rem\]{
+    min-width:
+      28rem;
   }
 
   .xl\:grid-cols-4{

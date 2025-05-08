@@ -7,7 +7,139 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { useRef } from 'react';
 
+
+export const metadata = {
+  title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
+  description: "Firevolt provides comprehensive fire safety services including test & tag, emergency planning, fire training, and extinguisher services across Brisbane. Stay compliant with our expert solutions.",
+  openGraph: {
+    title: "Fire Safety Compliance Services Brisbane | Firevolt",
+    description: "Brisbane's trusted fire safety experts offering test & tag, fire warden training, extinguisher services & compliance solutions for businesses.",
+    url: "https://www.firevolt.com.au",
+    siteName: "Firevolt Fire Safety Experts",
+    images: [
+      {
+        url: "/images/meta/twitter-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Firevolt Fire Safety Services Brisbane",
+      },
+    ],
+    type: "website",
+    locale: "en_AU",
+  },
+  keywords: [
+    "fire safety Brisbane",
+    "test and tag services QLD",
+    "fire warden training",
+    "fire extinguisher servicing",
+    "compliance services Brisbane",
+    "emergency procedures planning",
+    "fire equipment training",
+    "business fire safety",
+    "fire compliance experts",
+    "Brisbane fire services",
+    "Fire Services Acacia Ridge",
+    "Fire Services Albany Creek",
+    "Fire Services Albion",
+    "Fire Services Archerfield",
+    "Fire Services Banyo",
+    "Fire Services Boondall",
+    "Fire Services Bray Park",
+    "Fire Services Brendale",
+    "Fire Services Bulimba",
+    "Fire Services Bulwer Island",
+    "Fire Services Burpengary",
+    "Fire Services Burpengary East",
+    "Fire Services Caboolture",
+    "Fire Services Caboolture South",
+    "Fire Services Capalaba",
+    "Fire Services Carole Park",
+    "Fire Services Chermside",
+    "Fire Services Chermside South",
+    "Fire Services Chermside West",
+    "Fire Services Coopers Plains",
+    "Fire Services Coorparoo",
+    "Fire Services Darra",
+    "Fire Services Deception Bay",
+    "Fire Services Doboy",
+    "Fire Services Doomben",
+    "Fire Services Eagle Farm",
+    "Fire Services Geebung",
+    "Fire Services Heathwood",
+    "Fire Services Hemmant",
+    "Fire Services Hendra",
+    "Fire Services Hillcrest",
+    "Fire Services Kedron",
+    "Fire Services Larapinta",
+    "Fire Services Lawnton",
+    "Fire Services Lindum",
+    "Fire Services Lytton",
+    "Fire Services Meeandah",
+    "Fire Services Morayfield",
+    "Fire Services Myrtletown",
+    "Fire Services Narangba",
+    "Fire Services Newstead",
+    "Fire Services North Lakes",
+    "Fire Services Northgate",
+    "Fire Services Nudgee",
+    "Fire Services Nudgee Beach",
+    "Fire Services Nundah",
+    "Fire Services Parkinson",
+    "Fire Services Pinkenba",
+    "Fire Services Port of Brisbane",
+    "Fire Services Redbank",
+    "Fire Services Redbank Plains",
+    "Fire Services Richlands",
+    "Fire Services Rochedale",
+    "Fire Services Rocklea",
+    "Fire Services Salisbury",
+    "Fire Services Sandstone Point",
+    "Fire Services Springfield Central",
+    "Fire Services Springfield Lakes",
+    "Fire Services Stafford",
+    "Fire Services Strathpine",
+    "Fire Services Sumner",
+    "Fire Services Sunnybank Hills",
+    "Fire Services Toombul",
+    "Fire Services Virginia",
+    "Fire Services Wacol",
+    "Fire Services Warner",
+    "Fire Services Whinstanes",
+    "Fire Services Wynnum Central",
+    "Fire Services Wynnum North",
+    "Fire Services Yeerongpilly",
+    "and Fire Services Zillmere",
+    
+  ],
+  authors: [{ name: "Firevolt Team", url: "https://www.firevolt.com.au" }],
+  alternates: {
+    canonical: "https://www.firevolt.com.au",
+  },
+  metadataBase: new URL("https://www.firevolt.com.au"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  //Get hayden to add google verification code
+  // verification: {
+  //   google: "Add Google Verification Code",
+  // },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
+    description: "Protect your business with Firevolt's comprehensive fire safety services across Brisbane.",
+    images: ["/images/meta/twitter-card.png"],
+  },
+};
 
 const HomePage = () => {
 
@@ -19,7 +151,7 @@ const HomePage = () => {
   const [isFaqOpen2, setIsFaqOpen2] = useState(false);
   const [isFaqOpen3, setIsFaqOpen3] = useState(false);
   const [isFaqOpen4, setIsFaqOpen4] = useState(false);
- 
+
   //Open or close popup form
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -41,6 +173,18 @@ const HomePage = () => {
   const toggleCategory = (category: string) => {
     setSelectedCategory(category);
   };
+
+  const testimonial1Ref = useRef<HTMLDivElement | null>(null);
+  const testimonial2Ref = useRef<HTMLDivElement | null>(null);
+  const testimonial3Ref = useRef<HTMLDivElement | null>(null);
+
+  const scrollTo = (ref: React.RefObject<HTMLDivElement | null>) => {
+    ref.current?.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'start',
+      block: 'nearest',
+    });
+  };  
 
   //Download free emergency pdf form submission
   async function submitForm(formData: FormData): Promise<void> {
@@ -340,8 +484,6 @@ const HomePage = () => {
         
       ]
     },
-   
-
   ]
   
 
@@ -351,7 +493,6 @@ const HomePage = () => {
     (category) => category.filter === selectedCategory
   );
 
- 
 
   return (
       <>
@@ -718,10 +859,10 @@ const HomePage = () => {
               <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their business future with Firevolt.</p>
             </div>
             
-            <div className="flex overflow-x-auto snap-x snap-mandatory h-fit gap-10 mx-auto hide-scrollbar p-4 scroll-smooth">
+            <div className="flex pb-[] overflow-x-auto snap-x snap-mandatory h-fit gap-10 mx-auto hide-scrollbar p-4 scroll-smooth">
               {/* Testimonial 1 */}
 
-                <div className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <div ref={testimonial1Ref}  className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Great training today with Fire volt. Very informative and professional whilst creating a fantastic fun and learning environment. Would highly recommend.
@@ -747,7 +888,7 @@ const HomePage = () => {
               
               
               {/* Testimonial 2 */}
-              <div className="testimonials min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <div ref={testimonial2Ref}  className="testimonials min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Thanks so much for our training today at Apollo Hayden and Ally. Very well done and clearly explained and good to get everyone involved to learn how to handle a fire blanket and extinguisher.
@@ -771,7 +912,7 @@ const HomePage = () => {
               </div>
               
               {/* Testimonial 3 */}
-              <div className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <div ref={testimonial3Ref}  className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-lg text-secondary-700 mb-6 relative">
                   <span className="absolute -top-4 -left-4 text-primary-400 text-4xl opacity-50">&quot;</span>
                   Hayden from Firevolt supplied fire extinguishers and helped make my business compliant. He was very helpful, reliable, and provided great advice. Highly recommended for any business owners!
@@ -792,10 +933,40 @@ const HomePage = () => {
                     <p className="text-secondary-500">Business Compliance</p>
                   </div>
                 </div>
+                    
               </div>
               
+
+              
             </div>
+            <div className="flex justify-center items-center gap-4 z-50">
+              <button 
+                onClick={() => scrollTo(testimonial1Ref)} 
+                className="w-4 h-4 rounded-full bg-[#e53e3ed1]
+                border border-[#e53e3eba] shadow-md 
+                hover:scale-125
+                transition-all duration-300"
+              ></button>
+
+              <button 
+                onClick={() => scrollTo(testimonial2Ref)} 
+                className="w-4 h-4 rounded-full bg-[#e53e3ed1] 
+                border border-[#e53e3eba] shadow-md 
+                hover:scale-125
+                transition-all duration-300"
+              ></button>
+
+              <button 
+                onClick={() => scrollTo(testimonial3Ref)} 
+                className="w-4 h-4 rounded-full bg-[#e53e3ed1] 
+                border border-[#e53e3eba] shadow-md 
+                hover:scale-125
+                transition-all duration-300"
+              ></button>
+            </div>
+
           </div>
+              
         </section>
 
         {/* Veteran-Owned Business Section */}
