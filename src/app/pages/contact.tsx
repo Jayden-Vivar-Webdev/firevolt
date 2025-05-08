@@ -200,20 +200,28 @@ const ContactPage = () => {
                             id="message" 
                             rows={4} 
                             className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
-                            placeholder="Tell us about your goals..."
+                            placeholder="Tell us about your requirements..."
                           
                             />
                         </div>
 
                         {formStatus && (
                             <div 
-                            className={formStatus.includes("Success") ? "text-green-500 font-bold text-center mb-4 bg-green-100 border border-green-500 border-2 rounded-lg p-3" : "text-red-500 font-bold text-center mb-4 bg-red-100 border border-red-500 border-2 rounded-lg p-3"}
+                                className={`text-center mb-4 p-3 rounded-lg border-2 ${
+                                formStatus.includes("Success") 
+                                    ? "text-green-700 bg-green-50 border-green-300" 
+                                    : "text-red-700 bg-red-50 border-red-300"
+                                }`}
                             >
-                              <p className={formStatus.includes("Success") ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
+                                <p className={`font-medium ${
+                                formStatus.includes("Success") 
+                                    ? "text-green-700" 
+                                    : "text-red-700"
+                                }`}>
                                 {formStatus}
-                              </p>
+                                </p>
                             </div>
-                          )}
+                            )}
                   
                         
                         <button type="submit" className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-primary-700 transition shadow-md hover:shadow-lg">Send Message</button>

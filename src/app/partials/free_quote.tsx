@@ -114,13 +114,21 @@ const FreeQuote = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; togglePopu
                   {/* Services Section */}
                   {formStatus && (
                     <div 
-                    className={formStatus.includes("Success") ? "text-green-500 font-bold text-center mb-4 bg-green-100 border border-green-500 border-2 rounded-lg p-3" : "text-red-500 font-bold text-center mb-4 bg-red-100 border border-red-500 border-2 rounded-lg p-3"}
+                        className={`text-center mb-4 p-3 rounded-lg border-2 ${
+                        formStatus.includes("Success") 
+                            ? "text-green-700 bg-green-50 border-green-300" 
+                            : "text-red-700 bg-red-50 border-red-300"
+                        }`}
                     >
-                      <p className={formStatus.includes("Success") ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
+                        <p className={`font-medium ${
+                        formStatus.includes("Success") 
+                            ? "text-green-700" 
+                            : "text-red-700"
+                        }`}>
                         {formStatus}
-                      </p>
+                        </p>
                     </div>
-                  )}
+                    )}
         
                   {/* Submit Button */}
                   <div className="pt-4">
