@@ -1143,12 +1143,12 @@ const HomePage = () => {
     
 
     {/* View More Button */}
-    <div className="text-center mt-12">
+    {/* <div className="text-center mt-12">
       <button className="inline-flex items-center justify-center bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg">
         View Full Gallery
         <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
       </button>
-    </div>
+    </div> */}
   </div>
 </section>
 
