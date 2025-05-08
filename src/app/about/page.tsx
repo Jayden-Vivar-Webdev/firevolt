@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faLightbulb, faHandsHelping, faBullseye, faEnvelope, faEye, faNetworkWired} from '@fortawesome/free-solid-svg-icons';
 import type { Metadata } from 'next'
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+
+
 export const metadata: Metadata = {
     title: "About Firevolt | Trusted Fire Safety Experts in Brisbane",
     description: "Firevolt is Brisbane's leading fire safety company with certified professionals providing test & tag, fire training, and compliance solutions since [YEAR]. Learn about our mission and expertise.",
