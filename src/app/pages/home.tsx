@@ -1565,7 +1565,7 @@ const HomePage = () => {
         </div>
         
   <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 h-auto lg:mt-12 ">
-  <div className="bg-primary-600 p-6 text-white">
+  <div className="bg-primary-10 p-6 text-white">
     <h3 className="text-xl font-bold flex items-center">
       <FontAwesomeIcon icon={faFileAlt} className="mr-3" />
       Our 4-Step Process
@@ -1577,7 +1577,7 @@ const HomePage = () => {
       {/* Step 1 */}
       <li className="flex">
         <div className="flex-shrink-0">
-          <span className="bg-primary-600 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">01</span>
+          <span className="bg-primary-10 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">01</span>
         </div>
         <div>
           <h4 className="font-bold text-lg mb-1">Contact Us</h4>
@@ -1590,7 +1590,7 @@ const HomePage = () => {
       {/* Step 2 */}
       <li className="flex items-start">
         <div className="flex-shrink-0">
-          <span className="bg-primary-600 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">02</span>
+          <span className="bg-primary-10 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">02</span>
         </div>
         <div>
           <h4 className="font-bold text-lg mb-1">Information Gathering</h4>
@@ -1603,7 +1603,7 @@ const HomePage = () => {
       {/* Step 3 */}
       <li className="flex items-start">
         <div className="flex-shrink-0">
-          <span className="bg-primary-600 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">03</span>
+          <span className="bg-primary-10 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">03</span>
         </div>
         <div>
           <h4 className="font-bold text-lg mb-1">Design & Approval</h4>
@@ -1616,7 +1616,7 @@ const HomePage = () => {
       {/* Step 4 */}
       <li className="flex items-start">
         <div className="flex-shrink-0">
-          <span className="bg-primary-600 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">04</span>
+          <span className="bg-primary-10 text-white text-lg font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">04</span>
         </div>
         <div>
           <h4 className="font-bold text-lg mb-1">Installation/Delivery</h4>
@@ -1806,7 +1806,7 @@ const HomePage = () => {
     <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
       <div className="md:flex">
         {/* Left Column - Visual */}
-        <div className="md:w-2/5 bg-primary-600 p-8 flex items-center justify-center">
+        <div className="md:w-2/5 bg-primary-10 p-8 flex items-center justify-center">
           <div className="text-center">
             <FontAwesomeIcon 
               icon={faFileDownload} 
