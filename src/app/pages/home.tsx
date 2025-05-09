@@ -1295,7 +1295,7 @@ const HomePage = () => {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href="/contact" className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
+          <a href="/contact" className="bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
             Get Your Diagrams
           </a>
           <a href="/compliance-guide" className="border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
@@ -1315,7 +1315,7 @@ const HomePage = () => {
           <button 
           key={info.name} 
           onClick={() => toggleInfo(info.name)}
-          className={`emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition ${selectedInfo === info.name ? 'bg-primary-600 text-white' : 'hover:bg-gray-100'}`}>
+          className={`emergency-tab-btn py-3 px-4 rounded-lg font-medium text-center transition ${selectedInfo === info.name ? 'bg-primary-10 text-white' : 'hover:bg-gray-100'}`}>
           {info.name}
         </button>
         ))
@@ -1424,7 +1424,7 @@ const HomePage = () => {
           
 
           <div className="mt-8 pt-6 border-t border-gray-200">
-            <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg w-full">
+            <a href="/contact" className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg w-full">
               Get Your Emergency Plan
               <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
             </a>
@@ -1638,7 +1638,7 @@ const HomePage = () => {
     </div>
     
     <div className="mt-8 pt-6 border-t border-gray-200">
-      <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg w-full">
+      <a href="/contact" className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg w-full">
         Start Your Emergency Plan
         <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
       </a>
@@ -1870,7 +1870,7 @@ const HomePage = () => {
             </div>
             <button 
               type="submit" 
-              className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              className="w-full bg-primary-10 hover:bg-primary-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
             >
               Download Now <FontAwesomeIcon icon={faArrowDown} className="ml-2" />
             </button>
