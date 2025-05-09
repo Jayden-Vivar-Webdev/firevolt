@@ -1351,7 +1351,7 @@ const HomePage = () => {
 <section className="py-20 bg-gray-50" id="emergency-plans">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
-      <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+      <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
         Workplace Safety
       </span>
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Emergency Plans</h2>
@@ -1435,7 +1435,7 @@ const HomePage = () => {
       {/* Plan Components Column */}
       <div className="flex flex-col justify-between xl:w-2/3 ">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 h-auto mb-12 lg:mb-2 ">
-          <div className="bg-primary-50 p-6 text-white">
+          <div className="bg-primary-10 p-6 text-white">
             <h3 className="text-xl font-bold flex items-center">
               <FontAwesomeIcon icon={faFileAlt} className="mr-3" />
               What&apos;s Included in Our Emergency Plans
