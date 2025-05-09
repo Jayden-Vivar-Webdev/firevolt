@@ -17,14 +17,14 @@ const Footer = () => {
                     </div>
                     <p className="text-center md:text-left mb-6 text-secondary-300">Fire compliance services for your business, that takes you to the next level.</p>
                     <div className="flex justify-around pr-5">
-                        <Link href="https://www.facebook.com/people/Firevolt/100086488210335/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link aria-label='Facebook Firevolt Link' href="https://www.facebook.com/people/Firevolt/100086488210335/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faFacebook} />
                         </Link>
                         
-                        <Link href="https://www.linkedin.com/in/haydenheath/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link aria-label='Linkedin Firevolt Link' href="https://www.linkedin.com/in/haydenheath/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Link>
-                        <Link href="https://www.instagram.com/firevolt._/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link aria-label='Instagram Firevolt Link' href="https://www.instagram.com/firevolt._/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faInstagram} />
                         </Link>
                     </div>
