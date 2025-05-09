@@ -114,6 +114,7 @@ const Navbar = () => {
           <button
             className="lg:hidden text-2xl focus:outline-none text-secondary-600 absolute right-6"
             id="mobile-menu-button"
+            aria-label='Mobile Menu Button'
             onClick={toggleMobileMenu}
           >
             <FontAwesomeIcon icon={faBars} />
