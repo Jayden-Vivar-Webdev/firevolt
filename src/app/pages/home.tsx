@@ -1887,7 +1887,7 @@ const HomePage = () => {
 <section className="py-16 bg-gray-50">
   <div className="container mx-auto px-4">
     <div className="text-center mb-12">
-      <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+      <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
         Trusted By
       </span>
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Businesses We&apos;ve Served</h2>
