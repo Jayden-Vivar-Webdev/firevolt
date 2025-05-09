@@ -28,7 +28,7 @@ const ContactPage = () => {
         body: JSON.stringify(formValues)
       });
       if(response.ok){
-        setFormStatus('Success, you will be contacted within 24hrs.')
+        setFormStatus('Success, you will be contacted within 24hrs. Please check your junk email for confirmation.')
         console.log('Success, Form Sent')
       } else {
         console.error('Failed to send message')
