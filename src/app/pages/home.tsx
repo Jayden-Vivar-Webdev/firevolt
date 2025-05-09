@@ -861,7 +861,7 @@ const HomePage = () => {
               
               {/* Content Column */}
               <div className="md:w-2/3">
-                <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
                   Veteran Owned & Operated
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -913,7 +913,7 @@ const HomePage = () => {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white" id="training-package">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
               Comprehensive Training
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -1087,7 +1087,7 @@ const HomePage = () => {
 <section className="py-20 bg-gray-50" id="gallery">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
-      <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+      <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
         Our Work
       </span>
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Fire Safety In Action</h2>
@@ -1233,7 +1233,7 @@ const HomePage = () => {
 
       {/* Content Column */}
       <div className="lg:w-1/1">
-        <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
           Compliance Essential
         </span>
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
