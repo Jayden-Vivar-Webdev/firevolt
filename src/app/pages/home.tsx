@@ -1819,7 +1819,7 @@ const HomePage = () => {
 
         {/* Right Column - Content */}
         <div className="md:w-3/5 p-8">
-          <span className="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-medium mb-4">
+          <span className="inline-block bg-primary-10 text-white px-3 py-1 rounded-full text-xs font-medium mb-4">
             FREE RESOURCE
           </span>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Emergency Preparedness Fact Sheet</h2>
@@ -1931,7 +1931,7 @@ const HomePage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Business Compliant?</h2>
             <p className="text-lg max-w-3xl mx-auto mb-10 text-secondary-200">We&apos;re here to help you stay compliant and safe.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
+              <a href="/contact" className="bg-white text-primary-10 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
               <button onClick={togglePopup} className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-0.1">Free Quote</button>
             </div>
           </div>
