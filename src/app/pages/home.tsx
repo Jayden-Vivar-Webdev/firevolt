@@ -725,7 +725,7 @@ const HomePage = () => {
         <section className="py-20 bg-secondary-50" id="testimonials">
           <div className="container mx-auto px-4 ">
             <div className="text-center mb-16">
-              <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
+              <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
               <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their business future with Firevolt.</p>
             </div>
