@@ -104,7 +104,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-            <button onClick={togglePopup} className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
+            <button onClick={togglePopup} className="bg-primary-10 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
                 Free Quote Now
             </button>
           </div>
