@@ -77,16 +77,20 @@ const Footer = () => {
             
             <div className="pt-6 border-t border-secondary-800 text-secondary-400 text-sm">
             <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 text-center z-50">
-                <Link href="/policy" className="hover:text-primary-400 transition">
-                Privacy Policy
+                <Link href="/policy" className="hover:text-primary-400 transition" aria-label="Privacy Policy">
+                    Privacy Policy
                 </Link>
                 <span className="hidden md:inline">|</span>
-                <Link href="https://nexawebdev.com" className="hover:text-primary-400 transition">
-                Powered By Nexa Web
+                
+                <Link href="https://nexawebdev.com" className="hover:text-primary-400 transition" aria-label="Powered by Nexa Web">
+                    Powered By Nexa Web
                 </Link>
+                
                 <span className="hidden md:inline">|</span>
+                
                 <p className="mt-2 md:mt-0">&copy; 2025 FireVolt. All rights reserved.</p>
-            </div>
+                </div>
+
             </div>
 
         </div>
