@@ -750,7 +750,7 @@ const HomePage = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold">Samuel Ridgard</h4>
+                    <h1 className="font-bold">Samuel Ridgard</h1>
                     <p className="text-secondary-500">Staff Training</p>
                   </div>
                 </div>
@@ -776,7 +776,7 @@ const HomePage = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold">Apollo Patios</h4>
+                    <h1 className="font-bold">Apollo Patios</h1>
                     <p className="text-secondary-500">Equipment Handling</p>
                   </div>
                 </div>
@@ -800,7 +800,7 @@ const HomePage = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold">Kaleb Maider</h4>
+                    <h1 className="font-bold">Kaleb Maider</h1>
                     <p className="text-secondary-500">Business Compliance</p>
                   </div>
                 </div>
