@@ -459,6 +459,7 @@ const HomePage = () => {
                     className="w-full h-full object-cover transition duration-500"
                     width={500}
                     height={300}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
                   />
                   <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
                 </div>
@@ -506,6 +507,7 @@ const HomePage = () => {
                     className="w-full h-full object-cover transition duration-500"
                     width={500}
                     height={300}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
                   />
                   <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Professional Service</span>
                 </div>
