@@ -413,7 +413,7 @@ const HomePage = () => {
                     className="w-full h-full object-cover transition duration-500" 
                     priority
                   />
-                  <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Highly Rated</span>
+                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Highly Rated</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -460,7 +460,7 @@ const HomePage = () => {
                     width={500}
                     height={300}
                   />
-                  <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
+                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -507,7 +507,7 @@ const HomePage = () => {
                     width={500}
                     height={300}
                   />
-                  <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Professional Service</span>
+                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Professional Service</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -553,7 +553,7 @@ const HomePage = () => {
                     width={500}
                     height={300}
                   />
-                  <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
+                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -900,7 +900,7 @@ const HomePage = () => {
                 </div>
                 <a 
                   href="/about" 
-                  className="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg"
+                  className="inline-block bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg"
                 >
                   Learn About Us
                 </a>
@@ -1074,7 +1074,7 @@ const HomePage = () => {
           <div className="text-center mt-16">
             <a 
               href="/contact" 
-              className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Get Your Custom Training Plan
               <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
@@ -1103,7 +1103,7 @@ const HomePage = () => {
                 <button 
                 key={category.filter}
                 onClick={() => toggleCategory(category.filter)}
-                className={`gallery-filter px-4 py-2 rounded-full ${selectedCategory === category.filter ? 'bg-primary-600 text-white font-medium transition hover:bg-primary-700 active' : 'bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600'}`} 
+                className={`gallery-filter px-4 py-2 rounded-full ${selectedCategory === category.filter ? 'bg-primary-10 text-white font-medium transition hover:bg-primary-700 active' : 'bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600'}`} 
                 data-filter={category.filter}
                 >
                     <FontAwesomeIcon icon={category.icon} className="mr-2" />
@@ -1133,7 +1133,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+              <div className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
                 {component.type}
               </div>
             </div>
