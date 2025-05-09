@@ -384,7 +384,7 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get In Touch With Us</a>
+              <a href="/contact" className="bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get In Touch With Us</a>
               <a href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-1">Learn More About Us</a>
             </div>
           </div>
@@ -394,7 +394,7 @@ const HomePage = () => {
         <section className="py-20 bg-white" id="services">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Our Services</span>
+              <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our Services</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
               <p className="text-secondary-600 max-w-2xl mx-auto">We offer a range of services to help you stay compliant and safe.</p>
             </div>
@@ -443,7 +443,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   
-                  <a href="/contact" className="block w-full bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
+                  <a href="/contact" className="block w-full bg-primary-10 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
                     Contact Us
                   </a>
                 </div>
@@ -490,7 +490,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   
-                  <a href="/contact" className="block w-full bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
+                  <a href="/contact" className="block w-full bg-primary-10 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
                     Book Consultation
                   </a>
                 </div>
@@ -537,7 +537,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   
-                  <a href="/contact" className="block w-full bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
+                  <a href="/contact" className="block w-full bg-primary-10 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
                     Get Started
                   </a>
                 </div>
@@ -583,7 +583,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   
-                  <a href="/contact" className="block w-full bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
+                  <a href="/contact" className="block w-full bg-primary-10 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
                     Book Consultation
                   </a>
                 </div>
@@ -596,7 +596,7 @@ const HomePage = () => {
         <section className="py-20" id="features">
           <div className="container mx-auto px-4">
             <div className="text-center mb-1">
-              <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Why Choose Us</span>
+              <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Why Choose Us</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Here to help business owners</h2>
               <p className="text-secondary-600 max-w-2xl mx-auto">Discover the features that make us stand out from the competition and help your business.</p>
             </div>
