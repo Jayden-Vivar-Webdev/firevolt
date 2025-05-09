@@ -2589,6 +2589,11 @@ button,
       2rem;
 }
 
+.gap-5{
+  gap:
+      1.25rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse:
       0;
@@ -2659,6 +2664,24 @@ button,
       calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom:
       calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse:
+      0;
+  margin-top:
+      calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom:
+      calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse:
+      0;
+  margin-top:
+      calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom:
+      calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -3371,6 +3394,16 @@ button,
       0.75rem;
   line-height:
       1rem;
+}
+
+.text-\[24px\]{
+  font-size:
+      24px;
+}
+
+.text-\[15px\]{
+  font-size:
+      15px;
 }
 
 .font-bold{
