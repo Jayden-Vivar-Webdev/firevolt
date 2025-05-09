@@ -730,7 +730,7 @@ const HomePage = () => {
               <p className="text-secondary-600 max-w-2xl mx-auto">Hear from people who have transformed their business future with Firevolt.</p>
             </div>
             
-            <div className="flex pb-[] overflow-x-auto snap-x snap-mandatory h-fit gap-10 mx-auto hide-scrollbar p-4 scroll-smooth">
+            <div className="flex overflow-x-auto snap-x snap-mandatory h-fit gap-10 mx-auto hide-scrollbar p-4 scroll-smooth">
               {/* Testimonial 1 */}
 
                 <div ref={testimonial1Ref}  className="testimonials snap-center min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
@@ -813,6 +813,7 @@ const HomePage = () => {
             <div className="flex justify-center items-center gap-4 z-50">
               <button 
                 onClick={() => scrollTo(testimonial1Ref)} 
+                aria-label='Testimonial One'
                 className="w-4 h-4 rounded-full bg-[#e53e3ed1]
                 border border-[#e53e3eba] shadow-md 
                 hover:scale-125
@@ -821,6 +822,7 @@ const HomePage = () => {
 
               <button 
                 onClick={() => scrollTo(testimonial2Ref)} 
+                aria-label='Testimonial Two'
                 className="w-4 h-4 rounded-full bg-[#e53e3ed1] 
                 border border-[#e53e3eba] shadow-md 
                 hover:scale-125
@@ -829,6 +831,7 @@ const HomePage = () => {
 
               <button 
                 onClick={() => scrollTo(testimonial3Ref)} 
+                aria-label='Testimonial Three'
                 className="w-4 h-4 rounded-full bg-[#e53e3ed1] 
                 border border-[#e53e3eba] shadow-md 
                 hover:scale-125
