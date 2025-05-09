@@ -1,5 +1,3 @@
-
-// next.config.js
 const nextConfig = {
   reactStrictMode: true,
   env: {
@@ -9,4 +7,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
