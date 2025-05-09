@@ -1298,7 +1298,7 @@ const HomePage = () => {
           <a href="/contact" className="bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
             Get Your Diagrams
           </a>
-          <a href="/compliance-guide" className="border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
+          <a href="/compliance-guide" className="border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
             Compliance Guide
           </a>
         </div>

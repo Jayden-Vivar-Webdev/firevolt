@@ -2877,6 +2877,13 @@ button,
       rgb(255 255 255 / 0.3);
 }
 
+.border-primary-10{
+  --tw-border-opacity:
+      1;
+  border-color:
+      rgb(174 20 20 / var(--tw-border-opacity, 1));
+}
+
 .bg-\[\#AE1414\]{
   --tw-bg-opacity:
       1;
@@ -3675,6 +3682,13 @@ button,
       1;
   color:
       rgb(133 77 14 / var(--tw-text-opacity, 1));
+}
+
+.text-primary-10{
+  --tw-text-opacity:
+      1;
+  color:
+      rgb(174 20 20 / var(--tw-text-opacity, 1));
 }
 
 .underline{
