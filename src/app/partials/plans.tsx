@@ -10,7 +10,7 @@ const Plans = () => {
  <div className="container mx-auto px-4">
    
    <div className="text-center mb-16">
-     <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+     <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
        Compliance Documentation
      </span>
      <h2 className="text-3xl md:text-4xl font-bold mb-4">Emergency Plans & Evacuation Diagrams</h2>
@@ -65,7 +65,7 @@ const Plans = () => {
            <span>Training requirements</span>
          </li>
        </ul>
-       <a href="/emergency-plans" className="inline-flex items-center text-primary-600 font-medium">
+       <a href="/emergency-plans" className="inline-flex items-center text-primary-10 font-medium">
          Learn More About Emergency Plans
          <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
        </a>
@@ -99,7 +99,7 @@ const Plans = () => {
            <span>48-hour turnaround available</span>
          </li>
        </ul>
-       <a href="/evacuation-diagrams" className="inline-flex items-center text-primary-600 font-medium">
+       <a href="/evacuation-diagrams" className="inline-flex items-center text-primary-10 font-medium">
          Learn More About Evacuation Diagrams
          <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
        </a>
@@ -107,7 +107,7 @@ const Plans = () => {
    </div>
    
    <div className="text-center">
-     <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+     <a href="/contact" className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
        Get Your Custom Emergency Documentation
        <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
      </a>

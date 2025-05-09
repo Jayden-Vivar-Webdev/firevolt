@@ -110,7 +110,7 @@ const FreeCompliance = ({isPopupOpen, togglePopup}: {isPopupOpen: boolean; toggl
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                      className="flex w-full bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-block"
                     >
                       Submit Request
                     </button>

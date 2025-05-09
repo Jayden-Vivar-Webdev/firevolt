@@ -104,7 +104,7 @@ const ContactPage = () => {
     <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
             <div className="md:flex">
-                <div className="md:w-1/2 bg-primary-600 text-white p-8 md:p-12">
+                <div className="md:w-1/2 bg-primary-10 text-white p-8 md:p-12">
                     <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
                     <p className="mb-6 text-primary-100">Fill out the form and one of our Fire Volt specialists will contact you within 24 hours to discuss your needs.</p>
                     
@@ -224,7 +224,7 @@ const ContactPage = () => {
                             )}
                   
                         
-                        <button type="submit" className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-primary-700 transition shadow-md hover:shadow-lg">Send Message</button>
+                        <button type="submit" className="w-full bg-primary-10 text-white py-3 px-6 rounded-lg font-bold hover:bg-primary-700 transition shadow-md hover:shadow-lg">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -329,7 +329,7 @@ const ContactPage = () => {
             href="https://maps.app.goo.gl/eEBVwbkR3a7HnEfP7"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg"
           >
             Google Maps
             <FontAwesomeIcon icon={faMapMarkerAlt} className="ml-3" />
@@ -342,7 +342,7 @@ const ContactPage = () => {
 <section className="py-16 bg-secondary-50">
     <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-            <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">FAQs</span>
+            <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">FAQs</span>
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">Find answers to common questions about our fire safety services.</p>
         </div>
@@ -423,11 +423,11 @@ const ContactPage = () => {
 </section>
 
 {/* CTA Section */}
-<section className="py-16 bg-primary-600 text-white">
+<section className="py-16 bg-primary-10 text-white">
     <div className="container mx-auto px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Start Your Fire Safety Journey?</h2>
         <p className="text-lg max-w-2xl mx-auto mb-8 text-primary-100">Schedule a free consultation with one of our Fire Volt specialists today.</p>
-        <a href="#contact-us" className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Book a Consultation</a>
+        <a href="#contact-us" className="inline-block bg-white text-primary-10 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Book a Consultation</a>
     </div>
 </section>
  

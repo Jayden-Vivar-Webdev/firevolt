@@ -20,7 +20,7 @@ import {
   <div className="container mx-auto px-4">
     <div className="flex flex-col lg:flex-row gap-12 items-center">
       <div className="lg:w-1/2 order-2 lg:order-1">
-        <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
           Safety Compliance
         </span>
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Comprehensive Workplace Safety Compliance Solutions</h2>
@@ -146,11 +146,11 @@ import {
         
         {/* CTA Section */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg flex-1 text-center">
+          <a href="/contact" className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg flex-1 text-center">
             Request Compliance Audit
             <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
           </a>
-          <a href="https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf" className="inline-flex items-center justify-center bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold transition shadow-sm hover:shadow-md flex-1 text-center">
+          <a href="https://irp.cdn-website.com/94ddd8b4/files/uploaded/Firevolt%20-%20Emergency%20Plans%20fact%20Sheet.pdf" className="inline-flex items-center justify-center bg-white border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold transition shadow-sm hover:shadow-md flex-1 text-center">
             Download Compliance Guide
             <FontAwesomeIcon icon={faFileAlt} className="ml-3" />
           </a>

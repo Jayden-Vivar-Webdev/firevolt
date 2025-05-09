@@ -59,7 +59,7 @@ const Navbar = () => {
                 <Link 
                     href="/"
                     className={`nav-link relative pb-1 transition ${
-                      pathname === '/' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                      pathname === '/' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                       Home
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <Link 
                     href="/services"
                     className={`nav-link relative pb-1 transition ${
-                      pathname === '/services' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                      pathname === '/services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                    
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <Link 
                     href="/about"
                     className={`nav-link relative pb-1 transition ${
-                      pathname === '/about' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                      pathname === '/about' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                     
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <Link 
                     href="/contact"
                     className={`nav-link relative pb-1 transition ${
-                      pathname === '/contact' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-secondary-600 hover:text-primary-600'
+                      pathname === '/contact' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                     

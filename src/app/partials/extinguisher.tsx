@@ -81,7 +81,7 @@ const Extinguisher = () => {
         </p>
       </div>
       
-      <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg">
+      <a href="/contact" className="inline-flex items-center justify-center bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition shadow-md hover:shadow-lg">
         Schedule Equipment Service
         <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
       </a>

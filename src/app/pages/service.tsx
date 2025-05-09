@@ -85,7 +85,7 @@ return (
           </p>
           <a 
             onClick={togglePopup}
-            className="bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-block"
+            className="bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-block"
           >
             Claim Your Free Compliance Check
           </a>
@@ -109,8 +109,9 @@ return (
             {categories.map((category) => (
                 <button 
                 key={category.filter}
+                aria-label={category.filter}
                 onClick={() => toggleCategory(category.filter)}
-                className={`gallery-filter px-4 py-2 rounded-full ${selectedCategory === category.filter ? 'bg-primary-600 text-white font-medium transition hover:bg-primary-700 active' : 'bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600'}`} 
+                className={`gallery-filter px-4 py-2 rounded-full ${selectedCategory === category.filter ? 'bg-primary-10 text-white font-medium transition hover:bg-primary-700 active' : 'bg-white text-secondary-700 border border-gray-200 font-medium transition hover:bg-gray-50 hover:border-primary-300 hover:text-primary-600'}`} 
                 data-filter={category.filter}
                 >
                     <FontAwesomeIcon icon={category.icon} className="mr-2" />
@@ -127,7 +128,7 @@ return (
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Business Compliant?</h2>
             <p className="text-lg max-w-3xl mx-auto mb-10 text-secondary-200">We&apos;re here to help you stay compliant and safe.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="bg-white text-primary-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
+              <a href="/contact" className="bg-white text-primary-10 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-0.2 shadow-lg hover:shadow-xl">Contact Us</a>
               <a onClick={togglePopup} className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-0.1">Free Quote</a>
             </div>
           </div>

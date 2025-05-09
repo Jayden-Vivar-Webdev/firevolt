@@ -19,7 +19,7 @@ const Training = () => {
                         </div>
                     </div>
                     <div className="lg:w-1/2">
-                        <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                        <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
                             Hands-On Training
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">Fire Safety Training Programs</h2>
@@ -102,10 +102,10 @@ const Training = () => {
                         </div>
                         
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="/contact" className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
+                            <a href="/contact" className="bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
                                 Book Training Session
                             </a>
-                            <a href="/contact" className="border border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
+                            <a href="/contact" className="border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
                                 Request Custom Program
                             </a>
                         </div>

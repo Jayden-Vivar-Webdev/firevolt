@@ -14,7 +14,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Our Story, Mission, and Values</h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-secondary-200">For over 5+ years, Firevolt has been helping clients achieve fire safety through innovative solutions and personalized service.</p>
-            <a href="#our-team" className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Meet Our Team</a>
+            <a href="#our-team" className="inline-block bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Meet Our Team</a>
         </div>
     </section>
 
@@ -23,7 +23,7 @@ const AboutPage = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-                <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">About Firevolt</span>
+                <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">About Firevolt</span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Trusted Fire Partners Since 2018</h2>
                 <p className="text-secondary-600 mb-6">Firevolt was founded on the principle that everyone deserves access to professional fire protection, regardless of situation. What began as a small fire protection business in Brisbane has grown into a nationally recognized fire protection company serving clients across the country.</p>
                 <p className="text-secondary-600 mb-8">Our independence empowers us to deliver genuinely objective fire protection services. We’re proud to act with integrity, always prioritizing the safety, compliance, and best interests of our clients.</p>
@@ -55,7 +55,7 @@ const AboutPage = () => {
         <section className="py-20 bg-secondary-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-            <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Our Purpose</span>
+            <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our Purpose</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission & Vision</h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">Guiding principles that shape every decision we make</p>
         </div>
@@ -84,7 +84,7 @@ const AboutPage = () => {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-            <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Our Culture</span>
+            <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our Culture</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">The foundation of everything we do</p>
         </div>
@@ -129,7 +129,7 @@ const AboutPage = () => {
         <section className="history-bg text-white py-20">
             <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-            <span className="inline-block bg-primary-400 text-primary-900 px-4 py-1 rounded-full text-sm font-medium mb-4">Our Journey</span>
+            <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our Journey</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our History</h2>
             <p className="text-secondary-200 max-w-2xl mx-auto">Milestones in our journey to becoming a trusted partner for fire protection and training</p>
         </div>
@@ -190,7 +190,7 @@ const AboutPage = () => {
             <section className="py-20 bg-secondary-50" id="our-team">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                <span className="inline-block bg-primary-50 text-primary-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Our People</span>
+                <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our People</span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
                 <p className="text-secondary-600 max-w-2xl mx-auto">Seasoned professionals with decades of combined experience</p>
             </div>
@@ -292,7 +292,7 @@ const AboutPage = () => {
     </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary-600 text-white">
+        <section className="py-20 bg-primary-10 text-white">
             <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience the Firevolt Difference?</h2>
                 <p className="text-lg max-w-3xl mx-auto mb-10 text-secondary-200">Schedule a complimentary consultation with one of our experts today.</p>
