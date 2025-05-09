@@ -1435,7 +1435,7 @@ const HomePage = () => {
       {/* Plan Components Column */}
       <div className="flex flex-col justify-between xl:w-2/3 ">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 h-auto mb-12 lg:mb-2 ">
-          <div className="bg-primary-600 p-6 text-white">
+          <div className="bg-primary-50 p-6 text-white">
             <h3 className="text-xl font-bold flex items-center">
               <FontAwesomeIcon icon={faFileAlt} className="mr-3" />
               What&apos;s Included in Our Emergency Plans
