@@ -439,7 +439,7 @@ const HomePage = () => {
                     </div>
                     <div className="flex items-center text-sm text-secondary-500">
                       <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mr-2" />
-                      {/* <span>Fire Alarm Systems</span> */}
+                      <span>Fire Extingusher Replacement</span>
                     </div>
                   </div>
                   
