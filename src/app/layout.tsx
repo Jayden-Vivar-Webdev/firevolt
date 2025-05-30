@@ -4,6 +4,7 @@ import "./styles.css";
 import Footer from "./partials/footer";
 import QuickLink from "./partials/quicklink";
 import { Inter } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           as="image"
         />
       <body>
+        <Analytics/>
         <Navbar />
         {children}
         <QuickLink />
