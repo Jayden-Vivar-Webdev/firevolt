@@ -5,7 +5,7 @@ import '../output.css';
 import FreeQuote from '../partials/free_quote';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faTag, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt, faDollarSign, faMoneyBill, faBolt, faTrophy, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -95,8 +95,11 @@ const HomePage = () => {
         points: ['Floor plan with clear exit routes', 
         'Assembly area locations', 
         'Emergency equipment locations', 'You Are Here indicators', 
-        'Standardized emergency symbols', 'Legend explaining all symbols']
-      }
+        'Standardized emergency symbols', 'Legend explaining all symbols'],
+        src: '/images/evac_template.png',
+        alt: 'Evacuation template diagram'
+      },
+      
     },
     {
       name: 'Legal Requirements',
@@ -104,8 +107,11 @@ const HomePage = () => {
         title: 'Consider the following requirements', 
         points: ['Diagrams must include the "You Are Here" location', 'The evacuation diagram must be correctly oriented', 
         'Diagrams must be displayed in conspicuous positions', 'Must use standardised symbols', 
-        , 'Review and maintenance must be conducted']
-      }
+        , 'Review and maintenance must be conducted'],
+        src: '/images/evac_diagram_compliance.jpg',
+        alt: 'Evacuation Template diagram'
+      },
+      
     },
     {
       name: 'Placement Guide',
@@ -113,8 +119,11 @@ const HomePage = () => {
       title: 'Best placements includes the follow',
       points: ['Visable and easily accessible', 'Height guidelines 1200 mm and 1600 mm from the floor', 
         'Place diagrams at key decision points', 'Large or complex buildings require multiple diagrams', 
-        'Key Location', 'Diagrams must be permanently affixed']
-      }
+        'Key Location', 'Diagrams must be permanently affixed'],
+        src: '/images/evac_template.png',
+        alt: 'Evacuation template placement'
+      },
+      
     },
     {
       name: 'Update Frequency',
@@ -122,11 +131,12 @@ const HomePage = () => {
         title: 'What the law says',
         points: ['Review every 5 years', 'Update after building changes', 
         'Post renovation checks', 'Ongoing Maintenance', 
-        'Annual emergency review', 'Emergency Planning Committee (EPC) Responsibility']
-      }
+        'Annual emergency review', 'Emergency Planning Committee (EPC) Responsibility'],
+        src: '/images/evac_diagram_compliance.jpg',
+        alt: 'Updated diagrams'
+      },
       
     }
-
   ]
 
   const categories = [
@@ -551,9 +561,9 @@ const HomePage = () => {
                 <div className="service-img h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 z-10"></div>
                   <Image 
-                    src="/images" 
+                    src="/images/compliance_gal/IMG_3755.JPEG" 
                     alt="Live Fire Training by Firevolt" 
-                    className="w-full h-full object-cover transition duration-500"
+                    className="w-full h-full object-[0%_17%] object-cover transition duration-500"
                     width={500}
                     height={300}
                   />
@@ -620,7 +630,7 @@ const HomePage = () => {
               */}
               <div data-name="car-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faFireExtinguisher} />
+                  <FontAwesomeIcon icon={faMoneyBill} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Save Time, Make Money</h3>
                 <p className="text-secondary-600">Free up time and resources to concentrate on growing your business, leaving compliance to us.</p>
@@ -629,7 +639,7 @@ const HomePage = () => {
               {/* Feature 2 */}
               <div data-name="caravan-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faFire} />
+                  <FontAwesomeIcon icon={faShieldAlt} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Easy Breezy Compliance</h3>
                 <p className="text-secondary-600">Stay compliant with minimal effort through automated reminders and easy scheduling.</p>
@@ -638,7 +648,7 @@ const HomePage = () => {
               {/* Feature 3 */}
               <div data-name="boat-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faExclamationTriangle} />
+                  <FontAwesomeIcon icon={faDollarSign} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">For The Aussie Battler</h3>
                 <p className="text-secondary-600">Access affordable compliance services designed to fit any budget, ensuring that safety is never out of reach.</p>
@@ -647,21 +657,21 @@ const HomePage = () => {
               {/* Feature 4 */}
               <div data-name="jetski-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faTag} />
+                  <FontAwesomeIcon icon={faBolt} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">One-Hit Wonder</h3>
                 <p className="text-secondary-600">Reduce disruptions and Save Time with Firevolts ability to service multiple compliance services provided in one visit.</p>
               </div>
               <div data-name="jetski-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faTag} />
+                  <FontAwesomeIcon icon={faTrophy} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Quality Assurance</h3>
                 <p className="text-secondary-600">All our work is completed to the highest standards, ensuring that your business is always compliant.</p>
               </div>
               <div data-name="jetski-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
-                  <FontAwesomeIcon icon={faTag} />
+                  <FontAwesomeIcon icon={faHandsHelping} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Ongoing Support</h3>
                 <p className="text-secondary-600">We offer ongoing support to ensure that your business is always compliant.</p>
@@ -814,7 +824,7 @@ const HomePage = () => {
 
               
             </div>
-            <div className="flex justify-center items-center gap-4 z-50">
+            <div className="flex 2xl:hidden justify-center items-center gap-4 z-50">
               <button 
                 onClick={() => scrollTo(testimonial1Ref)} 
                 aria-label='Testimonial One'
@@ -855,7 +865,7 @@ const HomePage = () => {
               <div className="md:w-1/2">
                 
                   <Image 
-                    src="/images/Chevron-Double.png"  // Replace with your actual image path
+                    src="/images/Chevron-Double.png"
                     alt="Veteran owned fire safety business"
                     width={300}
                     height={300}
@@ -1313,9 +1323,6 @@ const HomePage = () => {
     {/* Detailed Information Tabs */}
     <div className="mt-20 p-8 bg-gray-50 rounded-xl p-1 max-w-4xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-1 pb-8">
-
-        {/* {infoSection.map((info) => ()) */}
-        
         {infoSection.map(info => (
           <button 
           key={info.name} 
@@ -1327,7 +1334,6 @@ const HomePage = () => {
         }
       </div>
 
-      {/* Add images to block elements */}
       <div className="flex flex-col justify-around">
         {/* Tab Content - What's Included */}
         <div className="emergency-tab-content active">
@@ -1335,7 +1341,7 @@ const HomePage = () => {
         {selectedData && (
           <>
           <h3 className="text-xl font-bold mb-4">{selectedData.components.title}</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 items-start">
               <ul className="space-y-3">
                 {selectedData.components.points.map((point, index) => (
                   <li key={index} className="flex items-start">
@@ -1344,6 +1350,16 @@ const HomePage = () => {
                   </li>
                 ))}
               </ul>
+              <div>
+              <Image
+                  src={selectedData.components.src}
+                  alt={selectedData.components.alt}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
+              </div>
+              
           </div>
           </>
         )}
@@ -1373,7 +1389,7 @@ const HomePage = () => {
       <div className="flex flex-col justify-between xl:w-1/3">
       <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 mb-12 justify-between">
       <Image
-            src="/images/emergency_plan_book.png" // Replace with your image path
+            src="/images/emergency_plan_book.png"
             alt="Professional emergency plan documentation example"
             width={800}
             height={600}
