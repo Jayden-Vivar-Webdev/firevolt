@@ -139,16 +139,16 @@ const HomePage = () => {
           id: 'e1',
           src: '/images/extinguisher_installation.jpg',
           alt: 'Fire extinguisher installation',
-          title: 'Extinguisher Testing',
-          p: 'Testing and maintenance',
-          type: 'Testing'
+          title: 'Extinguisher Replacement',
+          p: 'Replacing Fire Extinguishers',
+          type: 'Replacement'
         },
         {
           id: 'e2',
           src: '/images/extinguisher_gal/IMG_4299.JPEG',
           alt: 'Fire extinguisher installation',
           title: 'Extinguisher Installation',
-          p: 'Commercial kitchen fire protection',
+          p: 'Fire protection equipment',
           type: 'Installation'
         },
         {
@@ -157,7 +157,7 @@ const HomePage = () => {
           alt: 'Fire extinguisher servicing',
           title: 'Fire Extinguisher Servicing',
           p: 'Annual extinguisher servicing',
-          type: 'Evacuation'
+          type: 'Servicing'
         },
         {
           id: 'e4',
@@ -181,7 +181,7 @@ const HomePage = () => {
           alt: 'Fire extinguisher Truck',
           title: 'Essential Equipment',
           p: 'Annual extinguisher servicing',
-          type: 'Replacement'
+          type: 'Secure'
         },
         
       ]
@@ -196,7 +196,7 @@ const HomePage = () => {
           src: '/images/fire-extinguisher-training.webp',
           alt: 'Fire safety training session',
           title: 'Live Fire Training',
-          p: 'Hands-on extinguisher training for staff',
+          p: 'Hands on extinguisher training for staff',
           type: 'Extinguisher'
         },
         {
@@ -212,7 +212,7 @@ const HomePage = () => {
           src: '/images/training_gal/fire_e_training.jpg',
           alt: 'Evacuation use',
           title: 'Extinguisher Training',
-          p: 'Develop skills',
+          p: 'Developing safety skills',
           type: 'Extinguisher'
         },
         {
@@ -252,7 +252,7 @@ const HomePage = () => {
           src: '/images/compliance_gal/IMG_2518.JPG',
           alt: 'Fire equipment labeling',
           title: 'Clear Labels',
-          p: 'Compliance check on lables',
+          p: 'Compliance checks',
           type: 'Fire Reel'
         },
         {
@@ -325,7 +325,7 @@ const HomePage = () => {
           alt: 'Evacuation installation',
           title: 'Evacuation Diagrams Installation',
           p: 'Custom emergency exit plans',
-          type: 'Evacuation'
+          type: 'Placement'
         },
         {
           id: 't4',
@@ -341,15 +341,15 @@ const HomePage = () => {
           alt: 'Chief warden training',
           title: 'Equipment Training',
           p: 'Emergency response skills',
-          type: 'Training'
+          type: 'Evacuation Training'
         },
         {
           id: 'e6',
           src: '/images/testing_equipment-img.webp',
           alt: 'Fire extinguisher maintenance',
-          title: 'Equipment Testing',
-          p: 'Annual extinguisher servicing',
-          type: 'Testing'
+          title: 'Testing Equipment',
+          p: 'Annual site inspection',
+          type: 'Assessment'
         },
         
       ]
