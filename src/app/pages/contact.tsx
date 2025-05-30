@@ -47,7 +47,7 @@ const ContactPage = () => {
         
  <section className="contact-hero text-white py-24 md:py-32">
     <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Contact Our Fire Volt Specialists</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Contact Our Firevolt Specialists</h1>
         <p className="text-lg md:text-xl max-w-3xl mx-auto text-secondary-200">Have questions about our services or need fire safety advice? Reach out to our team of certified professionals.</p>
     </div>
 </section>
@@ -62,7 +62,7 @@ const ContactPage = () => {
                     <FontAwesomeIcon icon={faPhone} />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-center">Phone Support</h3>
-                <p className="text-secondary-600 text-center mb-4">Speak directly with a Fire Volt specialist.</p>
+                <p className="text-secondary-600 text-center mb-4">Speak directly with a Firevolt specialist.</p>
                 <div className="text-center">
                     <a href="tel:+18001234567" className="text-primary-600 font-semibold hover:text-primary-800 transition">1300 533 294</a>
                     <p className="text-sm text-secondary-500 mt-1">Mon-Fri, 6am-5.30pm AEST | Sat, 8am-12pm AEST</p>
@@ -106,13 +106,13 @@ const ContactPage = () => {
             <div className="md:flex">
                 <div className="md:w-1/2 bg-primary-10 text-white p-8 md:p-12">
                     <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
-                    <p className="mb-6 text-primary-100">Fill out the form and one of our Fire Volt specialists will contact you within 24 hours to discuss your needs.</p>
+                    <p className="mb-6 text-primary-100">Fill out the form and one of our Firevolt specialists will contact you within 24 hours to discuss your needs.</p>
                     
                     <div className="space-y-4">
                         <div className="flex items-start">
                             <FontAwesomeIcon icon={faUserTie} className="mt-1 mr-4 text-primary-300" />
                             <div>
-                                <h4 className="font-bold">Fire Volt Specialists</h4>
+                                <h4 className="font-bold">Firevolt Specialists</h4>
                                 <p className="text-primary-200 text-sm">All our consultants are certified specialists.</p>
                             </div>
                         </div>
@@ -382,7 +382,7 @@ const ContactPage = () => {
                 <button 
                 onClick={() => setIsFaqOpen3(!isFaqOpen3)}
                 className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
-                    <span>What makes Fire Volt different from other fire safety firms?</span>
+                    <span>What makes Firevolt different from other fire safety firms?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
                 {isFaqOpen3 && <div className="faq-content mt-2 text-secondary-600">
@@ -410,7 +410,7 @@ const ContactPage = () => {
                 <button 
                 onClick={() => setIsFaqOpen5(!isFaqOpen5)}
                 className="faq-toggle flex justify-between items-center w-full text-left font-medium text-secondary-800 hover:text-primary-600 focus:outline-none">
-                    <span>Is my business and fire safety procedures secure with Fire Volt?</span>
+                    <span>Is my business and fire safety procedures secure with Firevolt?</span>
                     <i className="fas fa-chevron-down text-primary-600 transition-transform duration-300"></i>
                 </button>
                 {isFaqOpen5 && <div className="faq-content mt-2 text-secondary-600">
@@ -426,7 +426,7 @@ const ContactPage = () => {
 <section className="py-16 bg-primary-10 text-white">
     <div className="container mx-auto px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Start Your Fire Safety Journey?</h2>
-        <p className="text-lg max-w-2xl mx-auto mb-8 text-primary-100">Schedule a free consultation with one of our Fire Volt specialists today.</p>
+        <p className="text-lg max-w-2xl mx-auto mb-8 text-primary-100">Schedule a free consultation with one of our Firevolt specialists today.</p>
         <a href="#contact-us" className="inline-block bg-white text-primary-10 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Book a Consultation</a>
     </div>
 </section>

@@ -40,7 +40,7 @@ import {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium text-secondary-600">Comprehensive WHS audits & gap analysis</span>
+                <span className="font-medium text-secondary-600">Comprehensive WHS audits</span>
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
@@ -92,7 +92,7 @@ import {
               </li>
               <li className="flex items-start">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-                <span className="font-medium text-secondary-600">Environmental protection regulations</span>
+                <span className="font-medium text-secondary-600">Building Fire Safety Regulations (BFSR)</span>
               </li>
             </ul>
           </div>
@@ -176,9 +176,17 @@ import {
             <FontAwesomeIcon icon={faHandshake} className="text-primary-500 mt-1 mr-3 text-xl" />
             <div>
               <blockquote className="text-secondary-700 italic mb-3">
-                &quot;Their compliance audit identified several issues we weren&apos;t aware of. Their team helped us implement solutions that not only made us compliant but improved our overall safety culture.&quot;
+                We have had our Fire Equipment and Emergency plans 
+                recently maintained by Firevolt. 
+                The communication, timeliness and 
+                requirements were impeccable. 
+                Hayden provided us with our Fire 
+                training today. It was professional, 
+                informative and engaging, no one nodded off. 
+                Nice to find a Company that covered most of 
+                our requirements. Highly recommend them.
               </blockquote>
-              <p className="font-semibold">- Sarah K., Manufacturing Client</p>
+              <p className="font-semibold">- Wendy M., Manfuturing WHS Officer</p>
             </div>
           </div>
         </div>

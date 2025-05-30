@@ -105,9 +105,7 @@ const Training = () => {
                             <a href="/contact" className="bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
                                 Book Training Session
                             </a>
-                            <a href="/contact" className="border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
-                                Request Custom Program
-                            </a>
+                            
                         </div>
                     </div>
                 </div>

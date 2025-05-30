@@ -28,7 +28,7 @@ const Extinguisher = () => {
           <ul className="space-y-2">
             <li className="flex items-start">
               <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-              <span>Fire extinguisher testing & refilling</span>
+              <span>Fire extinguisher testing & replacement</span>
             </li>
             <li className="flex items-start">
               <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
@@ -56,11 +56,11 @@ const Extinguisher = () => {
             </li>
             <li className="flex items-start">
               <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-              <span>Annual pressure testing</span>
+              <span>Fire Signage Checks</span>
             </li>
             <li className="flex items-start">
               <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />
-              <span>Monthly visual inspections</span>
+              <span>Site Safety Inspections</span>
             </li>
             <li className="flex items-start">
               <FontAwesomeIcon icon={faCheckCircle} className="text-primary-500 mt-1 mr-2 text-sm" />

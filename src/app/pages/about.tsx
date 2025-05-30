@@ -2,7 +2,7 @@
 import Image from "next/image";
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserShield, faLightbulb, faHandsHelping, faBullseye, faEnvelope, faEye, faNetworkWired} from '@fortawesome/free-solid-svg-icons';
+import { faUserShield, faLightbulb, faHandsHelping, faBullseye, faEye, faNetworkWired} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -24,17 +24,18 @@ const AboutPage = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
                 <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">About Firevolt</span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Trusted Fire Partners Since 2018</h2>
-                <p className="text-secondary-600 mb-6">Firevolt was founded on the principle that everyone deserves access to professional fire protection, regardless of situation. What began as a small fire protection business in Brisbane has grown into a nationally recognized fire protection company serving clients across the country.</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Trusted Fire Partners Since 2020</h2>
+                <p className="text-secondary-600 mb-6">Firevolt was founded on the principle that everyone deserves access to professional fire protection, 
+                    regardless of situation. What began as a small fire protection business in Brisbane has grown into a widely recognised fire protection company serving clients across the country.</p>
                 <p className="text-secondary-600 mb-8">Our independence empowers us to deliver genuinely objective fire protection services. We’re proud to act with integrity, always prioritizing the safety, compliance, and best interests of our clients.</p>
                 <div className="grid grid-cols-2 gap-6">
                     <div>
-                        <h3 className="text-3xl font-bold text-primary-600 mb-2">5+</h3>
+                        <h3 className="text-3xl font-bold text-primary-600 mb-2">3+</h3>
                         <p className="text-secondary-600">Years in Business</p>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-bold text-primary-600 mb-2">100+</h3>
-                        <p className="text-secondary-600">Fire Protection Experts</p>
+                        <h3 className="text-3xl font-bold text-primary-600 mb-2">100%</h3>
+                        <p className="text-secondary-600">Satisfaction Guarantee</p>
                     </div>
                 </div>
             </div>
@@ -141,9 +142,9 @@ const AboutPage = () => {
             {/* Timeline Item 1 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2023 January - Founding</h3>
+                    <h3 className="text-xl font-bold mb-2"> 2022 January - Founding</h3>
                     <p className="text-secondary-200 mb-2">Firevolt is founded by Hayden after his service in the Australian Army.</p>
-                    <span className="text-sm text-primary-300">June 15, 2018</span>
+                    <span className="text-sm text-primary-300">September, 2022</span>
                 </div>
             </div>
             
@@ -159,17 +160,17 @@ const AboutPage = () => {
             {/* Timeline Item 3 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2023 December - Provide a Service</h3>
-                    <p className="text-secondary-200 mb-2">We provide our first full packaged service to local businesses.</p>
-                    <span className="text-sm text-primary-300">October 22, 2021</span>
+                    <h3 className="text-xl font-bold mb-2">2023 April - Downer Contract</h3>
+                    <p className="text-secondary-200 mb-2">Firevolt to service Queensland defence bases.</p>
+                    <span className="text-sm text-primary-300">April 22, 2023</span>
                 </div>
             </div>
             
             {/* Timeline Item 4 */}
             <div className="relative mb-12 timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2024 January - Building a Team</h3>
-                    <p className="text-secondary-200 mb-2">We start to build a team to support our clients.</p>
+                    <h3 className="text-xl font-bold mb-2">2024 January - Expansion</h3>
+                    <p className="text-secondary-200 mb-2">Firevolt expanded its service to help support our clients.</p>
                     <span className="text-sm text-primary-300">January 8, 2022</span>
                 </div>
             </div>
@@ -177,7 +178,7 @@ const AboutPage = () => {
             {/* Timeline Item 5 */}
             <div className="relative timeline-item pl-8">
                 <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <h3 className="text-xl font-bold mb-2">2024 - Today</h3>
+                    <h3 className="text-xl font-bold mb-2">2025 - Today</h3>
                     <p className="text-secondary-200 mb-2">Serving over 100+ businesses in Brisbane and surrounding areas.</p>
                     <span className="text-sm text-primary-300">Present</span>
                 </div>
@@ -213,10 +214,6 @@ const AboutPage = () => {
                         <p className="text-secondary-600 text-sm mb-4">Over a decade of experience in the military and now helping small businesses stay compliant.</p>
                         <div className="flex space-x-3">
                             <a href="https://www.linkedin.com/in/haydenheath/" className="text-secondary-400 hover:text-primary-600 transition"><FontAwesomeIcon icon={faLinkedin} /></a>
-                            <a href="mailto:service@firevolt.com.au" className="text-secondary-400 hover:text-primary-600 transition">
-                                <FontAwesomeIcon icon={faEnvelope} />
-                            </a>
-                            
                         </div>
                     </div>
                 </div>

@@ -21,12 +21,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           as="image"
         />
       <body>
-      <Navbar />
+        <Navbar />
         {children}
-        
         <QuickLink />
         <Footer />
-        
       </body>
     </html>
   );

@@ -70,7 +70,6 @@ return (
     <>
     <main>
 
-    
       {/* Hero Section */}
       <section className="hero-bg text-white py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">

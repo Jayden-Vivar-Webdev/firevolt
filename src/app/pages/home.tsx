@@ -384,7 +384,7 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get In Touch With Us</a>
+              <a href="/contact" className="bg-primary-10 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-700 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Contact Us</a>
               <a href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-600 transition transform hover:-translate-y-1">Learn More About Us</a>
             </div>
           </div>
@@ -518,7 +518,7 @@ const HomePage = () => {
                     </div>
                     <h3 className="text-xl font-bold">Emergency Plans & Diagrams</h3>
                   </div>
-                  <p className="text-secondary-600 mb-4">48 Hour Turnaround</p>
+                  <p className="text-secondary-600 mb-4">Professionally Designed Plans</p>
                   
                   <div className="mb-4">
                     <div className="flex items-center text-sm text-secondary-500 mb-1">
@@ -545,24 +545,26 @@ const HomePage = () => {
                 </div>
               </div>
               {/* Service 2 */}
+
+              {/* Change images to test and tag images */}
               <div className="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-gray-100">
                 <div className="service-img h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 z-10"></div>
                   <Image 
-                    src="/images/fire_training-img.webp" 
+                    src="/images" 
                     alt="Live Fire Training by Firevolt" 
                     className="w-full h-full object-cover transition duration-500"
                     width={500}
                     height={300}
                   />
-                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Expert Training</span>
+                  <span className="absolute top-4 right-4 bg-primary-10 text-white text-xs font-semibold px-3 py-1 rounded-full z-20">Professional Service</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mr-3">
                       <FontAwesomeIcon icon={faFire} />
                     </div>
-                    <h3 className="text-xl font-bold">Testing, Taging & Servicing</h3>
+                    <h3 className="text-xl font-bold">Testing & Tagging services</h3>
                   </div>
                   <p className="text-secondary-600 mb-4">Reduce Electrical Hazards</p>
                   
@@ -586,7 +588,7 @@ const HomePage = () => {
                   </div>
                   
                   <a href="/contact" className="block w-full bg-primary-10 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg font-medium transition shadow-md hover:shadow-lg">
-                    Book Consultation
+                    Book Service
                   </a>
                 </div>
               </div>
@@ -613,7 +615,9 @@ const HomePage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Feature 1 */}
+              {/* Feature 1 
+                Change icons for relevance.               
+              */}
               <div data-name="car-loan" className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100 js-open-popup">
                 <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-500">
                   <FontAwesomeIcon icon={faFireExtinguisher} />
@@ -722,7 +726,7 @@ const HomePage = () => {
         </section>
 
 
-    
+        {/*Add or get rid of testimonials sections*/}
         {/* Testimonials Section */}
         <section className="py-20 bg-secondary-50" id="testimonials">
           <div className="container mx-auto px-4 ">
@@ -757,8 +761,6 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
-              
               
               {/* Testimonial 2 */}
               <div ref={testimonial2Ref}  className="testimonials min-w-full xl:min-w-[28rem] snap-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
@@ -1144,7 +1146,6 @@ const HomePage = () => {
             
           })
         }
-
     </div>
     
 
@@ -1300,9 +1301,11 @@ const HomePage = () => {
           <a href="/contact" className="bg-primary-10 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-center transition shadow-md hover:shadow-lg">
             Get Your Diagrams
           </a>
-          <a href="/compliance-guide" className="border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
+
+          {/* Add compliance guide link and blog*/}
+          {/* <a href="/complianceGuide" className="border border-primary-10 text-primary-10 hover:bg-primary-50 px-6 py-3 rounded-lg font-bold text-center transition">
             Compliance Guide
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
@@ -1324,10 +1327,11 @@ const HomePage = () => {
         }
       </div>
 
+      {/* Add images to block elements */}
       <div className="flex flex-col justify-around">
         {/* Tab Content - What's Included */}
         <div className="emergency-tab-content active">
-
+        
         {selectedData && (
           <>
           <h3 className="text-xl font-bold mb-4">{selectedData.components.title}</h3>
