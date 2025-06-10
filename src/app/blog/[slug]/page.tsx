@@ -100,7 +100,15 @@ interface PageProps {
   };
 }
 
+export async function generateStaticParams() {
+  return blogPosts.map(post => ({
+    slug: post.slug,
+  }));
+}
+
+
 export default async function BlogPostPage({ params }: PageProps) {
+
   const post = blogPosts.find(p => p.slug === params.slug);
 
   if (!post) {
