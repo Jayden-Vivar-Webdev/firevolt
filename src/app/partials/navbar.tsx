@@ -161,6 +161,14 @@ const Navbar = () => {
                     
                   </Link>
                 </li>
+                <li>
+                  <Link href="/blog"
+                    onClick={() => {toggleMobileMenu()}}
+                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      Blog
+                    
+                  </Link>
+                </li>
                 
                
                 <li>
