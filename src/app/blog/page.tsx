@@ -7,7 +7,7 @@ const blogPosts = [
     title: 'What Are The Fire Extinguisher Signage Requirements In Brisbane?',
     image: '/images/extinguisher_gal/IMG_4299.JPEG',
     link: '/blog/fire-extingusher-requirements-brisbane',
-    blurb: 'Fire extinguisher signs are generally mounted approximately 2 metres above floor level or next to the fire extinguisher on the wall. This placement will make sure they are highly visible for everyone and can&apos;t be missed or obscured.'
+    blurb: "Fire extinguisher signs are generally mounted approximately 2 metres above floor level or next to the fire extinguisher on the wall. This placement will make sure they are highly visible for everyone and can't be missed or obscured."
   },
   // {
   //   title: 'What Are The Fire Extinguisher Signage Requirements In Brisbane?',

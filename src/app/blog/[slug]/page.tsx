@@ -81,8 +81,8 @@ const blogPosts: BlogPost[] = [
 
     <p><strong>Contact us today</strong> to book an inspection or speak with a fire safety expert.</p>
   </article>,
-    author: 'Nexa Web',
-    date: '2024-06-01',
+    author: 'Owner',
+    date: '10 June 2025',
     categories: ['Fire Extinguishers'],
     featuredImage: {
       url: '/images/extinguisher_gal/IMG_4299.JPEG',
