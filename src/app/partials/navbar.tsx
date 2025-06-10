@@ -89,6 +89,18 @@ const Navbar = () => {
                    
                   </Link>
                 </li>
+                <li>
+                <Link 
+                    href="/blog"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/blog' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}
+                  >
+                    
+                      Blog
+                   
+                  </Link>
+                </li>
                 
                 <li>
                 <Link 

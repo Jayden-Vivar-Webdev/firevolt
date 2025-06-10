@@ -41,7 +41,7 @@ const AboutPage = () => {
             </div>
             <div className="lg:w-1/2">
                 <Image 
-                src="/images/warehouse-safety.jpg" 
+                src="/images/vehicle/PHOTO-2025-06-04-18-56-53.jpg" 
                 alt="Warehouse Safety" 
                 className="w-full rounded-xl shadow-lg"
                 width={500}

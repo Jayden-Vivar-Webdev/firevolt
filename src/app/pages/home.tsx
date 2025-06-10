@@ -561,9 +561,9 @@ const HomePage = () => {
                 <div className="service-img h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 z-10"></div>
                   <Image 
-                    src="/images/compliance_gal/IMG_3755.JPEG" 
+                    src="/images/broken-cord.jpg" 
                     alt="Live Fire Training by Firevolt" 
-                    className="w-full h-full object-[0%_17%] object-cover transition duration-500"
+                    className="w-full h-full object-[0%_100%] object-cover transition duration-500"
                     width={500}
                     height={300}
                   />
