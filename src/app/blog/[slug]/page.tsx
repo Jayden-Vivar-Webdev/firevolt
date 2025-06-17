@@ -28,9 +28,9 @@ const blogPosts: BlogPost[] = [
     title: 'What Are The Fire Extinguisher Signage Requirements in Brisbane?',
     content: <article className='space-y-5'>
     <h1 className='text-3xl md:text-4xl font-bold mb-4'>What Are The Fire Extinguisher Signage Requirements in Brisbane?</h1>
-    <p>Fire safety regulations in Australia vary by state, and in Queensland—including Brisbane—there are strict compliance rules that building owners and managers must follow. Whether you own a commercial property, lease a space, or manage a building, you are legally responsible for ensuring the safety of occupants during a fire or emergency situation.</p>
+    <p>Fire safety regulations in Australia vary by state, and in Queensland including Brisbane; there are strict compliance rules that building owners and managers must follow. Whether you own a commercial property, lease a space, or manage a building, you are legally responsible for ensuring the safety of occupants during a fire or emergency situation.</p>
 
-    <p>A key part of this responsibility involves meeting fire extinguisher signage requirements. These visual indicators are not just a formality—they play a crucial role in helping people quickly locate and understand how to use firefighting equipment during an emergency.</p>
+    <p>A key part of this responsibility involves meeting fire extinguisher signage requirements. These visual indicators are not just a formality they play a crucial role in helping people quickly locate and understand how to use firefighting equipment during an emergency.</p>
     
     <p>In this article, we’ll walk you through what’s required when it comes to fire extinguisher signage in Brisbane, where signs should be placed, and how to stay compliant with Queensland fire safety laws.</p>
     
@@ -45,11 +45,11 @@ const blogPosts: BlogPost[] = [
     <ul>
       <li>Mounted at least <strong>2 metres above floor level</strong>, or positioned so they are easily visible from a distance.</li>
       <li>Installed directly above or near the extinguisher.</li>
-      <li>Placed in <strong>clear, unobstructed locations</strong>—they must not be hidden behind furniture or placed too high or too low.</li>
+      <li>Placed in <strong>clear, unobstructed locations</strong> they must not be hidden behind furniture or placed too high or too low.</li>
       <li>Located along <strong>emergency exit paths</strong>, where they are easy to find and access.</li>
     </ul>
 
-    <p>The goal is to ensure that anyone—staff, visitors, or first responders—can quickly spot the signage and reach the extinguisher without barriers.</p>
+    <p>The goal is to ensure that anyone staff, visitors, or first responders can quickly spot the signage and reach the extinguisher without barriers.</p>
 
     <h2 className='text-2xl md:text-3xl font-bold mb-4'>Brisbane Fire Extinguisher Testing Requirements</h2>
     <p>In addition to correct signage, fire extinguishers and other fire protection equipment in Brisbane must be regularly tested and serviced.</p>
