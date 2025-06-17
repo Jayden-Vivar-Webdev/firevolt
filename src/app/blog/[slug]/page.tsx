@@ -123,12 +123,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
+    <section className='px-6 lg:px-[15rem]'>
       <head>
         <title>{`${title} | Firevolt Blog`}</title>
         <meta name="description" content={metaDescription} />
       </head>
 
-      <section className="py-12 bg-white">
+      <section className="py-12  bg-white">
         <div className="container mx-auto px-4 max-w-1xl">
           {/* Back to Blog Link */}
           <div className="mb-8">
@@ -264,6 +265,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
           </section> */}
         </div>
+      </section>
       </section>
     </>
   );
