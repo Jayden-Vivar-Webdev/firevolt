@@ -113,7 +113,7 @@ const blogPosts: BlogPost[] = [
   
     <p>Correct placement of fire extinguisher signage is just as important as having the right extinguisher installed. In Brisbane and more broadly under <strong>Australian Standard AS 2444:2001</strong>, signs must be:</p>
   
-    <ul className="list-disc list-inside">
+    <ul className="list-disc list-outside ml-6">
       <li>Mounted at least <strong>2 metres above floor level</strong>, or positioned so they are easily visible from a distance.</li>
       <li>Installed directly above or near the extinguisher.</li>
       <li>Placed in <strong>clear unobstructed locations</strong> they must not be hidden behind furniture or placed too high or too low.</li>

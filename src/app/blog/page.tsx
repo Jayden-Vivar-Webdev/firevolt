@@ -12,6 +12,7 @@ const blogPosts = [
   {
     title: 'Fire Safety and Compliance Brisbane: Protecting Your Property and People',
     image: '/images/broken-cord.jpg',
+    link: '/blog/fire-saftey-compliance-brisbane',
     blurb: 'Fire safety and compliance in Brisbane is more than a legal requirement it is a life saving priority for every business, property owner, and facility manager...'
   },
   // {
