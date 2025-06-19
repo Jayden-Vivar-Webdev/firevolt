@@ -15,11 +15,12 @@ const blogPosts = [
     link: '/blog/fire-saftey-compliance-brisbane',
     blurb: 'Fire safety and compliance in Brisbane is more than a legal requirement it is a life saving priority for every business, property owner, and facility manager...'
   },
-  // {
-  //   title: 'What Are The Fire Extinguisher Signage Requirements In Brisbane?',
-  //   image: '',
-  //   blurb: 'Fire extinguisher signs are generally mounted approximately 2 metres above floor level or next to the fire extinguisher on the wall. This placement will make sure they are highly visible for everyone and can&apos;t be missed or obscured.'
-  // },
+  {
+    title: 'Top Fire Extinguisher Problems and Why Regular Servicing Matters',
+    image: '/images/extinguisher_gal/IMG_6997.jpg',
+    link: '/blog/fire-extinguisher-servicing-brisbane',
+    blurb: 'When it comes to fire safety, fire extinguishers play a vital role in stopping small fires before they turn into dangerous, destructive situations. But a fire extinguisher is only as reliable as its condition.'
+  },
   // {
   //   title: 'What Are The Fire Extinguisher Signage Requirements In Brisbane?',
   //   image: '',

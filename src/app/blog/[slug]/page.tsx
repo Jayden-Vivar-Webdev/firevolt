@@ -168,7 +168,91 @@ const blogPosts: BlogPost[] = [
     metaDescription: 'This article explains the fire extingusiher requirements for businesses located in Brisbane, QLD Australia.',
 
 
+  },
+  {
+    slug: 'fire-extinguisher-servicing-brisbane',
+    title: 'Fire Extinguisher Servicing Brisbane: Common Issues and Why Maintenance Matters',
+    content: <article className="space-y-5">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4">Top Fire Extinguisher Problems and Why Regular Servicing Matters</h1>
+  
+      <p>When it comes to fire safety, fire extinguishers are critical in stopping small fires before they become serious emergencies. But your extinguisher is only reliable if it’s regularly maintained. Without scheduled servicing, even the best extinguishers can fail right when they’re needed most.</p>
+  
+      <p>This article highlights the most common fire extinguisher issues like leakage, low pressure, expiry, and physical damage and how professional servicing ensures your fire safety equipment remains compliant and ready to perform.</p>
+  
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Regular Fire Extinguisher Servicing Is Essential</h2>
+  
+      <p>Under <strong>Australian Standard AS1851-2012</strong>, all fire extinguishers must be inspected every six months. These checks are designed to:</p>
+      <ul className="list-disc list-inside">
+        <li>Identify early signs of faults or wear</li>
+        <li>Ensure extinguishers are pressurised and functional</li>
+        <li>Maintain compliance with Queensland fire safety laws</li>
+        <li>Prevent failure during emergency use</li>
+      </ul>
+  
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">Common Fire Extinguisher Problems in Brisbane</h2>
+  
+      <h3 className="text-xl font-semibold">1. Leakage</h3>
+      <p>Leaks often go unnoticed and reduce internal pressure, rendering the extinguisher ineffective. They usually occur due to:</p>
+      <ul className="list-disc list-inside">
+        <li>Worn or faulty valves</li>
+        <li>Cracked or damaged seals</li>
+      </ul>
+      <p><strong>Solution:</strong> During servicing, technicians inspect and replace compromised components or the full unit if needed.</p>
+  
+      <h3 className="text-xl font-semibold">2. Low Pressure</h3>
+      <p>Pressure loss can occur through partial discharge or incorrect storage, and extinguishers without enough pressure won’t work in an emergency.</p>
+      <p><strong>Solution:</strong> Pressure gauges are checked, and units are recharged if pressure is outside the safe zone.</p>
+  
+      <h3 className="text-xl font-semibold">3. Expired Units</h3>
+      <p>All extinguishers have a shelf life. Expired models may contain degraded agents or faulty mechanisms.</p>
+      <p><strong>Solution:</strong> Servicing professionals track expiry dates and replace units before they become unsafe or non-compliant.</p>
+  
+      <h3 className="text-xl font-semibold">4. Corrosion and Physical Damage</h3>
+      <p>Fire extinguishers in high-humidity or industrial environments may suffer from rust or damage, compromising their integrity.</p>
+      <p><strong>Solution:</strong> Units are visually inspected for signs of corrosion or structural compromise and replaced as required.</p>
+  
+      <h3 className="text-xl font-semibold">5. Tampering or Accidental Discharge</h3>
+      <p>Safety pins can be removed accidentally or extinguishers discharged unintentionally. This affects their readiness.</p>
+      <p><strong>Solution:</strong> Servicing includes checking for tampering and restoring discharged units to full working order.</p>
+  
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">What’s Included in a Professional Fire Extinguisher Service</h2>
+  
+      <p>Servicing by qualified fire safety professionals ensures your extinguishers are always compliant and functional. A typical service includes:</p>
+      <ul className="list-disc list-inside">
+        <li>Inspection of all external and internal parts</li>
+        <li>Pressure level testing</li>
+        <li>Seal and nozzle checks</li>
+        <li>Recharge or replacement</li>
+        <li>Compliance tagging and recordkeeping</li>
+      </ul>
+  
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">Fire Safety Services Available in Brisbane</h2>
+  
+      <p>Beyond extinguisher maintenance, Brisbane Fire Services offers:</p>
+      <ul className="list-disc list-inside">
+        <li>Emergency and exit light inspections</li>
+        <li>Fire hose reel and hydrant testing</li>
+        <li>Site audits for fire safety compliance</li>
+        <li>Fire safety training and evacuation drills</li>
+      </ul>
+  
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">Protect Your People and Property By Booking Your Fire Extinguisher Service Today</h2>
+  
+      <p>Don’t leave your fire safety to chance. Whether you’re running a warehouse, office, retail store or any other commercial property in Brisbane, regular fire extinguisher servicing is a legal and safety must. </p>
+  
+      <p><strong><a href='/contact'>Contact Firevolt today</a> </strong> to schedule your fire extinguisher maintenance and keep your business protected and compliant with Queensland standards.</p>
+    </article>,
+    author: 'Owner',
+    date: '19 June 2025',
+    categories: ['Fire Extinguishers'],
+    featuredImage: {
+      url: '/images/extinguisher_gal/IMG_6997.jpg',
+      alt: 'Fire extinguisher being serviced by a technician',
+      caption: 'Fire Extinguisher Servicing in Brisbane'
+    },
+    metaDescription: 'Learn about the most common fire extinguisher problems and why regular servicing in Brisbane is essential for compliance and safety.'
   }
+  
   // Add more posts if you want
 ];
 
