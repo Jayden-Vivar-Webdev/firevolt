@@ -64,7 +64,7 @@ const blogPosts: BlogPost[] = [
     <p>Failing to meet these servicing requirements can result in penalties and increased liability in the event of an incident.</p>
 
     <h2 className='text-2xl md:text-3xl font-bold mb-4'>Fire Safety Training and Site Assessments</h2>
-    <p>Knowing how to use a fire extinguisher is just as important as having one installed. That’s why we offer accredited fire safety training for Brisbane businesses, including:</p>
+    <p>Knowing how to use a fire extinguisher is just as important as having one installed. That’s why we fire safety training for Brisbane businesses, including:</p>
 
     <ul>
       <li>First Response (First Attack) Fire Training</li>
@@ -138,7 +138,7 @@ const blogPosts: BlogPost[] = [
   
     <h2 className="text-2xl md:text-3xl font-bold mb-4">Fire Safety Training and Site Assessments</h2>
   
-    <p>Knowing how to use a fire extinguisher is just as important as having one installed. That’s why we offer accredited fire safety training for Brisbane businesses including:</p>
+    <p>Knowing how to use a fire extinguisher is just as important as having one installed. That’s why we offer fire safety training for Brisbane businesses including:</p>
   
     <ul className="list-disc list-inside">
       <li>First Response (First Attack) Fire Training</li>
@@ -228,7 +228,7 @@ const blogPosts: BlogPost[] = [
   
       <h2 className="text-2xl md:text-3xl font-bold mb-4">Fire Safety Services Available in Brisbane</h2>
   
-      <p>Beyond extinguisher maintenance, Brisbane Fire Services offers:</p>
+      <p>Beyond extinguisher maintenance, Firevolt services offered:</p>
       <ul className="list-disc list-inside">
         <li>Emergency and exit light inspections</li>
         <li>Fire hose reel and hydrant testing</li>
