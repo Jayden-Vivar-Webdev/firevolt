@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
-  description: "Firevolt is Brisbane’s trusted fire safety partner, offering test & tag, fire training, emergency planning, and full compliance services for businesses.",
+  description: "Firevolt provides comprehensive fire safety services including test & tag, emergency planning, fire training, and extinguisher services across mutiple locations in Brisbane Australia.",
   openGraph: {
     title: "Fire Safety Compliance Services Brisbane | Firevolt",
     description: "Brisbane's trusted fire safety experts offering test & tag, fire warden training, extinguisher services & compliance solutions for businesses.",
