@@ -1,4 +1,8 @@
-import blogSlugs from './blog-urls.json' assert { type: "json" };
+const blogSlugs = [
+  "fire-extingusher-requirements-brisbane",
+  "fire-saftey-compliance-brisbane",
+  "fire-extinguisher-servicing-brisbane"
+]
 
 export default {
   siteUrl: 'https://www.firevolt.com.au',
