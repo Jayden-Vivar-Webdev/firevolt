@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     "Fire Services Wynnum Central",
     "Fire Services Wynnum North",
     "Fire Services Yeerongpilly",
-    "and Fire Services Zillmere",
+    "Fire Services Zillmere",
     
   ],
   authors: [{ name: "Firevolt Team", url: "https://www.firevolt.com.au" }],

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.firevolt.com.au
+
+# Sitemaps
+Sitemap: https://www.firevolt.com.au/sitemap.xml

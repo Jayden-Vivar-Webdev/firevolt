@@ -807,7 +807,7 @@ const HomePage = () => {
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary-100">
                     <Image
                       src="/images/maider.png" 
-                      alt="ACEMONEY" 
+                      alt="Kaleb Maider" 
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"
