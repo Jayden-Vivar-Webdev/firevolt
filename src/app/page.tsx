@@ -4,7 +4,7 @@ import './styles.css';
 import './output.css';
 import HomePage from './pages/home';
 import { Metadata } from 'next';
-
+//Added meta tags
 export const metadata: Metadata = {
   title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
   description: "Firevolt provides comprehensive fire safety services including test & tag, emergency planning, fire training, and extinguisher services across mutiple locations in Brisbane Australia.",
