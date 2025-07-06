@@ -79,6 +79,18 @@ const Navbar = () => {
                 </li>
                 <li>
                 <Link 
+                    href="/all-services"
+                    className={`nav-link relative pb-1 transition ${
+                      pathname === '/all-services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}
+                  >
+                   
+                      All Services
+                    
+                  </Link>
+                </li>
+                <li>
+                <Link 
                     href="/about"
                     className={`nav-link relative pb-1 transition ${
                       pathname === '/about' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
@@ -158,6 +170,14 @@ const Navbar = () => {
                     onClick={() => {toggleMobileMenu()}}
                     className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                       Services
+                    
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/all-services"
+                    onClick={() => {toggleMobileMenu()}}
+                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      All Services
                     
                   </Link>
                 </li>
