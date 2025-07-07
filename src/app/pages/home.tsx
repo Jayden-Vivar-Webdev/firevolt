@@ -1578,7 +1578,7 @@ const HomePage = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="bg-primary-100 text-primary-600 text-xs font-bold px-2 py-1 rounded mr-3">4</span>
-                  <span className="text-secondary-600">Guaranteed compliance wtih Australian Standards.</span>
+                  <span className="text-secondary-600">Guaranteed compliance with Australian Standards.</span>
                 </li>
               </ol>
             </div>

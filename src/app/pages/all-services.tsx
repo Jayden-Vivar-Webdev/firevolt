@@ -6,7 +6,7 @@ import Compliance from '../partials/compliance';
 import Test from '../partials/test';
 import { useState } from 'react';
 import FreeCompliance from '../partials/free_cc';
-
+import ComprehensivePlans from '../partials/components/emergency-plans';
 export default function AllServices() {
 
 
@@ -48,6 +48,7 @@ export default function AllServices() {
     <Plans />
     <Compliance />
     <Test />
+    <ComprehensivePlans />
     </>
     
     

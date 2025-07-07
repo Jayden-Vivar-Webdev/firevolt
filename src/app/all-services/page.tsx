@@ -1,8 +1,6 @@
 import AllServices from "../pages/all-services"
 import { Metadata } from "next";
 
-
-
 export const metadata: Metadata = {
   title: "Professional Fire Safety Services Brisbane | Firevolt Solutions",
   description: "Firevolt offers expert fire safety services in Brisbane including test & tag, fire warden training, extinguisher servicing & compliance solutions. Protect your business today.",
@@ -86,9 +84,11 @@ export const metadata: Metadata = {
 };
 
 export default function Services(){
+    
     return(
         <>
         <AllServices />
+        
         </>
     )
 }
