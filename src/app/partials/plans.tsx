@@ -65,7 +65,7 @@ const Plans = () => {
            <span>Training requirements</span>
          </li>
        </ul>
-       <a href="/emergency-plans" className="inline-flex items-center text-primary-10 font-medium">
+       <a href="/contact" className="inline-flex items-center text-primary-10 font-medium">
          Learn More About Emergency Plans
          <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
        </a>
@@ -99,7 +99,7 @@ const Plans = () => {
            <span>48-hour turnaround available</span>
          </li>
        </ul>
-       <a href="/evacuation-diagrams" className="inline-flex items-center text-primary-10 font-medium">
+       <a href="/contact" className="inline-flex items-center text-primary-10 font-medium">
          Learn More About Evacuation Diagrams
          <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
        </a>
