@@ -3,7 +3,7 @@ import Image from "next/image";
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faLightbulb, faHandsHelping, faBullseye, faEye, faNetworkWired} from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
 const AboutPage = () => {
@@ -188,7 +188,7 @@ const AboutPage = () => {
     </section>
 
             {/* Our Team */}
-            <section className="py-20 bg-secondary-50" id="our-team">
+            {/* <section className="py-20 bg-secondary-50" id="our-team">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                 <span className="inline-block bg-primary-10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our People</span>
@@ -197,7 +197,7 @@ const AboutPage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
-                {/* Team Member 1 */}
+                
                 <div className="team-card col-2 bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
                     <div className="h-64 overflow-hidden">
                         <Image 
@@ -217,76 +217,10 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </div>
-                
-                {/* Team Member 2
-                <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
-                    <div className="h-64 overflow-hidden">
-                        <Image 
-                        src="/images/hayden-img.webp" 
-                        alt="Sarah Chen" 
-                        className="w-full h-full object-cover"
-                        width={500}
-                        height={300}
-                        />
-                    </div>
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold">Carl Carlson</h3>
-                        <p className="text-primary-600 mb-3">Head of Operations</p>
-                        <p className="text-secondary-600 text-sm mb-4">Carl provides the day to day operations of the business and training management.</p>
-                        <div className="flex space-x-3">
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fab fa-linkedin-in"></i></a>
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div> */}
-                
-                {/* Team Member 3 */}
-                {/* <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
-                    <div className="h-64 overflow-hidden">
-                        <Image 
-                        src="/images/hayden-img.webp" 
-                        alt="Michael Rodriguez" 
-                        className="w-full h-full object-cover"
-                        width={500}
-                        height={300}
-                        />
-                    </div>
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold">Ryan</h3>
-                        <p className="text-primary-600 mb-3">Safety Officer</p>
-                        <p className="text-secondary-600 text-sm mb-4">Ryan is our safety officer and helps us ensure our clients are compliant.</p>
-                        <div className="flex space-x-3">
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fab fa-linkedin-in"></i></a>
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div> */}
-                
-                {/* Team Member 4 */}
-                {/* <div className="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100">
-                    <div className="h-64 overflow-hidden">
-                        <Image 
-                        src="/images/hayden-img.webp" 
-                        alt="Emily Johnson" 
-                        className="w-full h-full object-cover"
-                        width={500}
-                        height={300}
-                        />
-                    </div>
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold">John Doe</h3>
-                        <p className="text-primary-600 mb-3">Project Manager</p>
-                        <p className="text-secondary-600 text-sm mb-4">John is our project manager and helps us ensure our clients meet all regulatory requirements.</p>
-                        <div className="flex space-x-3">
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fab fa-linkedin-in"></i></a>
-                            <a href="#" className="text-secondary-400 hover:text-primary-600 transition"><i className="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div> */}
-            </div> 
+            </div>
             
         </div>
-    </section>
+    </section> */}
 
         {/* CTA Section */}
         <section className="py-20 bg-primary-10 text-white">

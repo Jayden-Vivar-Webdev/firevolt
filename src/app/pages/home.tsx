@@ -614,9 +614,9 @@ const HomePage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Here to help business owners</h2>
               <p className="text-secondary-600 max-w-2xl mx-auto">Discover the features that make us stand out from the competition and help your business.</p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center py-10 items-center ml-8">
               <Image 
-                src="/images/hayden-img.webp" 
+                src="/images/Firevolt_CenteredLogo(Gradient-LBG).png" 
                 alt="owner of Firevolt" 
                 width={500}
                 height={300}

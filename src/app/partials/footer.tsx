@@ -21,7 +21,7 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faFacebook} />
                         </Link>
                         
-                        <Link aria-label='Linkedin Firevolt Link' href="https://www.linkedin.com/in/haydenheath/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
+                        <Link aria-label='Linkedin Firevolt Link' href="https://www.linkedin.com/company/firevolt/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Link>
                         <Link aria-label='Instagram Firevolt Link' href="https://www.instagram.com/firevolt._/" className="w-10 h-10 bg-secondary-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition text-secondary-300 hover:text-white">
