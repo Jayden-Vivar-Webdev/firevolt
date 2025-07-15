@@ -1,101 +1,6 @@
 import Link from 'next/link';
-
+import MobileLocationService from './search-locations';
 const ServiceLocations = () => {
-  const locations = [
-    { name: "Brisbane", slug: "brisbane" },
-    { name: "Acacia Ridge", slug: "acacia-ridge" },
-    { name: "Albany Creek", slug: "albany-creek" },
-    { name: "Albion", slug: "albion" },
-    { name: "Archerfield", slug: "archerfield" },
-    { name: "Banyo", slug: "banyo" },
-    { name: "Boondall", slug: "boondall" },
-    { name: "Bray Park", slug: "bray-park" },
-    { name: "Brendale", slug: "brendale" },
-    { name: "Bulimba", slug: "bulimba" },
-    { name: "Bulwer Island", slug: "bulwer-island" },
-    { name: "Burpengary", slug: "burpengary" },
-    { name: "Burpengary East", slug: "burpengary-east" },
-    { name: "Caboolture", slug: "caboolture" },
-    { name: "Caboolture South", slug: "caboolture-south" },
-    { name: "Capalaba", slug: "capalaba" },
-    { name: "Carole Park", slug: "carole-park" },
-    { name: "Chermside", slug: "chermside" },
-    { name: "Chermside South", slug: "chermside-south" },
-    { name: "Chermside West", slug: "chermside-west" },
-    { name: "Coopers Plains", slug: "coopers-plains" },
-    { name: "Coorparoo", slug: "coorparoo" },
-    { name: "Darra", slug: "darra" },
-    { name: "Deception Bay", slug: "deception-bay" },
-    { name: "Doboy", slug: "doboy" },
-    { name: "Doomben", slug: "doomben" },
-    { name: "Eagle Farm", slug: "eagle-farm" },
-    { name: "Geebung", slug: "geebung" },
-    { name: "Heathwood", slug: "heathwood" },
-    { name: "Hemmant", slug: "hemmant" },
-    { name: "Hendra", slug: "hendra" },
-    { name: "Hillcrest", slug: "hillcrest" },
-    { name: "Kedron", slug: "kedron" },
-    { name: "Larapinta", slug: "larapinta" },
-    { name: "Lawnton", slug: "lawnton" },
-    { name: "Lindum", slug: "lindum" },
-    { name: "Lytton", slug: "lytton" },
-    { name: "Meeandah", slug: "meeandah" },
-    { name: "Morayfield", slug: "morayfield" },
-    { name: "Myrtletown", slug: "myrtletown" },
-    { name: "Narangba", slug: "narangba" },
-    { name: "Newstead", slug: "newstead" },
-    { name: "North Lakes", slug: "north-lakes" },
-    { name: "Northgate", slug: "northgate" },
-    { name: "Nudgee", slug: "nudgee" },
-    { name: "Nudgee Beach", slug: "nudgee-beach" },
-    { name: "Nundah", slug: "nundah" },
-    { name: "Parkinson", slug: "parkinson" },
-    { name: "Pinkenba", slug: "pinkenba" },
-    { name: "Port of Brisbane", slug: "port-of-brisbane" },
-    { name: "Redbank", slug: "redbank" },
-    { name: "Redbank Plains", slug: "redbank-plains" },
-    { name: "Richlands", slug: "richlands" },
-    { name: "Rochedale", slug: "rochedale" },
-    { name: "Rocklea", slug: "rocklea" },
-    { name: "Salisbury", slug: "salisbury" },
-    { name: "Sandstone Point", slug: "sandstone-point" },
-    { name: "Springfield Central", slug: "springfield-central" },
-    { name: "Springfield Lakes", slug: "springfield-lakes" },
-    { name: "Stafford", slug: "stafford" },
-    { name: "Strathpine", slug: "strathpine" },
-    { name: "Sumner", slug: "sumner" },
-    { name: "Sunnybank Hills", slug: "sunnybank-hills" },
-    { name: "Toombul", slug: "toombul" },
-    { name: "Virginia", slug: "virginia" },
-    { name: "Wacol", slug: "wacol" },
-    { name: "Warner", slug: "warner" },
-    { name: "Whinstanes", slug: "whinstanes" },
-    { name: "Wynnum Central", slug: "wynnum-central" },
-    { name: "Wynnum North", slug: "wynnum-north" },
-    { name: "Yeerongpilly", slug: "yeerongpilly" },
-    { name: "Zillmere", slug: "zillmere" }
-  ];
-  
-
-  // Group locations by state/region for better organization
-  const groupedLocations = {
-    "Queensland - Brisbane & Surrounds": [
-      "Brisbane", "Acacia Ridge", "Albany Creek", "Albion", "Archerfield", "Banyo", 
-      "Boondall", "Bray Park", "Brendale", "Bulimba", "Bulwer Island", "Burpengary", 
-      "Burpengary East", "Caboolture", "Caboolture South", "Capalaba", "Carole Park", 
-      "Chermside", "Chermside South", "Chermside West", "Coopers Plains", "Coorparoo", 
-      "Darra", "Deception Bay", "Doboy", "Doomben", "Eagle Farm", "Geebung", "Heathwood", 
-      "Hemmant", "Hendra", "Hillcrest", "Kedron", "Larapinta", "Lawnton", "Lindum", 
-      "Lytton", "Meeandah", "Morayfield", "Myrtletown", "Narangba", "Newstead", 
-      "North Lakes", "Northgate", "Nudgee", "Nudgee Beach", "Nundah", "Parkinson", 
-      "Pinkenba", "Port of Brisbane", "Redbank", "Redbank Plains", "Richlands", 
-      "Rochedale", "Rocklea", "Salisbury", "Sandstone Point", "Springfield Central", 
-      "Springfield Lakes", "Stafford", "Strathpine", "Sumner", "Sunnybank Hills", 
-      "Toombul", "Virginia", "Wacol", "Warner", "Whinstanes", "Wynnum Central", 
-      "Wynnum North", "Yeerongpilly", "Zillmere"
-    ]
-  };
-  
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
@@ -110,12 +15,13 @@ const ServiceLocations = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
              Firevolt Service Locations
-            <span className="block text-red-600">Service Excellence</span>
+            <span className="block text-red-600 text-3xl md:text-4xl font-bold mb-4">Service Excellence</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-secondary-600 mb-4">
           Delivering premium fire services all across locations in Brisbane QLD, Australia
+            <br />
             <br />
             <strong>Can’t find your location? No worries, get in touch and we will see how we can help.</strong>
           </p>
@@ -148,34 +54,7 @@ const ServiceLocations = () => {
             </div>
 
             {/* Locations Grid */}
-            <div className="flex gap-8">
-              {Object.entries(groupedLocations).map(([region, cities]) => (
-                <div key={region} className="group">
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="flex items-center mb-6">
-                      <div className="w-3 h-3 bg-red-600 rounded-full mr-3"></div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
-                        {region}
-                      </h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {cities.map(city => {
-                        const location = locations.find(loc => loc.name === city);
-                        return location ? (
-                          <Link
-                            key={location.slug}
-                            href={`/all-services/${location.slug}`}
-                            className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-gray-700 bg-gray-50 hover:bg-red-600 hover:text-white border border-gray-200 hover:border-red-600 transition-all duration-200 hover:shadow-md hover:scale-101"
-                          >
-                            {location.name}
-                          </Link>
-                        ) : null;
-                      })}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <MobileLocationService />
           </div>
         </div>
         
@@ -212,6 +91,7 @@ const ServiceLocations = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
