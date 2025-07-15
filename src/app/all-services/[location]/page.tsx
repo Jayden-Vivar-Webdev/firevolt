@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import AllServices from "../../pages/all-services-partial"
 import { Metadata } from "next";
-
+import FireServicesSection from '@/components/content/service-info';
 type Params = Promise <{
   location: string,
 }>
@@ -188,7 +188,7 @@ export default async function Services({params}: {params: Params}){
               We server in mutiple locations.
               <br />
               <br />
-              <strong>{param.location.toUpperCase()}</strong>
+              <strong>{param.location.replace(/-/g, ' ').toUpperCase()}</strong>
 
             </p>
             <a
@@ -199,6 +199,8 @@ export default async function Services({params}: {params: Params}){
             </a>
           </div>
         </section>
+
+        <FireServicesSection location={param.location.replace(/-/g, ' ').toUpperCase()} />
   
         <AllServices />
       </>

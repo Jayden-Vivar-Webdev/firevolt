@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle, faCheckCircle, faStar, faBuilding, faCalendarCheck, faThumbsUp, faShieldAlt, faUsers, faRoute, faTornado, faFlask, faUserInjured, faClock, faFileAlt, faArrowDown, faFileDownload, faClipboardCheck, faMapMarkedAlt, faDollarSign, faMoneyBill, faBolt, faTrophy, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useRef } from 'react';
-
+import ServiceLocations from '@/components/location/service-locations';
 
 
 const HomePage = () => {
@@ -399,6 +399,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
     
         {/* Services Section */}
         <section className="py-20 bg-white" id="services">
@@ -605,6 +606,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+        {/* Location for servicing areas */}
+        <ServiceLocations />
     
         {/* Features Section */}
         <section className="py-20" id="features">

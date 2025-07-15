@@ -12,10 +12,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import FreeQuote from './free_quote';
 
 
-
-
-
-
 const Navbar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,7 +48,7 @@ const Navbar = () => {
             <span className="text-secondary-900"></span>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             <nav>
               <ul className="flex gap-10">
                 <li>
@@ -134,7 +130,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="lg:hidden text-2xl focus:outline-none text-secondary-600 absolute right-6"
+            className="xl:hidden text-2xl focus:outline-none text-secondary-600 absolute right-6"
             id="mobile-menu-button"
             aria-label='Mobile Menu Button'
             onClick={toggleMobileMenu}
@@ -146,7 +142,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4" id="mobile-menu">
+          <div className="xl:hidden py-4" id="mobile-menu">
             <nav>
               <ul className="space-y-3" style={{justifyItems: 'center'}}>
                 <li>
