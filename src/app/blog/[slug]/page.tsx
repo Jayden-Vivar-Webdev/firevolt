@@ -3,7 +3,8 @@ import { faArrowLeft, faUser, faCalendarAlt, faTags } from '@fortawesome/free-so
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import fs from 'fs';
+import path from 'path';
 import { getPostBySlug } from '@/app/lib/getMdxContent';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
@@ -12,6 +13,63 @@ import { notFound } from 'next/navigation';
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
+
+export async function generateStaticParams() {
+  const postsDir = path.join(process.cwd(), 'src/app/content/blog');
+  const files = fs.readdirSync(postsDir);
+
+  const slugs = files
+    .filter(file => file.endsWith('.mdx'))
+    .map(file => file.replace(/\.mdx$/, ''));
+  return slugs.map(slug => ({ slug }));
+}
+
+// This function runs before rendering and provides metadata for the page
+export async function generateMetadata({ params }: PageProps ) {
+  
+  const { slug } = await params;
+
+  const { frontmatter} = await getPostBySlug(slug).catch(() => ({ frontmatter: null, content: null }));
+  if (!frontmatter) return notFound();
+
+
+  if (!frontmatter) {
+    return {
+      title: 'Post Not Found | Nexa Web Blog',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  const imageUrl = frontmatter.featuredImage && frontmatter.featuredImage.url
+  ? frontmatter.featuredImage.url
+  : 'https://firevolt.com.au/images/nexa_og.png';
+
+
+  return {
+    title: `${frontmatter.title} |  Firevolt Blog`,
+    description: 'Tips, and fire compliance advice from Firevolt.',
+    canonical: `https://firevolt.com.au/blog/${slug}`,
+    openGraph: {
+      title: `${frontmatter.title} | Firevolt Blog`,
+      description: 'Tips, and fire compliance advice from Firevolt.',
+      url: `https://firevolt.com.au/blog/${slug}`,
+      siteName: 'Firevolt',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: frontmatter.title,
+          type: 'image/png',
+        },
+      ],
+      type: 'article',
+      publishedTime: frontmatter.date,
+    },
+  };
+}
+
+
 
 export default async function BlogPostPage({ params }: PageProps ) {
   const { slug } = await params;

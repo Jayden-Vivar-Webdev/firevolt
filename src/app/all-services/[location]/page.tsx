@@ -1,22 +1,120 @@
 import { redirect } from 'next/navigation';
 import AllServices from "../../pages/all-services-partial"
-import { Metadata } from "next";
 import FireServicesSection from '@/components/content/service-info';
 type Params = Promise <{
   location: string,
 }>
 
-export const metadata: Metadata = {
-  title: "Professional Fire Safety Services Brisbane | Firevolt Solutions",
-  description: "Firevolt offers expert fire safety services in Brisbane including test & tag, fire warden training, extinguisher servicing & compliance solutions. Protect your business today.",
-  openGraph: {
-    title: "Fire Safety Services Brisbane | Test & Tag, Training & Compliance",
-    description: "Comprehensive fire safety services for Brisbane businesses - test & tag, emergency planning, warden training, extinguisher maintenance & compliance certification.",
-    url: "https://www.firevolt.com.au/services",
-    siteName: "Firevolt Fire Safety Experts",
+
+const slugs = [
+      "acacia-ridge",
+      "albany-creek",
+      "albion",
+      "archerfield",
+      "banyo",
+      "brisbane",
+      "boondall",
+      "bray-park",
+      "brendale",
+      "bulimba",
+      "bulwer-island",
+      "burpengary",
+      "burpengary-east",
+      "caboolture",
+      "caboolture-south",
+      "capalaba",
+      "carole park",
+      "chermside",
+      "chermside-south",
+      "chermside-west",
+      "coopers-plains",
+      "coorparoo",
+      "darra",
+      "deception-bay",
+      "doboy",
+      "doomben",
+      "eagle farm",
+      "geebung",
+      "heathwood",
+      "hemmant",
+      "hendra",
+      "hillcrest",
+      "kedron",
+      "larapinta",
+      "lawnton",
+      "lindum",
+      "lytton",
+      "meeandah",
+      "morayfield",
+      "myrtletown",
+      "narangba",
+      "newstead",
+      "north-lakes",
+      "northgate",
+      "nudgee",
+      "nudgee-beach",
+      "nundah",
+      "parkinson",
+      "pinkenba",
+      "port-of-brisbane",
+      "redbank",
+      "redbank-plains",
+      "richlands",
+      "rochedale",
+      "rocklea",
+      "salisbury",
+      "sandstone-point",
+      "springfield-central",
+      "springfield-lakes",
+      "stafford",
+      "strathpine",
+      "sumner",
+      "sunnybank-hills",
+      "toombul",
+      "virginia",
+      "wacol",
+      "warner",
+      "whinstanes",
+      "wynnum-central",
+      "wynnum-north",
+      "yeerongpilly",
+      "zillmere"
+];
+
+export async function generateStaticParams() {
+  
+  return slugs.map(location => ({
+    location,
+  }));
+
+  
+}
+export async function generateMetadata({ params }: { params: Params }) {
+  const { location } = await params;
+  
+
+  if (!location) {
+    return {
+      title: 'Page not found — Firevolt',
+      description: 'This page could not be found.',
+    };
+  }
+
+  const locationName = location.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  const pageTitle = `Firevolt — Fire Compliance Services in ${locationName}`;
+  const pageDescription = `Explore how Firevolt delivers expert fire compliance services for businesses located in ${locationName}.`;
+
+  return {
+    title: pageTitle,
+    description: pageDescription,
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: "https://www.firevolt.com.au/services",
+      siteName: "Firevolt Fire Safety Experts",
     images: [
       {
-        url: "/images/meta/services-og-image.png",
+        url: "https://www.firevolt.com.au/images/meta/firevolt_twitter-card.png",
         width: 1200,
         height: 630,
         alt: "Firevolt Fire Safety Services - Brisbane",
@@ -87,6 +185,7 @@ export const metadata: Metadata = {
     images: ["/images/meta/twitter-card.png"],
   },
 };
+}
 
 export default async function Services({params}: {params: Params}){
     
