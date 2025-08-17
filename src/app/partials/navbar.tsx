@@ -11,8 +11,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import FreeQuote from './free_quote';
 
+const DownArrow = () => {
+  return(
+    <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" 
+          stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+        </path>
+    </svg>
+  )
+}
+const UpArrow = () => {
+  return(
+    <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" 
+          stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+        </path>
+    </svg>
+  )
+}
+
+
 
 const Navbar = () => {
+
+  const [servicesSelected, setServicesSeleted] = useState(false)
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -24,9 +46,14 @@ const Navbar = () => {
   };
   
 
+  const toggleDropDown = () => {
+    setServicesSeleted(!servicesSelected);
+  }
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
+
 
 
   return (
@@ -72,6 +99,7 @@ const Navbar = () => {
                       Services
                     
                   </Link>
+                  
                 </li>
                 <li>
                 <Link 
@@ -80,7 +108,6 @@ const Navbar = () => {
                       pathname === '/all-services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
-                   
                       All Services
                     
                   </Link>
@@ -144,7 +171,7 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="xl:hidden py-4" id="mobile-menu">
             <nav>
-              <ul className="space-y-3" style={{justifyItems: 'center'}}>
+              <ul className="space-y-3 px-5">
                 <li>
                   <Link href="/"
                     onClick={() => {toggleMobileMenu()}}
@@ -161,22 +188,70 @@ const Navbar = () => {
                     
                   </Link>
                 </li>
-                <li>
+                <div className='relative' >
                   <Link href="/services"
-                    onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
-                      Services
-                    
+                    onClick={() => {toggleDropDown()}}
+                    className="flex justify-between hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      Services  {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
                   </Link>
-                </li>
-                <li>
-                  <Link href="/all-services"
-                    onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
-                      All Services
+                  {servicesSelected && 
+                  <div className='absolute bg-gray-50 w-full right-1/2 transform translate-x-1/2 rounded-lg mx-auto px-4 py-4 mx-4 border border-gray-200'>
+                    <div className='w-full bg-white rounded-lg shadow-sm border border-gray-100 space-y-3 py-3'>
                     
-                  </Link>
-                </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                      <Link href="/all-services"
+                        onClick={() => {toggleMobileMenu()}}
+                        className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                          All Services
+                      </Link>
+                    </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                    <Link href="/all-services"
+                      onClick={() => {toggleMobileMenu()}}
+                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        Compliance Checks
+                    </Link>
+                    </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                    <Link href="/all-services"
+                      onClick={() => {toggleMobileMenu()}}
+                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        Fire Training
+                    </Link>
+                    </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                    <Link href="/all-services"
+                      onClick={() => {toggleMobileMenu()}}
+                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        Extinguisher Serivces
+                    </Link>
+                    </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                    <Link href="/all-services"
+                      onClick={() => {toggleMobileMenu()}}
+                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        Test & Tag
+                    </Link>
+                    </li>
+                    <li className='flex pl-4'>
+                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
+                    <Link href="/all-services"
+                      onClick={() => {toggleMobileMenu()}}
+                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        Emergency Plans & Diagrams
+                    </Link>
+                  </li>
+                  </div>
+                  </div>}
+                </div>
+                
+                
+               
                 <li>
                   <Link href="/blog"
                     onClick={() => {toggleMobileMenu()}}
