@@ -512,6 +512,10 @@ const TestAndTag = () => {
             
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h4 className="text-xl font-bold mb-6 text-center">Test & Tag Pricing Guide</h4>
+                <div className="py-5">
+                    <strong className="">Note:</strong> This is only a guide
+                </div>
+                
                 <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="font-medium">Standard Office Equipment</span>

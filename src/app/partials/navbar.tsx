@@ -96,7 +96,6 @@ const Navbar = () => {
                       pathname === '/services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
-                   
                       Services {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
                   </div>
                   {servicesSelected && 
@@ -295,9 +294,6 @@ const Navbar = () => {
                   </div>
                   </div>}
                 </div>
-                
-                
-               
                 <li>
                   <Link href="/blog"
                     onClick={() => {toggleMobileMenu()}}
@@ -306,8 +302,6 @@ const Navbar = () => {
                     
                   </Link>
                 </li>
-                
-               
                 <li>
                   <Link href="/contact"
                     onClick={() => {toggleMobileMenu()}}
