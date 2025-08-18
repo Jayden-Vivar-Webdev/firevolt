@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import AllServices from "../../pages/all-services-partial"
+import AllServices from "../../../pages/all-services-partial"
 import FireServicesSection from '@/components/content/service-info';
 type Params = Promise <{
   location: string,

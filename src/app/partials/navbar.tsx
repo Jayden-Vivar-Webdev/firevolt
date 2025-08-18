@@ -15,7 +15,7 @@ const DownArrow = () => {
   return(
     <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" 
-          strokeLinejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+          strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7">
         </path>
     </svg>
   )
@@ -24,7 +24,7 @@ const UpArrow = () => {
   return(
     <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" 
-          strokeLinejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+          strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7">
         </path>
     </svg>
   )
@@ -92,20 +92,20 @@ const Navbar = () => {
                 
                   <div
                     onClick={() => toggleDropDown()}
-                    className={`nav-link relative pb-1 transition ${
+                    className={`nav-link flex items-center gap-2 relative pb-1 transition cursor-pointer ${
                       pathname === '/services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                    
-                      Services
+                      Services {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
                   </div>
-                  {!servicesSelected && 
+                  {servicesSelected && 
                   <div className='absolute bg-gray-50 w-1/3 left-1/2 top-17 transform translate-x-8 rounded-lg mx-auto px-4 py-4 mx-4 border border-gray-200'>
-                    <div className='w-full bg-white rounded-lg shadow-sm border border-gray-100 space-y-3 py-3'>
+                    <ul className='w-full bg-white rounded-lg shadow-sm border border-gray-100 space-y-3 py-3'>
                     
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                      <Link href="/all-services"
+                      <Link href="/services/all-services"
                         onClick={() => {toggleMobileMenu()}}
                         className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                           All Services
@@ -113,7 +113,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/compliance"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Compliance Checks
@@ -121,7 +121,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/fire-training"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Fire Training
@@ -129,7 +129,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/extinguisher-services"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Extinguisher Serivces
@@ -137,7 +137,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/test-and-tag"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Test & Tag
@@ -145,13 +145,13 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/emergency-plans"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Emergency Plans & Diagrams
                     </Link>
                   </li>
-                  </div>
+                  </ul>
                 </div>}
                     
                 
@@ -254,7 +254,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/compliance"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Compliance Checks
@@ -262,7 +262,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/fire-training"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Fire Training
@@ -270,7 +270,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/extingusher-services"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Extinguisher Serivces
@@ -278,7 +278,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/all-services"
+                    <Link href="/services/test-and-tag"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Test & Tag

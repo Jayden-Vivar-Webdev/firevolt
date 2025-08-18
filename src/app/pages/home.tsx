@@ -9,7 +9,7 @@ import { faFireExtinguisher, faArrowRight, faFire, faHome, faExclamationTriangle
 import { useState } from 'react';
 import { useRef } from 'react';
 import ServiceLocations from '@/components/location/service-locations';
-
+import ServicesPage from './service';
 
 const HomePage = () => {
 
@@ -606,6 +606,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+        <ServicesPage hero={false}/>
+        
         {/* Location for servicing areas */}
         <ServiceLocations />
     

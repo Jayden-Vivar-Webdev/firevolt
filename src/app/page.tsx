@@ -4,6 +4,7 @@ import './styles.css';
 import './output.css';
 import HomePage from './pages/home';
 import { Metadata } from 'next';
+import Script from 'next/script';
 //Added meta tags
 export const metadata: Metadata = {
   title: "Fire Safety & Compliance Experts Brisbane | Firevolt",
@@ -137,7 +138,73 @@ export const metadata: Metadata = {
 };
 
 const Home = () => {
-  return <HomePage/>
+  return (
+  <>
+  <HomePage/>
+  <Script
+        id="firevolt-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Firevolt Fire Safety & Compliance Experts",
+            url: "https://www.firevolt.com.au",
+            logo: "https://www.firevolt.com.au/images/meta/twitter-card.png",
+            image: "https://www.firevolt.com.au/images/meta/twitter-card.png",
+            description:
+              "Firevolt provides comprehensive fire safety services including test & tag, emergency planning, fire training, and extinguisher services across multiple locations in Brisbane, Australia.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Brisbane",
+              addressRegion: "QLD",
+              addressCountry: "Australia",
+            },
+            areaServed: {
+              "@type": "City",
+              name: "Brisbane",
+            },
+            sameAs: [
+              "https://www.facebook.com/people/Firevolt/100086488210335/", // add your real socials
+              "https://www.linkedin.com/company/firevolt/",
+              "https://www.instagram.com/firevolt._/",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+61-XXX-XXX-XXX", // replace with your phone
+              contactType: "customer service",
+              areaServed: "AU",
+              availableLanguage: ["English"],
+            },
+            serviceType: [
+              "Fire Safety Services",
+              "Test & Tag",
+              "Fire Warden Training",
+              "Fire Extinguisher Servicing",
+              "Emergency Procedures Planning",
+              "Fire Equipment Training",
+              "Business Fire Safety Compliance",
+            ],
+            offers: {
+              "@type": "Offer",
+              url: "https://www.firevolt.com.au",
+              priceCurrency: "AUD",
+              price: "0", // change if you want to show pricing
+              eligibleRegion: {
+                "@type": "Place",
+                name: "Brisbane, QLD, Australia",
+              },
+            },
+            founder: {
+              "@type": "Person",
+              name: "Firevolt Team",
+            },
+          }),
+        }}
+      />
+      </>
+    )
 }
 
 export default Home;

@@ -85,7 +85,7 @@ export const metadata: Metadata = {
 
 
 const Services = () => {
-  return <ServicesPage/>
+  return <ServicesPage hero={true}/>
 }
 
 
