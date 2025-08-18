@@ -270,7 +270,7 @@ const Navbar = () => {
                     </li>
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/extingusher-services"
+                    <Link href="/services/extinguisher-services"
                       onClick={() => {toggleMobileMenu()}}
                       className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                         Extinguisher Serivces
