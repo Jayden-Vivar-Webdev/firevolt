@@ -246,7 +246,7 @@ const Navbar = () => {
                     
                     <li className='flex pl-4'>
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                      <Link href="/all-services"
+                      <Link href="/services/all-services"
                         onClick={() => {toggleMobileMenu()}}
                         className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
                           All Services
