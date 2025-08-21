@@ -1,6 +1,7 @@
 'use client'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { Metadata } from "next";
 import { faFileAlt, 
     faCheckCircle, 
     faArrowRight, 
@@ -95,6 +96,76 @@ import Image from "next/image";
 //   };
   
 
+export const metadata: Metadata = {
+  title: "Emergency Plans & Evacuation Diagrams Brisbane | Fire Safety Experts | Firevolt",
+  description: "Professional emergency plans and evacuation diagrams for Brisbane businesses. Compliant with WHS legislation. Ensure workplace safety & meet legal obligations. Free consultation available.",
+  openGraph: {
+    title: "Emergency Plans & Evacuation Diagrams | Brisbane Fire Safety Experts",
+    description: "Expertly designed emergency plans and evacuation diagrams to meet WHS compliance. Protect staff and visitors with clear safety documentation. Serving Brisbane, Gold Coast & Sunshine Coast.",
+    url: "https://www.firevolt.com.au/services/emergency-plans",
+    siteName: "Firevolt Fire Safety Experts",
+    images: [
+      {
+        url: "https://www.firevolt.com.au/images/meta/emergency-plans.png",
+        width: 1200,
+        height: 630,
+        alt: "Firevolt Emergency Plans and Evacuation Diagrams",
+      },
+    ],
+    type: "website",
+    locale: "en_AU",
+  },
+  keywords: [
+    "emergency plans Brisbane",
+    "evacuation diagrams QLD",
+    "workplace emergency planning",
+    "fire evacuation plans Brisbane",
+    "emergency response procedures",
+    "WHS emergency plans",
+    "evacuation diagram compliance",
+    "emergency evacuation training",
+    "workplace safety diagrams",
+    "fire safety compliance Brisbane",
+    "emergency procedure documentation",
+    "emergency management plans",
+    "workplace evacuation plans QLD",
+    "safety evacuation consultants",
+    "emergency diagram services Brisbane",
+    "evacuation plans Queensland",
+    "workplace fire evacuation compliance",
+    "emergency plan development",
+    "fire emergency diagrams",
+    "emergency safety consultants Brisbane",
+    "emergency evacuation compliance QLD",
+    "workplace safety emergency diagrams",
+    "WHS evacuation requirements",
+    "emergency preparedness Brisbane",
+    "fire evacuation planning services",
+  ],
+  authors: [{ name: "Firevolt Emergency Planning Team", url: "https://www.firevolt.com.au/services/emergency-plans" }],
+  alternates: {
+    canonical: "https://www.firevolt.com.au/services/emergency-plans",
+  },
+  metadataBase: new URL("https://www.firevolt.com.au"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emergency Plans & Evacuation Diagrams Brisbane | Firevolt Safety Experts",
+    description: "Ensure workplace compliance and safety with professional emergency plans and evacuation diagrams. Servicing Brisbane, Gold Coast & Sunshine Coast.",
+    images: ["https://www.firevolt.com.au/images/meta/emergency-plans.png"],
+  },
+  category: "Business Services",
+};
 
 
 

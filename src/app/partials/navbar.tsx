@@ -93,7 +93,7 @@ const Navbar = () => {
                   <div
                     onClick={() => toggleDropDown()}
                     className={`nav-link flex items-center gap-2 relative pb-1 transition cursor-pointer ${
-                      pathname === '/services' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      pathname.includes('/services') ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
                     }`}
                   >
                       Services {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
@@ -106,7 +106,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                       <Link href="/services/all-services"
                         onClick={() => {toggleMobileMenu()}}
-                        className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                      pathname === '/services/all-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}>
                           All Services
                       </Link>
                     </li>
@@ -114,7 +116,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/compliance"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/compliance' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Compliance Checks
                     </Link>
                     </li>
@@ -122,7 +126,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/fire-training"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/fire-training' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Fire Training
                     </Link>
                     </li>
@@ -130,7 +136,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/extinguisher-services"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/extinguisher-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Extinguisher Serivces
                     </Link>
                     </li>
@@ -138,7 +146,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/test-and-tag"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/test-and-tag' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Test & Tag
                     </Link>
                     </li>
@@ -146,7 +156,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/emergency-plans"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/emergency-plans' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Emergency Plans & Diagrams
                     </Link>
                   </li>
@@ -220,7 +232,10 @@ const Navbar = () => {
                 <li>
                   <Link href="/"
                     onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                    
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                       Home
                     
                   </Link>
@@ -228,7 +243,9 @@ const Navbar = () => {
                 <li>
                   <Link href="/about"
                     onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                      pathname === '/about' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}>
                       About
                     
                   </Link>
@@ -236,7 +253,9 @@ const Navbar = () => {
                 <div className='relative' >
                   <Link href="/services"
                     onClick={() => {toggleDropDown()}}
-                    className="flex justify-between hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                    className={`flex justify-between hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                      pathname === '/about' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}>
                       Services  {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
                   </Link>
                   {servicesSelected && 
@@ -247,7 +266,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                       <Link href="/services/all-services"
                         onClick={() => {toggleMobileMenu()}}
-                        className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                        className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                          pathname === '/services/all-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                        }`}>
                           All Services
                       </Link>
                     </li>
@@ -255,7 +276,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/compliance"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/compliance' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Compliance Checks
                     </Link>
                     </li>
@@ -263,7 +286,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/fire-training"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/fire-training' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Fire Training
                     </Link>
                     </li>
@@ -271,7 +296,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/extinguisher-services"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/extinguisher-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Extinguisher Serivces
                     </Link>
                     </li>
@@ -279,7 +306,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/test-and-tag"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/test-and-tag' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Test & Tag
                     </Link>
                     </li>
@@ -287,7 +316,9 @@ const Navbar = () => {
                     <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
                     <Link href="/services/emergency-plans"
                       onClick={() => {toggleMobileMenu()}}
-                      className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                        pathname === '/services/emergency-plans' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                      }`}>
                         Emergency Plans & Diagrams
                     </Link>
                   </li>
@@ -297,7 +328,9 @@ const Navbar = () => {
                 <li>
                   <Link href="/blog"
                     onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                      pathname === '/blog' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}>
                       Blog
                     
                   </Link>
@@ -305,7 +338,9 @@ const Navbar = () => {
                 <li>
                   <Link href="/contact"
                     onClick={() => {toggleMobileMenu()}}
-                    className="block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600">
+                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
+                      pathname === '/contact' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
+                    }`}>
                       Contact
                     
                   </Link>
