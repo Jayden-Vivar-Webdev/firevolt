@@ -24,6 +24,9 @@ export async function generateStaticParams() {
   return slugs.map(slug => ({ slug }));
 }
 
+
+
+
 // This function runs before rendering and provides metadata for the page
 export async function generateMetadata({ params }: PageProps ) {
   

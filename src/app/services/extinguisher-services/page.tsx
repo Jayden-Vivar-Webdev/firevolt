@@ -14,6 +14,8 @@ import { faFireExtinguisher,
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Metadata } from "next";
+
+
 export const metadata: Metadata = {
     title: "Fire Extinguisher Services Brisbane | Testing & Maintenance | Firevolt",
     description:

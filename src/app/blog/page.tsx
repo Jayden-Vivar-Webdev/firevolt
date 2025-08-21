@@ -4,28 +4,10 @@
  import matter from 'gray-matter';
 
  
-// const blogPosts = [
-//   {
-//     title: 'What Are The Fire Extinguisher Signage Requirements In Brisbane?',
-//     image: '/images/extinguisher_gal/IMG_4299.JPEG',
-//     link: '/blog/fire-extingusher-requirements-brisbane',
-//     blurb: "Fire extinguisher signs are generally mounted approximately 2 metres above floor level or next to the fire extinguisher on the wall. This placement..."
-//   },
-//   {
-//     title: 'Fire Safety and Compliance Brisbane: Protecting Your Property and People',
-//     image: '/images/broken-cord.jpg',
-//     link: '/blog/fire-saftey-compliance-brisbane',
-//     blurb: 'Fire safety and compliance in Brisbane is more than a legal requirement it is a life saving priority for every business, property owner, and facility manager...'
-//   },
-//   {
-//     title: 'Top Fire Extinguisher Problems and Why Regular Servicing Matters',
-//     image: '/images/extinguisher_gal/IMG_6997.jpg',
-//     link: '/blog/fire-extinguisher-servicing-brisbane',
-//     blurb: 'When it comes to fire safety, fire extinguishers play a vital role in stopping small fires before they turn into dangerous, destructive situations. But a fire extinguisher is only as reliable as its condition.'
-//   },
-// ]
+
 
 const POSTS_PATH = path.join(process.cwd(), 'src/app/content/blog');
+
 
 async function getPosts() {
   const filenames = fs.readdirSync(POSTS_PATH);
