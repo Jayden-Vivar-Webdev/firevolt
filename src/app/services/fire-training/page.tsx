@@ -368,10 +368,10 @@ const Training = () => {
                                     <div>
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="text-sm font-medium">Course Completion Rate</span>
-                                            <span className="text-sm font-bold text-primary-600">98%</span>
+                                            <span className="text-sm font-bold text-primary-600">100%</span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
-                                            <div className="bg-primary-600 h-2 rounded-full" style={{width: '98%'}}></div>
+                                            <div className="bg-primary-600 h-2 rounded-full" style={{width: '100%'}}></div>
                                         </div>
                                     </div>
 
@@ -398,7 +398,7 @@ const Training = () => {
 
                                 <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                                     <p className="text-sm font-medium text-center">
-                                        <span className="text-2xl font-bold text-primary-600 block">5,000+</span>
+                                        <span className="text-2xl font-bold text-primary-600 block">1,000+</span>
                                         Employees Trained Annually
                                     </p>
                                 </div>
@@ -429,12 +429,13 @@ const Training = () => {
                             </div>
                         </div>
                         <p className="text-secondary-600 mb-4 italic">
-                            &ldquo;The hands-on training was excellent. Our staff now feel confident using fire extinguishers 
-                            and know exactly what to do in an emergency.&rdquo;
+                            &ldquo;Great training today with Fire volt. 
+                            Very informative and professional whilst creating a fantastic fun and learning environment. 
+                            Would highly recommend.&rdquo;
                         </p>
                         <div>
-                            <p className="font-bold">Sarah Mitchell</p>
-                            <p className="text-sm text-secondary-500">Safety Manager, TechCorp</p>
+                            <p className="font-bold">Samuel Ridgard</p>
+                            <p className="text-sm text-secondary-500">6 months ago</p>
                         </div>
                     </div>
 
@@ -449,12 +450,11 @@ const Training = () => {
                             </div>
                         </div>
                         <p className="text-secondary-600 mb-4 italic">
-                            &ldquo;Professional, thorough, and engaging. The trainers made complex procedures easy to understand 
-                            and remember. Highly recommended!&rdquo;
+                            &ldquo;We have had our Fire Equipment and Emergency plans recently maintained by Firevolt. The communication, timeliness and requirements were impeccable. Hayden provided us with our Fire training today.&rdquo;
                         </p>
                         <div>
-                            <p className="font-bold">James Rodriguez</p>
-                            <p className="text-sm text-secondary-500">Operations Director, Manufacturing Plus</p>
+                            <p className="font-bold">Wendy Mavrick</p>
+                            <p className="text-sm text-secondary-500">3 Months</p>
                         </div>
                     </div>
 
@@ -469,12 +469,11 @@ const Training = () => {
                             </div>
                         </div>
                         <p className="text-secondary-600 mb-4 italic">
-                            &ldquo;The flexibility to train our teams both online and in-person was perfect for our distributed 
-                            workforce. Great service and results.&rdquo;
+                            &ldquo;Thanks so much for our training today at Apollo Hayden and Ally. Very well done and clearly explained and good to get everyone involved to learn how to handle a fire blanket and extinguisher.&rdquo;
                         </p>
                         <div>
-                            <p className="font-bold">Linda Chen</p>
-                            <p className="text-sm text-secondary-500">HR Director, GlobalHealth Services</p>
+                            <p className="font-bold">Apollo Patios</p>
+                            <p className="text-sm text-secondary-500">1 year ago</p>
                         </div>
                     </div>
                 </div>

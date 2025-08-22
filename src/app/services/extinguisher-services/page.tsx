@@ -370,7 +370,7 @@ const Extinguisher = () => {
                 <span className="text-primary-600 font-bold">Annually</span>
             </div>
             <div className="flex justify-between items-center">
-                <span className="font-medium">Fire Signage</span>
+                <span className="font-medium">Fire Hydrants</span>
                 <span className="text-primary-600 font-bold">Every 6 Months</span>
             </div>
             </div>

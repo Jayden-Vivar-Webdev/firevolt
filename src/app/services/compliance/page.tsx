@@ -377,7 +377,7 @@ import {
             </div>
             <h3 className="text-xl font-bold mb-3">2. Implementation</h3>
             <p className="text-secondary-600">
-              Our experts develop and implement customized safety management systems, documentation, 
+              Our experts develop and implement customised safety management systems, documentation, 
               and procedures tailored to your specific industry and workplace requirements.
             </p>
           </div>
@@ -401,7 +401,7 @@ import {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry-Specific Compliance Expertise</h2>
           <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
             Different industries face unique safety challenges and regulatory requirements. Our team has 
-            extensive experience across multiple sectors to provide specialized compliance solutions.
+            extensive experience across multiple sectors to provide specialised compliance solutions.
           </p>
         </div>
         
@@ -470,7 +470,7 @@ import {
             <p className="text-lg text-secondary-600 mb-6">
               Proper documentation is the foundation of effective workplace safety compliance. We provide 
               comprehensive documentation services that meet all regulatory requirements and create a 
-              clear audit trail for your organization.
+              clear audit trail for your organisation.
             </p>
             
             <div className="space-y-6">
@@ -587,33 +587,33 @@ import {
             
             <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold mb-2">Management & Supervisory Training</h4>
+                <h4 className="font-bold mb-2">Cheif Warden Training</h4>
                 <p className="text-secondary-600 text-sm">
-                  Due diligence requirements, legal obligations, safety leadership, and incident investigation 
-                  training for managers and supervisors.
+                Comprehensive leadership instructions for the emergency control organisation members.
+                Develop Training confidence for the cheif warden to handle emergencies.
                 </p>
               </div>
               
               <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold mb-2">Worker Safety Induction & Refresher Training</h4>
+                <h4 className="font-bold mb-2">Live Fire Extingusiher & Fire Blanket Training</h4>
                 <p className="text-secondary-600 text-sm">
-                  Site-specific safety inductions, hazard awareness, emergency procedures, and regular 
-                  refresher training to maintain competency.
+                 Hands-on experience with fire extinguishers and blankets in controlled scenarios
+                  to prepare your business for emergencies.
                 </p>
               </div>
               
               <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h4 className="font-bold mb-2">Safety Representative Training</h4>
+                <h4 className="font-bold mb-2">Evacuation Training</h4>
                 <p className="text-secondary-600 text-sm">
-                  Training for elected safety representatives on their rights and responsibilities under 
-                  WHS legislation and workplace consultation requirements.
+                  Training on your specific emergency plans and evacuation procedures to help
+                  boost your staff confidence in handling emergencies in the workplace enviroment.
                 </p>
               </div>
               
               <div className="bg-white p-4 rounded-lg border border-gray-200">
                 <h4 className="font-bold mb-2">Emergency Response Team Training</h4>
                 <p className="text-secondary-600 text-sm">
-                  Specialized training for fire wardens, first aid officers, and emergency response teams 
+                  Specialised training for fire wardens, first aid officers, and emergency response teams 
                   including regular drills and competency assessments.
                 </p>
               </div>
@@ -723,6 +723,7 @@ import {
                 <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
                 With Professional Compliance Services
               </h4>
+
               <ul className="space-y-2 text-sm">
                 <li>• Proactive risk management</li>
                 <li>• Predictable compliance costs</li>
@@ -832,7 +833,7 @@ import {
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
             <h3 className="font-bold text-lg mb-3 flex items-center">
               <FontAwesomeIcon icon={faQuestionCircle} className="text-primary-500 mr-2" />
-              Do you provide training for our internal safety committee?
+              Do you provide training for our emergency planning committee?
             </h3>
             <p className="text-secondary-600">
               Yes, we provide comprehensive training for safety committees, including their legal responsibilities, 
@@ -865,7 +866,7 @@ import {
           </a>
           <a href="tel:1300533294" className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-10 transition">
             <FontAwesomeIcon icon={faPhone} className="mr-3" />
-            Call 1300533294
+            Call 1300 533 294
           </a>
         </div>
         

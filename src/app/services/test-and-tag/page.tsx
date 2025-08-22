@@ -236,7 +236,7 @@ const TestAndTag = () => {
                 <div className="space-y-2">
                 <div className="flex justify-between">
                     <span className="font-medium">Testing Frequency:</span>
-                    <span className="text-green-600 font-bold">5 Years</span>
+                    <span className="text-green-600 font-bold">1 Year</span>
                 </div>
                 <div className="text-sm text-green-600">
                     Computers, printers, desk lamps, phone chargers
@@ -248,12 +248,12 @@ const TestAndTag = () => {
                 <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={faIndustry} className="text-white text-xl" />
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-yellow-800">Industrial Environments</h4>
+                <h4 className="text-xl font-bold mb-3 text-yellow-800">Industrial/Manufacturing Environments</h4>
                 <p className="text-yellow-700 mb-4">Higher-risk environments with heavy-duty equipment.</p>
                 <div className="space-y-2">
                 <div className="flex justify-between">
                     <span className="font-medium">Testing Frequency:</span>
-                    <span className="text-yellow-600 font-bold">3 Months</span>
+                    <span className="text-yellow-600 font-bold">6 Months</span>
                 </div>
                 <div className="text-sm text-yellow-600">
                     Power tools, machinery, industrial equipment
@@ -283,20 +283,20 @@ const TestAndTag = () => {
         {/* Color Coding System */}
         <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
             <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Understanding Our Color-Coded Tagging System</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Understanding Our Color Coded Construction Tagging System</h3>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-                Our standardized color-coding system makes it easy to identify when equipment was last tested 
+                Our standardized color coding system makes it easy to identify when equipment was last tested 
                 and when the next test is due.
             </p>
             </div>
             
             <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm text-center border-t-4 border-red-500">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                2024
+                <div className="text-sm w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+                Dec-Feb
                 </div>
                 <h4 className="font-bold mb-2 text-red-700">Red Tags</h4>
-                <p className="text-sm text-secondary-600">Equipment tested in 2024. Easy identification for compliance tracking.</p>
+                <p className="text-sm text-secondary-600">Equipment tested Dec-Feb. Easy identification for compliance tracking.</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-sm text-center border-t-4 border-green-500">
@@ -444,19 +444,20 @@ const TestAndTag = () => {
                 <div className="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 3
                 </div>
-                <h4 className="font-bold mb-2">Documentation</h4>
+                <h4 className="font-bold mb-2">Tagging & Scheduling</h4>
                 <p className="text-secondary-600 text-sm">
-                Complete test records with results, recommendations, and compliance certificates.
+                    Color-coded tags applied and next testing date scheduled for ongoing compliance.
                 </p>
+                
             </div>
             
             <div className="text-center">
                 <div className="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 4
                 </div>
-                <h4 className="font-bold mb-2">Tagging & Scheduling</h4>
+                <h4 className="font-bold mb-2">Documentation</h4>
                 <p className="text-secondary-600 text-sm">
-                Color-coded tags applied and next testing date scheduled for ongoing compliance.
+                Complete test records with results, recommendations, and compliance certificates.
                 </p>
             </div>
             </div>
@@ -511,7 +512,7 @@ const TestAndTag = () => {
             </div>
             
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <h4 className="text-xl font-bold mb-6 text-center">Test & Tag Pricing Guide</h4>
+                <h4 className="text-xl font-bold mb-6 text-center">Test & Tag Equipment Guide</h4>
                 <div className="py-5">
                     <strong className="">Note:</strong> This is only a guide
                 </div>
@@ -519,19 +520,19 @@ const TestAndTag = () => {
                 <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="font-medium">Standard Office Equipment</span>
-                    <span className="text-primary-600 font-bold">From $8 per item</span>
+                    <span className="text-primary-600 font-bold"></span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="font-medium">Power Tools & Industrial</span>
-                    <span className="text-primary-600 font-bold">From $12 per item</span>
+                    <span className="text-primary-600 font-bold"></span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="font-medium">Extension Leads & Boards</span>
-                    <span className="text-primary-600 font-bold">From $10 per item</span>
+                    <span className="text-primary-600 font-bold"></span>
                 </div>
                 <div className="flex justify-between items-center py-3">
                     <span className="font-medium">RCD Testing</span>
-                    <span className="text-primary-600 font-bold">From $25 per unit</span>
+                    <span className="text-primary-600 font-bold"></span>
                 </div>
                 </div>
                 
