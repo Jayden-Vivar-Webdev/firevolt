@@ -13,6 +13,8 @@ const locations = [
   { name: "Bray Park", slug: "bray-park" },
   { name: "Brendale", slug: "brendale" },
   { name: "Bulimba", slug: "bulimba" },
+  { name: "woodridge", slug: "woodridge"},
+  { name: "Woolloongabba", slug: "woolloongabba" },
   { name: "Bulwer Island", slug: "bulwer-island" },
   { name: "Burpengary", slug: "burpengary" },
   { name: "Burpengary East", slug: "burpengary-east" },
