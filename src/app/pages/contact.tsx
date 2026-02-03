@@ -87,10 +87,6 @@ const ContactPage = () => {
     }
   }
 
-  {
-    /* Use state for FAQ */
-  }
-
   return (
     <>
       <section className="contact-hero text-white py-24 md:py-32">
