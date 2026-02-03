@@ -3,28 +3,24 @@ import "./output.css";
 import "./styles.css";
 import Footer from "./partials/footer";
 import QuickLink from "./partials/quicklink";
-import { Inter } from 'next/font/google';
-import { Analytics } from "@vercel/analytics/next"
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import GoogleCaptchaWrapper from "./lib/recaptcha/google-captcha-wrapper";
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
-
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={inter.className}>
-      <link
-          rel="preload"
-          href="/images/compliance_img.webp"
-          as="image"
-        />
+      <link rel="preload" href="/images/compliance_img.webp" as="image" />
       <body>
-        <Analytics/>
+        <Analytics />
         <Navbar />
-        {children}
+        <GoogleCaptchaWrapper>{children}</GoogleCaptchaWrapper>
         <QuickLink />
         <Footer />
       </body>
