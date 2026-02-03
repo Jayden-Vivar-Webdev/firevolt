@@ -281,6 +281,7 @@ const ContactPage = () => {
                     >
                       Phone Number
                     </label>
+                    {/* TODO: Add phone number input */}
                     <input
                       name="phone"
                       type="tel"
