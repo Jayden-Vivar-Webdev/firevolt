@@ -9,18 +9,32 @@ import {
   faHandshake,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import axios from "axios";
 
 const ContactPage = () => {
   const [formStatus, setFormStatus] = useState<string | null>(null);
+  const [mathChallenge, setMathChallenge] = useState({
+    question: "",
+    answer: 0,
+  });
   const [isFaqOpen1, setIsFaqOpen1] = useState(false);
   const [isFaqOpen2, setIsFaqOpen2] = useState(false);
   const [isFaqOpen3, setIsFaqOpen3] = useState(false);
   const [isFaqOpen4, setIsFaqOpen4] = useState(false);
   const [isFaqOpen5, setIsFaqOpen5] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const generateMathChallenge = () => {
+    const a = Math.floor(Math.random() * 8) + 2; // 2-9 keeps it simple but varied
+    const b = Math.floor(Math.random() * 8) + 2;
+    setMathChallenge({ question: `${a} + ${b}`, answer: a + b });
+  };
+
+  useEffect(() => {
+    generateMathChallenge();
+  }, []);
 
   const validateRecaptcha = async () => {
     try {
@@ -56,6 +70,25 @@ const ContactPage = () => {
   };
 
   async function submitForm(formData: FormData): Promise<void> {
+    const honeypot = (formData.get("company") as string | null)?.trim();
+    if (honeypot) {
+      setFormStatus("Spam detected. Please leave the hidden field empty.");
+      return;
+    }
+
+    const mathAnswerRaw = (formData.get("mathAnswer") as string | null)?.trim();
+    const mathAnswer = Number(mathAnswerRaw);
+    if (
+      mathChallenge.question &&
+      (Number.isNaN(mathAnswer) || mathAnswer !== mathChallenge.answer)
+    ) {
+      setFormStatus(
+        "Incorrect answer to the anti-spam question. Please try again.",
+      );
+      generateMathChallenge();
+      return;
+    }
+
     const recaptchaPassed = await validateRecaptcha();
     if (!recaptchaPassed) return;
 
@@ -77,6 +110,11 @@ const ContactPage = () => {
         setFormStatus(
           "Success, you will be contacted within 24hrs. Please check your junk email for confirmation.",
         );
+        generateMathChallenge();
+        const formElement = document.getElementById(
+          "contact-form",
+        ) as HTMLFormElement | null;
+        formElement?.reset();
         console.log("Success, Form Sent");
       } else {
         console.error("Failed to send message");
@@ -235,7 +273,20 @@ const ContactPage = () => {
                 <h3 className="text-xl font-bold mb-6 text-secondary-900">
                   Send Us a Message
                 </h3>
-                <form action={submitForm}>
+                <form id="contact-form" action={submitForm}>
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="company" className="sr-only">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      name="company"
+                      id="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -328,6 +379,38 @@ const ContactPage = () => {
                       className="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       placeholder="Tell us about your requirements..."
                     />
+                  </div>
+
+                  <div className="mb-6">
+                    <label
+                      htmlFor="mathAnswer"
+                      className="block text-secondary-700 font-medium mb-2"
+                    >
+                      Quick check: What is {mathChallenge.question || "..."}?
+                    </label>
+                    <div className="flex items-center gap-3">
+                      <span className="text-secondary-800 font-semibold">
+                        {mathChallenge.question
+                          ? `${mathChallenge.question} =`
+                          : "Loading"}
+                      </span>
+                      <input
+                        name="mathAnswer"
+                        type="number"
+                        id="mathAnswer"
+                        inputMode="numeric"
+                        className="form-input w-28 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        placeholder="?"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={generateMathChallenge}
+                        className="text-sm text-primary-600 font-semibold hover:text-primary-800"
+                      >
+                        New question
+                      </button>
+                    </div>
                   </div>
 
                   {formStatus && (
