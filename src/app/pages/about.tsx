@@ -108,10 +108,10 @@ const AboutPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
               <p className="text-secondary-600">
-                To use our veteran military experience to deliver professional
-                training and maintenance services, equipping workplaces with the
-                skills to effectively respond to emergencies and maximize safety
-                for people and property.
+                To bring military-grade discipline and preparedness to fire
+                safety, delivering training and maintenance that enables
+                workplaces to respond decisively and protect people and property
+                in emergencies.
               </p>
             </div>
 
@@ -121,10 +121,9 @@ const AboutPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Our Vision</h3>
               <p className="text-secondary-600">
-                To offer comprehensive fire protection, preventative
-                maintenance, fire training, and test tagging services to help
-                businesses in Queensland achieve compliance with Australian
-                standards and regulations.
+                To create safer workplaces across Queensland by setting the
+                benchmark for fire protection, preventative maintenance, and
+                training that protects people, property, and businesses.
               </p>
             </div>
           </div>
