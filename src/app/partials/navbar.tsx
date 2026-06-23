@@ -1,365 +1,425 @@
-"use client"; 
-import { usePathname } from 'next/navigation';
+"use client";
+import { usePathname } from "next/navigation";
 
-import React, { useState } from 'react';
-import '../globals.css'; // Make sure this is the correct path to your globals.css file
-import Link from 'next/link';  // Import Link from next/link
-import Image from 'next/image'; // Import Image from next/image
+import React, { useEffect, useRef, useState } from "react";
+import "../globals.css"; // Make sure this is the correct path to your globals.css file
+import Link from "next/link"; // Import Link from next/link
+import Image from "next/image"; // Import Image from next/image
 import "../output.css";
 import "../styles.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import FreeQuote from './free_quote';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faXmark,
+  faListCheck,
+  faClipboardCheck,
+  faUserShield,
+  faFireExtinguisher,
+  faPlugCircleCheck,
+  faMapLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import FreeQuote from "./free_quote";
+
+const serviceLinks = [
+  {
+    href: "/services/all-services",
+    label: "All Services",
+    description:
+      "Explore every fire safety and compliance service in one place.",
+    icon: faListCheck,
+  },
+  {
+    href: "/services/compliance",
+    label: "Compliance Checks",
+    description:
+      "WHS audits, risk reviews, and documentation for safer workplaces.",
+    icon: faClipboardCheck,
+  },
+  {
+    href: "/services/fire-training",
+    label: "Fire Training",
+    description:
+      "Practical warden and emergency response training for your team.",
+    icon: faUserShield,
+  },
+  {
+    href: "/services/extinguisher-services",
+    label: "Extinguisher Services",
+    description:
+      "Inspection, servicing, and maintenance for extinguisher readiness.",
+    icon: faFireExtinguisher,
+  },
+  {
+    href: "/services/test-and-tag",
+    label: "Test & Tag",
+    description: "Electrical test and tag completed to AS/NZS standards.",
+    icon: faPlugCircleCheck,
+  },
+  {
+    href: "/services/emergency-plans",
+    label: "Emergency Plans & Diagrams",
+    description:
+      "Site-specific evacuation diagrams and emergency plan support.",
+    icon: faMapLocationDot,
+  },
+];
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
+];
 
 const DownArrow = () => {
-  return(
-    <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" 
-          strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7">
-        </path>
+  return (
+    <svg
+      className="h-4 w-4 transition-transform duration-200 "
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M19 9l-7 7-7-7"
+      ></path>
     </svg>
-  )
-}
-const UpArrow = () => {
-  return(
-    <svg className="h-4 w-4 transition-transform duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" 
-          strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7">
-        </path>
-    </svg>
-  )
-}
-
-
+  );
+};
 
 const Navbar = () => {
-
-  const [servicesSelected, setServicesSeleted] = useState(false)
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement | null>(null);
 
-  
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
     setMobileMenuOpen(false);
   };
-  
 
-  const toggleDropDown = () => {
-    setServicesSeleted(!servicesSelected);
-  }
+  const toggleDesktopDropDown = () => {
+    setMobileServicesOpen(false);
+    setDesktopServicesOpen(!desktopServicesOpen);
+  };
+
+  const toggleMobileDropDown = () => {
+    setDesktopServicesOpen(false);
+    setMobileServicesOpen(!mobileServicesOpen);
+  };
 
   const toggleMobileMenu = () => {
+    setDesktopServicesOpen(false);
+    if (isMobileMenuOpen) {
+      setMobileServicesOpen(false);
+    }
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavigation = () => {
+    setMobileMenuOpen(false);
+    setDesktopServicesOpen(false);
+    setMobileServicesOpen(false);
+  };
 
+  const isServiceActive = (href: string) => {
+    if (href === "/services/all-services" && pathname === "/services") {
+      return true;
+    }
+    return pathname === href;
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDesktopServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  useEffect(() => {
+    setDesktopServicesOpen(false);
+    setMobileServicesOpen(false);
+  }, [pathname]);
+
+  const desktopLinkClass = (isActive: boolean) =>
+    `rounded-full px-4 py-2 text-sm font-semibold transition ${
+      isActive
+        ? "bg-primary-50 text-primary-10"
+        : "text-secondary-700 hover:bg-white hover:text-primary-10"
+    }`;
+
+  const mobileLinkClass = (isActive: boolean) =>
+    `block rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
+      isActive
+        ? "bg-primary-50 text-primary-10"
+        : "text-secondary-700 hover:bg-gray-50 hover:text-primary-10"
+    }`;
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-center lg:justify-between items-center">
-          <div className="flex items-center text-2xl font-bold">
-          
-          <Link href={'/'}>
-          <Image
-            src="/images/Firevolt_CenteredLogo(CMYK-LBG).jpg"
-            alt="logo"
-            height={100}
-            width={200}
-            ></Image>
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between gap-4 py-3">
+          <Link href="/" onClick={handleNavigation} className="shrink-0">
+            <Image
+              src="/images/Firevolt_CenteredLogo(CMYK-LBG).jpg"
+              alt="Firevolt logo"
+              height={88}
+              width={176}
+              className="h-auto w-[160px] sm:w-[176px]"
+            />
           </Link>
-          
 
-            <span className="text-secondary-900"></span>
-          </div>
-
-          <div className="hidden xl:flex items-center space-x-8">
-            <nav>
-              <ul className="flex gap-10">
+          <div className="hidden xl:flex flex-1 items-center justify-end gap-4">
+            <nav className="rounded-full border border-slate-200 bg-slate-50/80 p-1.5 shadow-sm">
+              <ul className="flex items-center gap-1">
                 <li>
-                <Link 
-                    href="/"
-                    className={`nav-link relative pb-1 transition ${
-                      pathname === '/' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}
+                  <Link
+                    href={navLinks[0].href}
+                    className={desktopLinkClass(pathname === navLinks[0].href)}
                   >
-                      Home
+                    {navLinks[0].label}
                   </Link>
                 </li>
-                <li>
-                
-                  <div
-                    onClick={() => toggleDropDown()}
-                    className={`nav-link flex items-center gap-2 relative pb-1 transition cursor-pointer ${
-                      pathname.includes('/services') ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
+
+                <li className="relative" ref={dropdownRef}>
+                  <button
+                    type="button"
+                    onClick={toggleDesktopDropDown}
+                    aria-expanded={desktopServicesOpen}
+                    aria-controls="desktop-services-dropdown"
+                    className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+                      pathname.includes("/services")
+                        ? "bg-primary-50 text-primary-10"
+                        : "text-secondary-700 hover:bg-white hover:text-primary-10"
                     }`}
                   >
-                      Services {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
-                  </div>
-                  {servicesSelected && 
-                  <div className='absolute bg-gray-50 w-1/3 left-1/2 top-17 transform translate-x-8 rounded-lg mx-auto px-4 py-4 mx-4 border border-gray-200'>
-                    <ul className='w-full bg-white rounded-lg shadow-sm border border-gray-100 space-y-3 py-3'>
-                    
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                      <Link href="/services/all-services"
-                        onClick={() => {toggleMobileMenu()}}
-                        className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                      pathname === '/services/all-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}>
-                          All Services
-                      </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/compliance"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/compliance' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Compliance Checks
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/fire-training"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/fire-training' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Fire Training
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/extinguisher-services"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/extinguisher-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Extinguisher Serivces
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/test-and-tag"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/test-and-tag' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Test & Tag
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/emergency-plans"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/emergency-plans' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Emergency Plans & Diagrams
+                    Services
+                    <span
+                      className={`${desktopServicesOpen ? "rotate-180" : ""} transition-transform`}
+                    >
+                      <DownArrow />
+                    </span>
+                  </button>
+
+                  {desktopServicesOpen && (
+                    <div
+                      id="desktop-services-dropdown"
+                      className="absolute left-1/2 top-full mt-3 w-[640px] -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_48px_-24px_rgba(15,23,42,0.35)]"
+                    >
+                      <div className="bg-slate-50/90 px-5 py-4">
+                        <p className="text-sm font-semibold text-secondary-900">
+                          Service Directory
+                        </p>
+                        <p className="mt-1 text-xs text-secondary-500">
+                          Fast access to all Firevolt service pages.
+                        </p>
+                      </div>
+
+                      <ul className="grid grid-cols-2 gap-2 p-3">
+                        {serviceLinks.map((service) => (
+                          <li key={service.href}>
+                            <Link
+                              href={service.href}
+                              onClick={handleNavigation}
+                              className={`block rounded-xl border p-3 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 ${
+                                isServiceActive(service.href)
+                                  ? "border-primary-10 bg-slate-50 shadow-sm "
+                                  : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                              }`}
+                            >
+                              <div className="flex items-center gap-3">
+                                <span
+                                  className={`flex h-8 w-8 items-center justify-center rounded-full border ${
+                                    isServiceActive(service.href)
+                                      ? "border-primary-100 bg-white text-primary-10"
+                                      : "border-slate-200 bg-slate-100 text-slate-500"
+                                  }`}
+                                >
+                                  <FontAwesomeIcon
+                                    icon={service.icon}
+                                    className="text-xs"
+                                  />
+                                </span>
+                                <span
+                                  className={`text-sm font-semibold ${isServiceActive(service.href) ? "text-secondary-900" : "text-secondary-800"}`}
+                                >
+                                  {service.label}
+                                </span>
+                              </div>
+                              <p className="mt-1.5 text-xs leading-relaxed text-secondary-500">
+                                {service.description}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="border-t border-slate-100 p-3">
+                        <Link
+                          href="/services/all-services"
+                          onClick={handleNavigation}
+                          className="block rounded-lg bg-primary-10 px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-primary-700"
+                        >
+                          View All Services
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </li>
+
+                {navLinks.slice(1).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={desktopLinkClass(pathname === link.href)}
+                    >
+                      {link.label}
                     </Link>
                   </li>
-                  </ul>
-                </div>}
-                    
-                
-                  
-                </li>
-                
-                <li>
-                <Link 
-                    href="/about"
-                    className={`nav-link relative pb-1 transition ${
-                      pathname === '/about' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}
-                  >
-                    
-                      About Us
-                   
-                  </Link>
-                </li>
-                <li>
-                <Link 
-                    href="/blog"
-                    className={`nav-link relative pb-1 transition ${
-                      pathname === '/blog' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}
-                  >
-                    
-                      Blog
-                   
-                  </Link>
-                </li>
-                
-                <li>
-                <Link 
-                    href="/contact"
-                    className={`nav-link relative pb-1 transition ${
-                      pathname === '/contact' ? 'text-primary-10 border-b-2 border-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}
-                  >
-                    
-                      Contact
-                  
-                  </Link>
-                </li>
+                ))}
               </ul>
             </nav>
-            <button onClick={togglePopup} className="bg-primary-10 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
-                Free Quote Now
+
+            <button
+              onClick={togglePopup}
+              className="rounded-full bg-primary-10 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-700 hover:shadow-md"
+            >
+              Free Quote Now
             </button>
           </div>
 
           <button
-            className="xl:hidden text-2xl focus:outline-none text-secondary-600 absolute right-6"
+            className="xl:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg text-secondary-700 transition hover:bg-slate-50"
             id="mobile-menu-button"
-            aria-label='Mobile Menu Button'
+            aria-label="Mobile Menu Button"
             onClick={toggleMobileMenu}
           >
-            <FontAwesomeIcon icon={faBars} />
-            {/* Ensure FontAwesome is properly installed */}
+            <FontAwesomeIcon icon={isMobileMenuOpen ? faXmark : faBars} />
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden py-4" id="mobile-menu">
-            <nav>
-              <ul className="space-y-3 px-5">
-                <li>
-                  <Link href="/"
-                    onClick={() => {toggleMobileMenu()}}
-                    
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                      Home
-                    
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about"
-                    onClick={() => {toggleMobileMenu()}}
-                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                      pathname === '/about' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}>
-                      About
-                    
-                  </Link>
-                </li>
-                <div className='relative' >
-                  <Link href="/services"
-                    onClick={() => {toggleDropDown()}}
-                    className={`flex justify-between hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                      pathname === '/about' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}>
-                      Services  {servicesSelected ? <span><UpArrow/></span> : <span><DownArrow/></span>}
-                  </Link>
-                  {servicesSelected && 
-                  <div className='absolute bg-gray-50 w-full right-1/2 transform translate-x-1/2 rounded-lg mx-auto px-4 py-4 mx-4 border border-gray-200'>
-                    <div className='w-full bg-white rounded-lg shadow-sm border border-gray-100 space-y-3 py-3'>
-                    
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                      <Link href="/services/all-services"
-                        onClick={() => {toggleMobileMenu()}}
-                        className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                          pathname === '/services/all-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                        }`}>
-                          All Services
-                      </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/compliance"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/compliance' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Compliance Checks
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/fire-training"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/fire-training' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Fire Training
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/extinguisher-services"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/extinguisher-services' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Extinguisher Serivces
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/test-and-tag"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/test-and-tag' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Test & Tag
-                    </Link>
-                    </li>
-                    <li className='flex pl-4'>
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-4"></div>
-                    <Link href="/services/emergency-plans"
-                      onClick={() => {toggleMobileMenu()}}
-                      className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                        pathname === '/services/emergency-plans' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                      }`}>
-                        Emergency Plans & Diagrams
+          <div className="xl:hidden pb-3" id="mobile-menu">
+            <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_36px_-28px_rgba(15,23,42,0.45)]">
+              <nav>
+                <ul className="space-y-1">
+                  <li>
+                    <Link
+                      href={navLinks[0].href}
+                      onClick={handleNavigation}
+                      className={mobileLinkClass(pathname === navLinks[0].href)}
+                    >
+                      {navLinks[0].label}
                     </Link>
                   </li>
-                  </div>
-                  </div>}
-                </div>
-                <li>
-                  <Link href="/blog"
-                    onClick={() => {toggleMobileMenu()}}
-                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                      pathname === '/blog' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}>
-                      Blog
-                    
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact"
-                    onClick={() => {toggleMobileMenu()}}
-                    className={`block hover:text-primary-600 px-3 py-2 rounded-lg transition text-secondary-600 ${
-                      pathname === '/contact' ? 'text-primary-10' : 'text-secondary-600 hover:text-primary-10'
-                    }`}>
-                      Contact
-                    
-                  </Link>
-                </li>
-                <li>
-                  <button onClick={togglePopup}
-                    className="block bg-primary-600 text-white px-6 py-2 rounded-lg font-medium text-center hover:bg-primary-700 transition shadow-md">
+
+                  <li>
+                    <button
+                      type="button"
+                      onClick={toggleMobileDropDown}
+                      aria-expanded={mobileServicesOpen}
+                      aria-controls="mobile-services-dropdown"
+                      className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm font-semibold transition ${
+                        pathname.includes("/services")
+                          ? "bg-primary-50 text-primary-10"
+                          : "text-secondary-700 hover:bg-gray-50 hover:text-primary-10"
+                      }`}
+                    >
+                      Services
+                      <span
+                        className={`${mobileServicesOpen ? "rotate-180" : ""} transition-transform`}
+                      >
+                        <DownArrow />
+                      </span>
+                    </button>
+
+                    {mobileServicesOpen && (
+                      <div
+                        id="mobile-services-dropdown"
+                        className="mt-2 rounded-xl border border-slate-200 bg-slate-50/70 p-2"
+                      >
+                        <ul className="space-y-2">
+                          {serviceLinks.map((service) => (
+                            <li key={service.href}>
+                              <Link
+                                href={service.href}
+                                onClick={handleNavigation}
+                                className={`block rounded-lg border px-3 py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 ${
+                                  isServiceActive(service.href)
+                                    ? "border-slate-200 bg-slate-50 shadow-sm ring-1 ring-primary-100/70"
+                                    : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                                }`}
+                              >
+                                <div className="flex items-center gap-2">
+                                  <span
+                                    className={`flex h-7 w-7 items-center justify-center rounded-full border ${
+                                      isServiceActive(service.href)
+                                        ? "border-primary-100 bg-white text-primary-10"
+                                        : "border-slate-200 bg-slate-100 text-slate-500"
+                                    }`}
+                                  >
+                                    <FontAwesomeIcon
+                                      icon={service.icon}
+                                      className="text-[10px]"
+                                    />
+                                  </span>
+                                  <p
+                                    className={`text-sm font-semibold ${isServiceActive(service.href) ? "text-secondary-900" : "text-secondary-700"}`}
+                                  >
+                                    {service.label}
+                                  </p>
+                                </div>
+                                <p className="mt-1 text-xs text-secondary-500">
+                                  {service.description}
+                                </p>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+
+                  {navLinks.slice(1).map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={handleNavigation}
+                        className={mobileLinkClass(pathname === link.href)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+
+                  <li className="pt-2">
+                    <button
+                      onClick={togglePopup}
+                      className="w-full rounded-xl bg-primary-10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-700"
+                    >
                       Free Quote Now
-                    
-                  </button>
-                </li>
-              </ul>
-            </nav>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         )}
       </div>
+
       <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
     </header>
-    
   );
 };
 
