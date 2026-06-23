@@ -167,8 +167,9 @@ const Navbar = () => {
     }`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur">
-      <div className="container mx-auto px-4">
+    <>
+      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur">
+        <div className="container mx-auto px-4">
         <div className="flex items-center justify-between gap-4 py-3">
           <Link href="/" onClick={handleNavigation} className="shrink-0">
             <Image
@@ -416,10 +417,11 @@ const Navbar = () => {
             </div>
           </div>
         )}
-      </div>
+        </div>
+      </header>
 
       <FreeQuote isPopupOpen={isPopupOpen} togglePopup={togglePopup} />
-    </header>
+    </>
   );
 };
 
