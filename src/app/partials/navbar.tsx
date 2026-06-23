@@ -152,6 +152,19 @@ const Navbar = () => {
     setMobileServicesOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = previousOverflow || "";
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
   const desktopLinkClass = (isActive: boolean) =>
     `rounded-full px-4 py-2 text-sm font-semibold transition ${
       isActive
@@ -311,7 +324,10 @@ const Navbar = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="xl:hidden pb-3" id="mobile-menu">
+          <div
+            className="xl:hidden pb-3 max-h-[calc(100vh-88px)] overflow-y-auto overscroll-contain"
+            id="mobile-menu"
+          >
             <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_36px_-28px_rgba(15,23,42,0.45)]">
               <nav>
                 <ul className="space-y-1">
