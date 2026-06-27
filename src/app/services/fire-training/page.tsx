@@ -610,10 +610,10 @@ const Training = () => {
               Schedule Free Consultation
             </a>
             <a
-              href="tel:+1234567890"
+              href="tel:+1300533294"
               className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-bold text-lg transition"
             >
-              Call Now: (123) 456-7890
+              Call Now: 1300 533 294
             </a>
           </div>
 
