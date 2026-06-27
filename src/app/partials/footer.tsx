@@ -161,7 +161,7 @@ const Footer = () => {
         <div className="pt-6 border-t border-secondary-800 text-secondary-400 text-[15px]">
           <div className="flex flex-col gap-3 md:flex-row items-center justify-center md:space-x-4 text-center z-50">
             <Link
-              href="/policy"
+              href="/Firevolt_Privacy_Policy.pdf"
               className="hover:text-primary-400 transition"
               aria-label="Privacy Policy"
             >
@@ -169,7 +169,7 @@ const Footer = () => {
             </Link>
             <span className="hidden md:inline">|</span>
             <Link
-              href="/Terms-and-Conditions-Jun-2026.pdf"
+              href="/Terms and Conditions Jun 2026.pdf"
               className="hover:text-primary-400 transition"
               aria-label="Privacy Policy"
             >
